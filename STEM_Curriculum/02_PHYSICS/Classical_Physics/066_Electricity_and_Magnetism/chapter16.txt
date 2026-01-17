@@ -1,0 +1,2236 @@
+15.6 • Transformers
+
+CHECK YOUR UNDERSTANDING 15.8
+The resonant angular frequency of an RLC series circuit is
+An ac source operating at this frequency
+transfers an average power of
+to the circuit. The resistance of the circuit is
+Write an
+expression for the emf of the source.
+
+15.6 Transformers
+LEARNING OBJECTIVES
+By the end of this section, you will be able to:
+• Explain why power plants transmit electricity at high voltages and low currents and how they do this
+• Develop relationships among current, voltage, and the number of windings in step-up and step-down
+transformers
+Although ac electric power is produced at relatively low voltages, it is sent through transmission lines at very high
+voltages (as high as 500 kV). The same power can be transmitted at different voltages because power is the product
+(For simplicity, we ignore the phase factor
+A particular power requirement can therefore be met
+with a low voltage and a high current or with a high voltage and a low current. The advantage of the high-voltage/
+low-current choice is that it results in lower
+ohmic losses in the transmission lines, which can be significant in
+lines that are many kilometers long (Figure 15.20).
+
+FIGURE 15.20 The rms voltage from a power plant eventually needs to be stepped down from 12 kV to 240 V so that it can be safely
+introduced into a home. A high-voltage transmission line allows a low current to be transmitted via a substation over long distances.
+
+Typically, the alternating emfs produced at power plants are “stepped up” to very high voltages before being
+transmitted through power lines; then, they must be “stepped down” to relatively safe values (110 or 220 V rms)
+before they are introduced into homes. The device that transforms voltages from one value to another using
+induction is the transformer (Figure 15.21).
+
+645
+
+646
+
+15 • Alternating-Current Circuits
+
+FIGURE 15.21 Transformers are used to step down the high voltages in transmission lines to the 110 to 220 V used in homes. (credit:
+modification of work by “Fortyseven”/Flickr)
+
+As Figure 15.22 illustrates, a transformer basically consists of two separated coils, or windings, wrapped around a
+soft iron core. The primary winding has
+loops, or turns, and is connected to an alternating voltage
+The
+secondary winding has
+turns and is connected to a load resistor
+We assume the ideal case for which all
+magnetic field lines are confined to the core so that the same magnetic flux permeates each turn of both the primary
+and the secondary windings. We also neglect energy losses to magnetic hysteresis, to ohmic heating in the
+windings, and to ohmic heating of the induced eddy currents in the core. A good transformer can have losses as low
+as 1% of the transmitted power, so this is not a bad assumption.
+
+FIGURE 15.22 A step-up transformer (more turns in the secondary winding than in the primary winding). The two windings are wrapped
+around a soft iron core.
+
+To analyze the transformer circuit, we first consider the primary winding. The input voltage
+
+Access for free at openstax.org
+
+is equal to the
+
+15.6 • Transformers
+
+potential difference induced across the primary winding. From Faraday’s law, the induced potential difference is
+where is the flux through one turn of the primary winding. Thus,
+
+Similarly, the output voltage
+delivered to the load resistor must equal the potential difference induced across
+the secondary winding. Since the transformer is ideal, the flux through every turn of the secondary winding is also
+and
+
+Combining the last two equations, we have
+15.20
+Hence, with appropriate values for
+“stepped down” (
+) to
+
+the input voltage
+may be “stepped up”
+or
+the output voltage. This is often abbreviated as the transformer equation,
+15.21
+
+which shows that the ratio of the secondary to primary voltages in a transformer equals the ratio of the number of
+turns in their windings. For a step-up transformer, which increases voltage and decreases current, this ratio is
+greater than one; for a step-down transformer, which decreases voltage and increases current, this ratio is less
+than one.
+From the law of energy conservation, the power introduced at any instant by
+equal to the power dissipated in the resistor of the secondary circuit; thus,
+
+to the primary winding must be
+
+When combined with Equation 15.20, this gives
+15.22
+If the voltage is stepped up, the current is stepped down, and vice versa.
+Finally, we can use
+
+which tells us that the input voltage
+
+, along with Equation 15.20 and Equation 15.22, to obtain
+
+“sees” not a resistance
+
+but rather a resistance
+
+Our analysis has been based on instantaneous values of voltage and current. However, the resulting equations are
+not limited to instantaneous values; they hold also for maximum and rms values.
+
+EXAMPLE 15.6
+A Step-Down Transformer
+A transformer on a utility pole steps the rms voltage down from 12 kV to 240 V. The transmission line resistance is
+200 Ω. (a) What is the ratio of the number of secondary turns to the number of primary turns? (b) If the input current
+to the transformer is 2.0 A, what is the output current? (c) Determine the power loss in the transmission line. (d)
+
+647
+
+648
+
+15 • Alternating-Current Circuits
+
+Find the power loss if there were no transformer and the output power were kept the same.
+Strategy
+The number of turns related to the voltages is found from Equation 15.20. The output current is calculated using
+Equation 15.22.
+Solution
+a. Using Equation 15.20 with rms values
+
+and
+
+we have
+
+so the primary winding has 50 times the number of turns in the secondary winding.
+b. From Equation 15.22, the output rms current
+is found using the transformer equation with current
+15.23
+
+such that
+
+c. The power loss in the transmission line is calculated to be
+d. If there were no transformer, the power would have to be sent at 240 V to work for these houses, and the
+power loss would be
+Therefore, when power needs to be transmitted, we want to avoid power loss. Thus, lines are sent with high
+voltages and low currents and adjusted with a transformer before power is sent into homes.
+Significance
+This application of a step-down transformer allows a home that uses 240-V outlets to have 100 A available to draw
+upon. This can power many devices in the home.
+
+CHECK YOUR UNDERSTANDING 15.9
+A transformer steps the line voltage down from 110 to 9.0 V so that a current of 0.50 A can be delivered to a
+doorbell. (a) What is the ratio of the number of turns in the primary and secondary windings? (b) What is the current
+in the primary winding? (c) What is the resistance seen by the 110-V source?
+
+Access for free at openstax.org
+
+15 • Chapter Review
+
+649
+
+Chapter Review
+Key Terms
+ac current current that fluctuates sinusoidally with
+time at a fixed frequency
+ac voltage voltage that fluctuates sinusoidally with
+time at a fixed frequency
+alternating current (ac) flow of electric charge that
+periodically reverses direction
+average power time average of the instantaneous
+power over one cycle
+bandwidth range of angular frequencies over which
+the average power is greater than one-half the
+maximum value of the average power
+capacitive reactance opposition of a capacitor to a
+change in current
+direct current (dc) flow of electric charge in only one
+direction
+impedance ac analog to resistance in a dc circuit,
+which measures the combined effect of resistance,
+capacitive reactance, and inductive reactance
+inductive reactance opposition of an inductor to a
+change in current
+phase angle amount by which the voltage and
+current are out of phase with each other in a circuit
+power factor amount by which the power delivered in
+
+Key Equations
+AC voltage
+AC current
+capacitive reactance
+rms voltage
+rms current
+inductive reactance
+Phase angle of an RLC series circuit
+AC version of Ohm’s law
+Impedance of an RLC series circuit
+Average power associated with a circuit element
+Average power dissipated by a resistor
+Resonant angular frequency of a circuit
+Quality factor of a circuit
+Quality factor of a circuit in terms of the circuit parameters
+Transformer equation with voltage
+Transformer equation with current
+
+the circuit is less than the theoretical maximum of
+the circuit due to voltage and current being out of
+phase
+quality factor dimensionless quantity that describes
+the sharpness of the peak of the bandwidth; a high
+quality factor is a sharp or narrow resonance peak
+resonant frequency frequency at which the
+amplitude of the current is a maximum and the
+circuit would oscillate if not driven by a voltage
+source
+rms current root mean square of the current
+rms voltage root mean square of the voltage
+step-down transformer transformer that decreases
+voltage and increases current
+step-up transformer transformer that increases
+voltage and decreases current
+transformer device that transforms voltages from
+one value to another using induction
+transformer equation equation showing that the
+ratio of the secondary to primary voltages in a
+transformer equals the ratio of the number of turns
+in their windings
+
+650
+
+15 • Chapter Review
+
+Summary
+15.1 AC Sources
+• Direct current (dc) refers to systems in which the
+source voltage is constant.
+• Alternating current (ac) refers to systems in
+which the source voltage varies periodically,
+particularly sinusoidally.
+• The voltage source of an ac system puts out a
+voltage that is calculated from the time, the peak
+voltage, and the angular frequency.
+• In a simple circuit, the current is found by
+dividing the voltage by the resistance. An ac
+current is calculated using the peak current
+(determined by dividing the peak voltage by the
+resistance), the angular frequency, and the time.
+15.2 Simple AC Circuits
+• For resistors, the current through and the voltage
+across are in phase.
+• For capacitors, we find that when a sinusoidal
+voltage is applied to a capacitor, the voltage
+follows the current by one-fourth of a cycle.
+Since a capacitor can stop current when fully
+charged, it limits current and offers another form
+of ac resistance, called capacitive reactance,
+which has units of ohms.
+• For inductors in ac circuits, we find that when a
+sinusoidal voltage is applied to an inductor, the
+voltage leads the current by one-fourth of a
+cycle.
+• The opposition of an inductor to a change in
+current is expressed as a type of ac reactance.
+This inductive reactance, which has units of
+ohms, varies with the frequency of the ac source.
+15.3 RLC Series Circuits with AC
+• An RLC series circuit is a resistor, capacitor, and
+inductor series combination across an ac source.
+• The same current flows through each element of
+an RLC series circuit at all points in time.
+• The counterpart of resistance in a dc circuit is
+impedance, which measures the combined effect
+of resistors, capacitors, and inductors. The
+maximum current is defined by the ac version of
+Ohm’s law.
+• Impedance has units of ohms and is found using
+
+the resistance, the capacitive reactance, and the
+inductive reactance.
+15.4 Power in an AC Circuit
+• The average ac power is found by multiplying the
+rms values of current and voltage.
+• Ohm’s law for the rms ac is found by dividing the
+rms voltage by the impedance.
+• In an ac circuit, there is a phase angle between
+the source voltage and the current, which can be
+found by dividing the resistance by the
+impedance.
+• The average power delivered to an RLC circuit is
+affected by the phase angle.
+• The power factor ranges from –1 to 1.
+15.5 Resonance in an AC Circuit
+• At the resonant frequency, inductive reactance
+equals capacitive reactance.
+• The average power versus angular frequency plot
+for a RLC circuit has a peak located at the
+resonant frequency; the sharpness or width of
+the peak is known as the bandwidth.
+• The bandwidth is related to a dimensionless
+quantity called the quality factor. A high quality
+factor value is a sharp or narrow peak.
+15.6 Transformers
+• Power plants transmit high voltages at low
+currents to achieve lower ohmic losses in their
+many kilometers of transmission lines.
+• Transformers use induction to transform voltages
+from one value to another.
+• For a transformer, the voltages across the
+primary and secondary coils, or windings, are
+related by the transformer equation.
+• The currents in the primary and secondary
+windings are related by the number of primary
+and secondary loops, or turns, in the windings of
+the transformer.
+• A step-up transformer increases voltage and
+decreases current, whereas a step-down
+transformer decreases voltage and increases
+current.
+
+Conceptual Questions
+15.1 AC Sources
+1. What is the relationship between frequency and
+angular frequency?
+
+Access for free at openstax.org
+
+15.2 Simple AC Circuits
+2. Explain why at high frequencies a capacitor acts
+as an ac short, whereas an inductor acts as an
+
+15 • Chapter Review
+
+open circuit.
+15.3 RLC Series Circuits with AC
+3. In an RLC series circuit, can the voltage
+measured across the capacitor be greater than
+the voltage of the source? Answer the same
+question for the voltage across the inductor.
+15.4 Power in an AC Circuit
+4. For what value of the phase angle between the
+voltage output of an ac source and the current is
+the average power output of the source a
+maximum?
+5. Discuss the differences between average power
+and instantaneous power.
+6. The average ac current delivered to a circuit is
+zero. Despite this, power is dissipated in the
+circuit. Explain.
+7. Can the instantaneous power output of an ac
+source ever be negative? Can the average power
+output be negative?
+
+651
+
+refers to the maximum average power
+dissipated in the resistor. How does this
+compare with the maximum instantaneous
+power dissipated in the resistor?
+15.6 Transformers
+9. Why do transmission lines operate at very high
+voltages while household circuits operate at
+fairly small voltages?
+10. How can you distinguish the primary winding
+from the secondary winding in a step-up
+transformer?
+11. Battery packs in some electronic devices are
+charged using an adapter connected to a wall
+socket. Speculate as to the purpose of the
+adapter.
+12. Will a transformer work if the input is a dc
+voltage?
+13. Why are the primary and secondary coils of a
+transformer wrapped around the same closed
+loop of iron?
+
+8. The power rating of a resistor used in ac circuits
+
+Problems
+15.1 AC Sources
+14. Write an expression for the output voltage of an
+ac source that has an amplitude of 12 V and a
+frequency of 200 Hz.
+15.2 Simple AC Circuits
+15. Calculate the reactance of a
+capacitor at
+(a) 60 Hz, (b) 600 Hz, and (c) 6000 Hz.
+16. What is the capacitance of a capacitor whose
+reactance is
+at 60 Hz?
+17. Calculate the reactance of a 5.0-mH inductor at
+(a) 60 Hz, (b) 600 Hz, and (c) 6000 Hz.
+18. What is the self-inductance of a coil whose
+reactance is
+at 60 Hz?
+19. At what frequency is the reactance of a
+capacitor equal to that of a 10-mH inductor?
+20. At 1000 Hz, the reactance of a 5.0-mH inductor
+is equal to the reactance of a particular
+capacitor. What is the capacitance of the
+capacitor?
+21. A
+
+resistor is connected across the emf
+. Write an
+expression for the current through the resistor.
+
+22. A
+capacitor is connected to an emf given
+by
+. (a) What is the
+reactance of the capacitor? (b) Write an
+expression for the current output of the source.
+23. A 100-mH inductor is connected across the emf
+of the preceding problem. (a) What is the
+reactance of the inductor? (b) Write an
+expression for the current through the inductor.
+15.3 RLC Series Circuits with AC
+24. What is the impedance of a series combination
+of a
+resistor, a
+capacitor, and a
+capacitor at a frequency of 2.0 kHz?
+25. A resistor and capacitor are connected in series
+across an ac generator. The emf of the generator
+is given by
+where
+, and
+.
+(a) What is the impedance of the circuit? (b)
+What is the amplitude of the current through the
+resistor? (c) Write an expression for the current
+through the resistor. (d) Write expressions
+representing the voltages across the resistor and
+across the capacitor.
+26. A resistor and inductor are connected in series
+across an ac generator. The emf of the generator
+
+652
+
+15 • Chapter Review
+
+is given by
+and
+
+where
+also,
+and
+(a) What is the impedance of the
+circuit? (b) What is the amplitude of the current
+through the resistor? (c) Write an expression for
+the current through the resistor. (d) Write
+expressions representing the voltages across
+the resistor and across the inductor.
+27. In an RLC series circuit, the voltage amplitude
+and frequency of the source are 100 V and 500
+Hz, respectively, an
+and
+(a) What is the impedance of
+the circuit? (b) What is the amplitude of the
+current from the source? (c) If the emf of the
+source is given by
+,
+how does the current vary with time? (d) Repeat
+the calculations with C changed to
+28. An RLC series circuit with
+,
+and
+is driven by an
+ac source whose frequency and voltage
+amplitude are 500 Hz and 50 V, respectively. (a)
+What is the impedance of the circuit? (b) What is
+the amplitude of the current in the circuit? (c)
+What is the phase angle between the emf of the
+source and the current?
+29. For the circuit shown below, what are (a) the
+total impedance and (b) the phase angle
+between the current and the emf? (c) Write an
+expression for
+
+given by
+where
+and
+when connected across (a)
+a
+capacitor, (b) a 20-mH inductor, and (c)
+a
+resistor.
+32. A 40-mH inductor is connected to a 60-Hz AC
+source whose voltage amplitude is 50 V. If an AC
+voltmeter is placed across the inductor, what
+does it read?
+33. For an RLC series circuit, the voltage amplitude
+and frequency of the source are 100 V and 500
+Hz, respectively;
+; and
+.
+Find the average power dissipated in the resistor
+for the following values for the capacitance: (a)
+and (b)
+34. An ac source of voltage amplitude 10 V delivers
+electric energy at a rate of 0.80 W when its
+current output is 2.5 A. What is the phase angle
+between the emf and the current?
+35. An RLC series circuit has an impedance of
+and a power factor of 0.50, with the voltage
+lagging the current. (a) Should a capacitor or an
+inductor be placed in series with the elements to
+raise the power factor of the circuit? (b) What is
+the value of the reactance across the inductor
+that will raise the power factor to unity?
+15.5 Resonance in an AC Circuit
+36. (a) Calculate the resonant angular frequency of
+an RLC series circuit for which
+,
+, and
+(b) If R is changed
+to
+what happens to the resonant angular
+frequency?
+37. The resonant frequency of an RLC series circuit
+is
+If the self-inductance in the
+circuit is 5.0 mH, what is the capacitance in the
+circuit?
+38. (a) What is the resonant frequency of an RLC
+series circuit with
+,
+, and
+? (b) What is the impedance of the
+circuit at resonance?
+
+15.4 Power in an AC Circuit
+30. The emf of an ac source is given by
+where
+and
+Calculate the average power
+output of the source if it is connected across (a)
+a
+capacitor, (b) a 20-mH inductor, and (c)
+a
+resistor.
+31. Calculate the rms currents for an ac source is
+
+Access for free at openstax.org
+
+39. For an RLC series circuit,
+,
+, and
+(a) If an ac
+source of variable frequency is connected to the
+circuit, at what frequency is maximum power
+dissipated in the resistor? (b) What is the quality
+factor of the circuit?
+40. An ac source of voltage amplitude 100 V and
+variable frequency f drives an RLC series circuit
+with
+,
+, and
+(a)
+
+15 • Chapter Review
+
+Plot the current through the resistor as a
+function of the frequency f. (b) Use the plot to
+determine the resonant frequency of the circuit.
+41. (a) What is the resonant frequency of a resistor,
+capacitor, and inductor connected in series if
+, and
+? (b) If
+this combination is connected to a 100-V source
+operating at the resonant frequency, what is the
+power output of the source? (c) What is the Q of
+the circuit? (d) What is the bandwidth of the
+circuit?
+42. Suppose a coil has a self-inductance of 20.0 H
+and a resistance of
+. What (a) capacitance
+and (b) resistance must be connected in series
+with the coil to produce a circuit that has a
+resonant frequency of 100 Hz and a Q of 10?
+43. An ac generator is connected to a device whose
+internal circuits are not known. We only know
+current and voltage outside the device, as shown
+below. Based on the information given, what can
+you infer about the electrical nature of the
+device and its power usage?
+
+653
+
+turns in the primary winding, how many turns
+are there in the secondary winding? (b) If a
+resistor connected across the secondary winding
+draws an rms current of 0.75 A, what is the
+current in the primary winding?
+45. A step-up transformer connected to a 110-V line
+is used to supply a hydrogen-gas discharge tube
+with 5.0 kV (rms). The tube dissipates 75 W of
+power. (a) What is the ratio of the number of
+turns in the secondary winding to the number of
+turns in the primary winding? (b) What are the
+rms currents in the primary and secondary
+windings? (c) What is the effective resistance
+seen by the 110-V source?
+46. An ac source of emf delivers 5.0 mW of power at
+an rms current of 2.0 mA when it is connected to
+the primary coil of a transformer. The rms
+voltage across the secondary coil is 20 V. (a)
+What are the voltage across the primary coil and
+the current through the secondary coil? (b) What
+is the ratio of secondary to primary turns for the
+transformer?
+47. A transformer is used to step down 110 V from a
+wall socket to 9.0 V for a radio. (a) If the primary
+winding has 500 turns, how many turns does the
+secondary winding have? (b) If the radio
+operates at a current of 500 mA, what is the
+current through the primary winding?
+
+15.6 Transformers
+44. A step-up transformer is designed so that the
+output of its secondary winding is 2000 V (rms)
+when the primary winding is connected to a
+110-V (rms) line voltage. (a) If there are 100
+
+48. A transformer is used to supply a 12-V model
+train with power from a 110-V wall plug. The
+train operates at 50 W of power. (a) What is the
+rms current in the secondary coil of the
+transformer? (b) What is the rms current in the
+primary coil? (c) What is the ratio of the number
+of primary to secondary turns? (d) What is the
+resistance of the train? (e) What is the resistance
+seen by the 110-V source?
+
+Additional Problems
+49. The emf of an ac source is given by
+where
+and
+Find an expression that
+represents the output current of the source if it
+is connected across (a) a
+capacitor, (b) a
+20-mH inductor, and (c) a
+resistor.
+50. A 700-pF capacitor is connected across an ac
+source with a voltage amplitude of 160 V and a
+frequency of 20 kHz. (a) Determine the
+capacitive reactance of the capacitor and the
+amplitude of the output current of the source.
+
+(b) If the frequency is changed to 60 Hz while
+keeping the voltage amplitude at 160 V, what
+are the capacitive reactance and the current
+amplitude?
+51. A 20-mH inductor is connected across an AC
+source with a variable frequency and a constantvoltage amplitude of 9.0 V. (a) Determine the
+reactance of the circuit and the maximum
+current through the inductor when the frequency
+is set at 20 kHz. (b) Do the same calculations for
+a frequency of 60 Hz.
+
+654
+
+15 • Chapter Review
+
+52. A
+capacitor is connected across a 60-Hz
+ac source whose voltage amplitude is 50 V. (a)
+What is the maximum charge on the capacitor?
+(b) What is the maximum current into the
+capacitor? (c) What is the phase relationship
+between the capacitor charge and the current in
+the circuit?
+53. A 7.0-mH inductor is connected across a 60-Hz
+ac source whose voltage amplitude is 50 V. (a)
+What is the maximum current through the
+inductor? (b) What is the phase relationship
+between the current through and the potential
+difference across the inductor?
+54. What is the impedance of an RLC series circuit at
+the resonant frequency?
+55. What is the resistance R in the circuit shown
+below if the amplitude of the ac through the
+inductor is 4.24 A?
+
+56. An ac source of voltage amplitude 100 V and
+frequency 1.0 kHz drives an RLC series circuit
+with
+,
+, and
+. (a)
+Determine the rms current through the circuit.
+(b) What are the rms voltages across the three
+elements? (c) What is the phase angle between
+the emf and the current? (d) What is the power
+output of the source? (e) What is the power
+dissipated in the resistor?
+57. In an RLC series circuit,
+, and
+is the power output of the source?
+
+,
+
+,
+. What
+
+58. A power plant generator produces 100 A at 15
+kV (rms). A transformer is used to step up the
+transmission line voltage to 150 kV (rms). (a)
+What is rms current in the transmission line? (b)
+If the resistance per unit length of the line is
+what is the power loss per
+meter in the line? (c) What would the power loss
+per meter be if the line voltage were 15 kV
+(rms)?
+59. Consider a power plant located 25 km outside a
+town delivering 50 MW of power to the town.
+The transmission lines are made of aluminum
+cables with a
+cross-sectional area. Find
+the loss of power in the transmission lines if it is
+transmitted at (a) 200 kV (rms) and (b) 120 V
+(rms).
+60. Neon signs require 12-kV for their operation. A
+transformer is to be used to change the voltage
+from 220-V (rms) ac to 12-kV (rms) ac. What
+must the ratio be of turns in the secondary
+winding to the turns in the primary winding? (b)
+What is the maximum rms current the neon
+lamps can draw if the fuse in the primary
+winding goes off at 0.5 A? (c) How much power
+is used by the neon sign when it is drawing the
+maximum current allowed by the fuse in the
+primary winding?
+
+Challenge Problems
+61. The 335-kV ac electricity from a power
+transmission line is fed into the primary winding
+of a transformer. The ratio of the number of
+turns in the secondary winding to the number in
+the primary winding is
+. (a) What
+voltage is induced in the secondary winding? (b)
+What is unreasonable about this result? (c)
+Which assumption or premise is responsible?
+62. A
+
+resistor and 30-mH inductor are
+
+Access for free at openstax.org
+
+connected in series, as shown below, across a
+120-V (rms) ac power source oscillating at
+60-Hz frequency. (a) Find the current in the
+circuit. (b) Find the voltage drops across the
+resistor and inductor. (c) Find the impedance of
+the circuit. (d) Find the power dissipated in the
+resistor. (e) Find the power dissipated in the
+inductor. (f) Find the power produced by the
+source.
+
+15 • Chapter Review
+
+655
+
+Use the simplified circuit shown below.
+
+63. A
+resistor,
+capacitor, and 30-mH
+inductor are connected in series with an ac
+source of amplitude 10 V and frequency 125 Hz.
+(a) What is the impedance of the circuit? (b)
+What is the amplitude of the current in the
+circuit? (c) What is the phase constant of the
+current? Is it leading or lagging the source
+voltage? (d) Write voltage drops across the
+resistor, capacitor, and inductor and the source
+voltage as a function of time. (e) What is the
+power factor of the circuit? (f) How much energy
+is used by the resistor in 2.5 s?
+64. A
+resistor,
+capacitor, and 2.5-H
+inductor are connected in series with an ac
+source of amplitude 10 V and variable angular
+frequency . (a) What is the value of the
+resonance frequency
+? (b) What is the
+amplitude of the current if
+? (c) What is
+the phase constant of the current when
+? Is it leading or lagging the source
+voltage, or is it in phase? (d) Write an equation
+for the voltage drop across the resistor as a
+function of time when
+. (e) What is the
+power factor of the circuit when
+? (f)
+How much energy is used up by the resistor in
+2.5 s when
+?
+65. Find the reactances of the following capacitors
+and inductors in ac circuits with the given
+frequencies in each case: (a) 2-mH inductor with
+a frequency 60-Hz of the ac circuit; (b) 2-mH
+inductor with a frequency 600-Hz of the ac
+circuit; (c) 20-mH inductor with a frequency
+6-Hz of the ac circuit; (d) 20-mH inductor with a
+frequency 60-Hz of the ac circuit; (e) 2-mF
+capacitor with a frequency 60-Hz of the ac
+circuit; and (f) 2-mF capacitor with a frequency
+600-Hz of the AC circuit.
+66. An output impedance of an audio amplifier has an
+impedance of
+and has a mismatch with a lowimpedance
+loudspeaker. You are asked to insert
+an appropriate transformer to match the
+impedances. What turns ratio will you use, and why?
+
+67. Show that the SI unit for capacitive reactance is
+the ohm. Show that the SI unit for inductive
+reactance is also the ohm.
+68. A coil with a self-inductance of 16 mH and a
+resistance of
+is connected to an ac source
+whose frequency can be varied. At what
+frequency will the voltage across the coil lead
+the current through the coil by
+69. An RLC series circuit consists of a
+resistor,
+a
+capacitor, and a 120-mH inductor
+whose coil has a resistance of
+. The source
+for the circuit has an rms emf of 240 V at a
+frequency of 60 Hz. Calculate the rms voltages
+across the (a) resistor, (b) capacitor, and (c)
+inductor.
+70. An RLC series circuit consists of a
+resistor,
+an
+capacitor, and a 50-mH inductor. A
+110-V (rms) source of variable frequency is
+connected across the combination. What is the
+power output of the source when its frequency is
+set to one-half the resonant frequency of the
+circuit?
+71. Shown below are two circuits that act as crude
+high-pass filters. The input voltage to the circuits
+is
+, and the output voltage is
+(a) Show
+that for the capacitor circuit,
+and for the inductor circuit,
+(b) Show that for high frequencies,
+but for low frequencies,
+
+656
+
+15 • Chapter Review
+
+and for the inductor circuit,
+(b) Show that for low frequencies,
+but for high frequencies,
+
+72. The two circuits shown below act as crude lowpass filters. The input voltage to the circuits is
+, and the output voltage is
+(a) Show that
+for the capacitor circuit,
+
+Access for free at openstax.org
+
+CHAPTER 16
+
+Electromagnetic Waves
+
+FIGURE 16.1 The pressure from sunlight predicted by Maxwell’s equations helped produce the tail of Comet McNaught. (credit:
+modification of work by Sebastian Deiries—ESO)
+
+CHAPTER OUTLINE
+16.1 Maxwell’s Equations and Electromagnetic Waves
+16.2 Plane Electromagnetic Waves
+16.3 Energy Carried by Electromagnetic Waves
+16.4 Momentum and Radiation Pressure
+16.5 The Electromagnetic Spectrum
+INTRODUCTION Our view of objects in the sky at night, the warm radiance of sunshine, the sting of sunburn, our
+cell phone conversations, and the X-rays revealing a broken bone—all are brought to us by electromagnetic waves. It
+would be hard to overstate the practical importance of electromagnetic waves, through their role in vision, through
+countless technological applications, and through their ability to transport the energy from the Sun through space to
+sustain life and almost all of its activities on Earth.
+Theory predicted the general phenomenon of electromagnetic waves before anyone realized that light is a form of
+an electromagnetic wave. In the mid-nineteenth century, James Clerk Maxwell formulated a single theory
+combining all the electric and magnetic effects known at that time. Maxwell’s equations, summarizing this theory,
+predicted the existence of electromagnetic waves that travel at the speed of light. His theory also predicted how
+these waves behave, and how they carry both energy and momentum. The tails of comets, such as Comet McNaught
+in Figure 16.1, provide a spectacular example. Energy carried by light from the Sun warms the comet to release dust
+and gas. The momentum carried by the light exerts a weak force that shapes the dust into a tail of the kind seen
+here. The flux of particles emitted by the Sun, called the solar wind, typically produces an additional, second tail, as
+described in detail in this chapter.
+In this chapter, we explain Maxwell’s theory and show how it leads to his prediction of electromagnetic waves. We
+use his theory to examine what electromagnetic waves are, how they are produced, and how they transport energy
+and momentum. We conclude by summarizing some of the many practical applications of electromagnetic waves.
+
+658
+
+16 • Electromagnetic Waves
+
+16.1 Maxwell’s Equations and Electromagnetic Waves
+LEARNING OBJECTIVES
+By the end of this section, you will be able to:
+• Explain Maxwell’s correction of Ampère’s law by including the displacement current
+• State and apply Maxwell’s equations in integral form
+• Describe how the symmetry between changing electric and changing magnetic fields explains Maxwell’s
+prediction of electromagnetic waves
+• Describe how Hertz confirmed Maxwell’s prediction of electromagnetic waves
+James Clerk Maxwell (1831–1879) was one of the major contributors to physics in the nineteenth century (Figure
+16.2). Although he died young, he made major contributions to the development of the kinetic theory of gases, to
+the understanding of color vision, and to the nature of Saturn’s rings. He is probably best known for having combined
+existing knowledge of the laws of electricity and of magnetism with insights of his own into a complete overarching
+electromagnetic theory, represented by Maxwell’s equations.
+
+FIGURE 16.2 James Clerk Maxwell, a nineteenth-century physicist, developed a theory that explained the relationship between electricity
+and magnetism, and correctly predicted that visible light consists of electromagnetic waves.
+
+Maxwell’s Correction to the Laws of Electricity and Magnetism
+The four basic laws of electricity and magnetism had been discovered experimentally through the work of physicists
+such as Oersted, Coulomb, Gauss, and Faraday. Maxwell discovered logical inconsistencies in these earlier results
+and identified the incompleteness of Ampère’s law as their cause.
+Recall that according to Ampère’s law, the integral of the magnetic field around a closed loop C is proportional to the
+current I passing through any surface whose boundary is loop C itself:
+16.1
+There are infinitely many surfaces that can be attached to any loop, and Ampère’s law stated in Equation 16.1 is
+independent of the choice of surface.
+Consider the set-up in Figure 16.3. A source of emf is abruptly connected across a parallel-plate capacitor so that a
+time-dependent current I develops in the wire. Suppose we apply Ampère’s law to loop C shown at a time before the
+capacitor is fully charged, so that
+. Surface
+gives a nonzero value for the enclosed current I, whereas
+surface
+gives zero for the enclosed current because no current passes through it:
+
+Access for free at openstax.org
+
+16.1 • Maxwell’s Equations and Electromagnetic Waves
+
+Clearly, Ampère’s law in its usual form does not work here. This is an internal contradiction in the theory which
+requires a modification to the theory, Ampère’s law, itself.
+
+FIGURE 16.3 The currents through surface
+
+and surface
+
+are unequal, despite having the same boundary loop C.
+
+How can Ampère’s law be modified so that it works in all situations? Maxwell suggested including an additional
+contribution, called the displacement current , to the real current I,
+16.2
+where the displacement current is defined to be
+16.3
+
+Here
+
+is the permittivity of free space and
+
+is the electric flux, defined as
+
+The displacement current is analogous to a real current in Ampère’s law, entering into Ampère’s law in the same
+way. It is produced, however, by a changing electric field. It accounts for a changing electric field producing a
+magnetic field, just as a real current does, but the displacement current can produce a magnetic field even where no
+real current is present. When this extra term is included, the modified Ampère’s law equation becomes
+16.4
+and is independent of the surface S through which the current I is measured.
+We can now examine this modified version of Ampère’s law to confirm that it holds independent of whether the
+surface
+
+or the surface
+
+in Figure 16.3 is chosen. The electric field
+
+16.3 is between the capacitor plates. Therefore, the
+are both zero, and Equation 16.2 takes the form
+
+corresponding to the flux
+
+in Equation
+
+field and the displacement current through the surface
+16.5
+
+We must now show that for surface
+
+through which no actual current flows, the displacement current leads to
+
+659
+
+660
+
+16 • Electromagnetic Waves
+
+the same value
+
+for the right side of the Ampère’s law equation. For surface
+
+the equation becomes
+16.6
+
+Gauss’s law for electric charge requires a closed surface and cannot ordinarily be applied to a surface like
+alone
+or
+alone. But the two surfaces
+and
+form a closed surface in Figure 16.3 and can be used in Gauss’s law.
+Because the electric field is zero on
+, the flux contribution through
+is zero. This gives us
+
+Therefore, we can replace the integral over
+apply Gauss’s law to obtain
+
+in Equation 16.6 with the closed Gaussian surface
+
+and
+16.7
+
+Thus, the modified Ampère’s law equation is the same using surface
+where the right-hand side results from the
+displacement current, as it is for the surface
+where the contribution comes from the actual flow of electric
+charge.
+
+EXAMPLE 16.1
+Displacement current in a charging capacitor
+A parallel-plate capacitor with capacitance C whose plates have area A and separation distance d is connected to a
+resistor R and a battery of voltage V. The current starts to flow at
+. (a) Find the displacement current between
+the capacitor plates at time t. (b) From the properties of the capacitor, find the corresponding real current
+
+,
+
+and compare the answer to the expected current in the wires of the corresponding RC circuit.
+Strategy
+We can use the equations from the analysis of an RC circuit (Alternating-Current Circuits) plus Maxwell’s version of
+Ampère’s law.
+Solution
+a. The voltage between the plates at time t is given by
+
+Let the z-axis point from the positive plate to the negative plate. Then the z-component of the electric field
+between the plates as a function of time t is
+
+Therefore, the z-component of the displacement current
+
+where we have used
+b. From the expression for
+
+Access for free at openstax.org
+
+for the capacitance.
+the charge on the capacitor is
+
+between the plates is
+
+16.1 • Maxwell’s Equations and Electromagnetic Waves
+
+The current into the capacitor after the circuit is closed, is therefore
+
+This current is the same as
+
+found in (a).
+
+Maxwell’s Equations
+With the correction for the displacement current, Maxwell’s equations take the form
+16.8
+16.9
+16.10
+16.11
+
+Once the fields have been calculated using these four equations, the Lorentz force equation
+16.12
+gives the force that the fields exert on a particle with charge q moving with velocity . The Lorentz force equation
+combines the force of the electric field and of the magnetic field on the moving charge. The magnetic and electric
+forces have been examined in earlier modules. These four Maxwell’s equations are, respectively,
+
+MAXWELL’S EQUATIONS
+1. Gauss’s law
+The electric flux through any closed surface is equal to the electric charge
+enclosed by the surface. Gauss’s
+law [Equation 16.8] describes the relation between an electric charge and the electric field it produces. This is
+often pictured in terms of electric field lines originating from positive charges and terminating on negative
+charges, and indicating the direction of the electric field at each point in space.
+2. Gauss’s law for magnetism
+The magnetic field flux through any closed surface is zero [Equation 16.9]. This is equivalent to the statement
+that magnetic field lines are continuous, having no beginning or end. Any magnetic field line entering the region
+enclosed by the surface must also leave it. No magnetic monopoles, where magnetic field lines would terminate,
+are known to exist (see Magnetic Fields and Lines).
+3. Faraday’s law
+A changing magnetic field induces an electromotive force (emf) and, hence, an electric field. The direction of the
+emf opposes the change. This third of Maxwell’s equations, Equation 16.10, is Faraday’s law of induction and
+includes Lenz’s law. The electric field from a changing magnetic field has field lines that form closed loops,
+without any beginning or end.
+4. Ampère-Maxwell law
+Magnetic fields are generated by moving charges or by changing electric fields. This fourth of Maxwell’s
+equations, Equation 16.11, encompasses Ampère’s law and adds another source of magnetic fields, namely
+changing electric fields.
+Maxwell’s equations and the Lorentz force law together encompass all the laws of electricity and magnetism. The
+
+661
+
+662
+
+16 • Electromagnetic Waves
+
+symmetry that Maxwell introduced into his mathematical framework may not be immediately apparent. Faraday’s
+law describes how changing magnetic fields produce electric fields. The displacement current introduced by
+Maxwell results instead from a changing electric field and accounts for a changing electric field producing a
+magnetic field. The equations for the effects of both changing electric fields and changing magnetic fields differ in
+form only where the absence of magnetic monopoles leads to missing terms. This symmetry between the effects of
+changing magnetic and electric fields is essential in explaining the nature of electromagnetic waves.
+Later application of Einstein’s theory of relativity to Maxwell’s complete and symmetric theory showed that electric
+and magnetic forces are not separate but are different manifestations of the same thing—the electromagnetic force.
+The electromagnetic force and weak nuclear force are similarly unified as the electroweak force. This unification of
+forces has been one motivation for attempts to unify all of the four basic forces in nature—the gravitational,
+electrical, strong, and weak nuclear forces (see Particle Physics and Cosmology (http://openstax.org/books/
+university-physics-volume-3/pages/11-introduction)).
+
+The Mechanism of Electromagnetic Wave Propagation
+To see how the symmetry introduced by Maxwell accounts for the existence of combined electric and magnetic
+waves that propagate through space, imagine a time-varying magnetic field
+alternating current seen in Figure 16.4. We represent
+
+produced by the high-frequency
+
+in the diagram by one of its field lines. From Faraday’s
+
+law, the changing magnetic field through a surface induces a time-varying electric field
+at the boundary of
+that surface. The displacement current source for the electric field, like the Faraday’s law source for the magnetic
+field, produces only closed loops of field lines, because of the mathematical symmetry involved in the equations for
+the induced electric and induced magnetic fields. A field line representation of
+electric field
+
+creates a magnetic field
+
+is shown. In turn, the changing
+
+according to the modified Ampère’s law. This changing field
+
+induces
+which induces
+and so on. We then have a self-continuing process that leads to the creation
+of time-varying electric and magnetic fields in regions farther and farther away from O. This process may be
+visualized as the propagation of an electromagnetic wave through space.
+
+FIGURE 16.4 How changing
+
+and
+
+fields propagate through space.
+
+In the next section, we show in more precise mathematical terms how Maxwell’s equations lead to the prediction of
+electromagnetic waves that can travel through space without a material medium, implying a speed of
+electromagnetic waves equal to the speed of light.
+Prior to Maxwell’s work, experiments had already indicated that light was a wave phenomenon, although the nature
+of the waves was yet unknown. In 1801, Thomas Young (1773–1829) showed that when a light beam was
+separated by two narrow slits and then recombined, a pattern made up of bright and dark fringes was formed on a
+screen. Young explained this behavior by assuming that light was composed of waves that added constructively at
+some points and destructively at others (see Interference (http://openstax.org/books/university-physics-volume-3/
+pages/3-introduction)). Subsequently, Jean Foucault (1819–1868), with measurements of the speed of light in
+various media, and Augustin Fresnel (1788–1827), with detailed experiments involving interference and diffraction
+of light, provided further conclusive evidence that light was a wave. So, light was known to be a wave, and Maxwell
+had predicted the existence of electromagnetic waves that traveled at the speed of light. The conclusion seemed
+inescapable: Light must be a form of electromagnetic radiation. But Maxwell’s theory showed that other
+wavelengths and frequencies than those of light were possible for electromagnetic waves. He showed that
+electromagnetic radiation with the same fundamental properties as visible light should exist at any frequency. It
+
+Access for free at openstax.org
+
+16.1 • Maxwell’s Equations and Electromagnetic Waves
+
+remained for others to test, and confirm, this prediction.
+
+CHECK YOUR UNDERSTANDING 16.1
+When the emf across a capacitor is turned on and the capacitor is allowed to charge, when does the magnetic field
+induced by the displacement current have the greatest magnitude?
+
+Hertz’s Observations
+The German physicist Heinrich Hertz (1857–1894) was the first to generate and detect certain types of
+electromagnetic waves in the laboratory. Starting in 1887, he performed a series of experiments that not only
+confirmed the existence of electromagnetic waves but also verified that they travel at the speed of light.
+Hertz used an alternating-current RLC (resistor-inductor-capacitor) circuit that resonates at a known frequency
+and connected it to a loop of wire, as shown in Figure 16.5. High voltages induced across the gap in
+the loop produced sparks that were visible evidence of the current in the circuit and helped generate
+electromagnetic waves.
+Across the laboratory, Hertz placed another loop attached to another RLC circuit, which could be tuned (as the dial
+on a radio) to the same resonant frequency as the first and could thus be made to receive electromagnetic waves.
+This loop also had a gap across which sparks were generated, giving solid evidence that electromagnetic waves had
+been received.
+
+FIGURE 16.5 The apparatus used by Hertz in 1887 to generate and detect electromagnetic waves.
+
+Hertz also studied the reflection, refraction, and interference patterns of the electromagnetic waves he generated,
+confirming their wave character. He was able to determine the wavelengths from the interference patterns, and
+knowing their frequencies, he could calculate the propagation speed using the equation
+, where v is the
+speed of a wave, f is its frequency, and is its wavelength. Hertz was thus able to prove that electromagnetic waves
+travel at the speed of light. The SI unit for frequency, the hertz (
+), is named in his honor.
+
+CHECK YOUR UNDERSTANDING 16.2
+Could a purely electric field propagate as a wave through a vacuum without a magnetic field? Justify your answer.
+
+663
+
+664
+
+16 • Electromagnetic Waves
+
+16.2 Plane Electromagnetic Waves
+LEARNING OBJECTIVES
+By the end of this section, you will be able to:
+• Describe how Maxwell’s equations predict the relative directions of the electric fields and magnetic fields,
+and the direction of propagation of plane electromagnetic waves
+• Explain how Maxwell’s equations predict that the speed of propagation of electromagnetic waves in free
+space is exactly the speed of light
+• Calculate the relative magnitude of the electric and magnetic fields in an electromagnetic plane wave
+• Describe how electromagnetic waves are produced and detected
+Mechanical waves travel through a medium such as a string, water, or air. Perhaps the most significant prediction of
+Maxwell’s equations is the existence of combined electric and magnetic (or electromagnetic) fields that propagate
+through space as electromagnetic waves. Because Maxwell’s equations hold in free space, the predicted
+electromagnetic waves, unlike mechanical waves, do not require a medium for their propagation.
+A general treatment of the physics of electromagnetic waves is beyond the scope of this textbook. We can, however,
+investigate the special case of an electromagnetic wave that propagates through free space along the x-axis of a
+given coordinate system.
+
+Electromagnetic Waves in One Direction
+An electromagnetic wave consists of an electric field, defined as usual in terms of the force per charge on a
+stationary charge, and a magnetic field, defined in terms of the force per charge on a moving charge. The
+electromagnetic field is assumed to be a function of only the x-coordinate and time. The y-component of the electric
+field is then written as
+the z-component of the magnetic field as
+, etc. Because we are assuming
+free space, there are no free charges or currents, so we can set
+and
+in Maxwell’s equations.
+The transverse nature of electromagnetic waves
+We examine first what Gauss’s law for electric fields implies about the relative directions of the electric field and the
+propagation direction in an electromagnetic wave. Assume the Gaussian surface to be the surface of a rectangular
+box whose cross-section is a square of side l and whose third side has length
+, as shown in Figure 16.6. Because
+the electric field is a function only of x and t, the y-component of the electric field is the same on both the top
+(labeled Side 2) and bottom (labeled Side 1) of the box, so that these two contributions to the flux cancel. The
+corresponding argument also holds for the net flux from the z-component of the electric field through Sides 3 and 4.
+Any net flux through the surface therefore comes entirely from the x-component of the electric field. Because the
+electric field has no y- or z-dependence,
+is constant over the face of the box with area A and has a possibly
+different value
+that is constant over the opposite face of the box. Applying Gauss’s law gives
+16.13
+where
+
+is the area of the front and back faces of the rectangular surface. But the charge enclosed is
+, so this component’s net flux is also zero, and Equation 16.13 implies
+for any
+. Therefore, if there is an x-component of the electric field, it cannot vary with x. A uniform field of that kind
+would merely be superposed artificially on the traveling wave, for example, by having a pair of parallel-charged
+plates. Such a component
+would not be part of an electromagnetic wave propagating along the x-axis; so
+for this wave. Therefore, the only nonzero components of the electric field are
+and
+perpendicular to the direction of propagation of the wave.
+
+Access for free at openstax.org
+
+16.2 • Plane Electromagnetic Waves
+
+FIGURE 16.6 The surface of a rectangular box of dimensions
+electromagnetic wave propagating along the x-axis.
+
+is our Gaussian surface. The electric field shown is from an
+
+A similar argument holds by substituting E for B and using Gauss’s law for magnetism instead of Gauss’s law for
+electric fields. This shows that the B field is also perpendicular to the direction of propagation of the wave. The
+electromagnetic wave is therefore a transverse wave, with its oscillating electric and magnetic fields perpendicular
+to its direction of propagation.
+The speed of propagation of electromagnetic waves
+We can next apply Maxwell’s equations to the description given in connection with Figure 16.4 in the previous
+section to obtain an equation for the E field from the changing B field, and for the B field from a changing E field. We
+then combine the two equations to show how the changing E and B fields propagate through space at a speed
+precisely equal to the speed of light.
+First, we apply Faraday’s law over Side 3 of the Gaussian surface, using the path shown in Figure 16.7. Because
+we have
+
+Assuming
+
+we obtain
+
+is small and approximating
+
+by
+
+665
+
+666
+
+16 • Electromagnetic Waves
+
+FIGURE 16.7 We apply Faraday’s law to the front of the rectangle by evaluating
+
+along the rectangular edge of Side 3 in the
+
+direction indicated, taking the B field crossing the face to be approximately its value in the middle of the area traversed.
+
+Because
+is small, the magnetic flux through the face can be approximated by its value in the center of the area
+traversed, namely
+. The flux of the B field through Face 3 is then the B field times the area,
+16.14
+From Faraday’s law,
+16.15
+Therefore, from Equation 16.13 and Equation 16.14,
+
+Canceling
+
+and taking the limit as
+
+, we are left with
+16.16
+
+We could have applied Faraday’s law instead to the top surface (numbered 2) in Figure 16.7, to obtain the resulting
+equation
+16.17
+This is the equation describing the spatially dependent E field produced by the time-dependent B field.
+Next we apply the Ampère-Maxwell law (with
+) over the same two faces (Surface 3 and then Surface 2) of the
+rectangular box of Figure 16.7. Applying Equation 16.10,
+
+Access for free at openstax.org
+
+16.2 • Plane Electromagnetic Waves
+
+to Surface 3, and then to Surface 2, yields the two equations
+16.18
+16.19
+These equations describe the spatially dependent B field produced by the time-dependent E field.
+We next combine the equations showing the changing B field producing an E field with the equation showing the
+changing E field producing a B field. Taking the derivative of Equation 16.16 with respect to x and using Equation
+16.19 gives
+
+16.20
+
+This is the form taken by the general wave equation for our plane wave. Because the equations describe a wave
+traveling at some as-yet-unspecified speed c, we can assume the field components are each functions of x – ct for
+the wave traveling in the +x-direction, that is,
+16.21
+It is left as a mathematical exercise to show, using the chain rule for differentiation, that Equation 16.17 and
+Equation 16.18 imply
+
+The speed of the electromagnetic wave in free space is therefore given in terms of the permeability and the
+permittivity of free space by
+16.22
+
+We could just as easily have assumed an electromagnetic wave with field components
+and
+same type of analysis with Equation 16.25 and Equation 16.24 would also show that the speed of an
+electromagnetic wave is
+.
+
+. The
+
+The physics of traveling electromagnetic fields was worked out by Maxwell in 1873. He showed in a more general
+way than our derivation that electromagnetic waves always travel in free space with a speed given by Equation
+16.18. If we evaluate the speed
+we find that
+
+which is the speed of light. Imagine the excitement that Maxwell must have felt when he discovered this equation!
+He had found a fundamental connection between two seemingly unrelated phenomena: electromagnetic fields and
+light.
+
+CHECK YOUR UNDERSTANDING 16.3
+The wave equation was obtained by (1) finding the E field produced by the changing B field, (2) finding the B field
+
+667
+
+668
+
+16 • Electromagnetic Waves
+
+produced by the changing E field, and combining the two results. Which of Maxwell’s equations was the basis of step
+(1) and which of step (2)?
+
+How the E and B Fields Are Related
+So far, we have seen that the rates of change of different components of the E and B fields are related, that the
+electromagnetic wave is transverse, and that the wave propagates at speed c. We next show what Maxwell’s
+equations imply about the ratio of the E and B field magnitudes and the relative directions of the E and B fields.
+We now consider solutions to Equation 16.16 in the form of plane waves for the electric field:
+16.23
+We have arbitrarily taken the wave to be traveling in the +x-direction and chosen its phase so that the maximum
+field strength occurs at the origin at time
+. We are justified in considering only sines and cosines in this way,
+and generalizing the results, because Fourier’s theorem implies we can express any wave, including even square
+step functions, as a superposition of sines and cosines.
+At any one specific point in space, the E field oscillates sinusoidally at angular frequency between
+and
+and similarly, the B field oscillates between
+and
+The amplitude of the wave is the maximum value of
+The period of oscillation T is the time required for a complete oscillation. The frequency f is the number of
+complete oscillations per unit of time, and is related to the angular frequency by
+. The wavelength is
+the distance covered by one complete cycle of the wave, and the wavenumber k is the number of wavelengths that
+fit into a distance of
+in the units being used. These quantities are related in the same way as for a mechanical
+wave:
+
+Given that the solution of
+has the form shown in Equation 16.20, we need to determine the B field that
+accompanies it. From Equation 16.24, the magnetic field component
+must obey
+16.24
+
+Because the solution for the B-field pattern of the wave propagates in the +x-direction at the same speed c as the
+E-field pattern, it must be a function of
+. Thus, we conclude from Equation 16.21 that
+is
+
+These results may be written as
+16.25
+
+16.26
+
+Therefore, the peaks of the E and B fields coincide, as do the troughs of the wave, and at each point, the E and B
+fields are in the same ratio equal to the speed of light c. The plane wave has the form shown in Figure 16.8.
+
+Access for free at openstax.org
+
+16.2 • Plane Electromagnetic Waves
+
+FIGURE 16.8 The plane wave solution of Maxwell’s equations has the B field directly proportional to the E field at each point, with the
+relative directions shown.
+
+EXAMPLE 16.2
+Calculating B-Field Strength in an Electromagnetic Wave
+What is the maximum strength of the B field in an electromagnetic wave that has a maximum E-field strength of
+1000 V/m?
+Strategy
+To find the B-field strength, we rearrange Equation 16.23 to solve for B, yielding
+
+Solution
+We are given E, and c is the speed of light. Entering these into the expression for B yields
+
+Significance
+The B-field strength is less than a tenth of Earth’s admittedly weak magnetic field. This means that a relatively
+strong electric field of 1000 V/m is accompanied by a relatively weak magnetic field.
+Changing electric fields create relatively weak magnetic fields. The combined electric and magnetic fields can be
+detected in electromagnetic waves, however, by taking advantage of the phenomenon of resonance, as Hertz did. A
+system with the same natural frequency as the electromagnetic wave can be made to oscillate. All radio and TV
+receivers use this principle to pick up and then amplify weak electromagnetic waves, while rejecting all others not at
+their resonant frequency.
+
+CHECK YOUR UNDERSTANDING 16.4
+What conclusions did our analysis of Maxwell’s equations lead to about these properties of a plane electromagnetic
+wave:
+(a) the relative directions of wave propagation, of the E field, and of B field,
+(b) the speed of travel of the wave and how the speed depends on frequency, and
+(c) the relative magnitudes of the E and B fields.
+
+Production and Detection of Electromagnetic Waves
+A steady electric current produces a magnetic field that is constant in time and which does not propagate as a wave.
+
+669
+
+670
+
+16 • Electromagnetic Waves
+
+Accelerating charges, however, produce electromagnetic waves. An electric charge oscillating up and down, or an
+alternating current or flow of charge in a conductor, emit radiation at the frequencies of their oscillations. The
+electromagnetic field of a dipole antenna is shown in Figure 16.9. The positive and negative charges on the two
+conductors are made to reverse at the desired frequency by the output of a transmitter as the power source. The
+continually changing current accelerates charge in the antenna, and this results in an oscillating electric field a
+distance away from the antenna. The changing electric fields produce changing magnetic fields that in turn produce
+changing electric fields, which thereby propagate as electromagnetic waves. The frequency of this radiation is the
+same as the frequency of the ac source that is accelerating the electrons in the antenna. The two conducting
+elements of the dipole antenna are commonly straight wires. The total length of the two wires is typically about onehalf of the desired wavelength (hence, the alternative name half-wave antenna), because this allows standing waves
+to be set up and enhances the effectiveness of the radiation.
+
+FIGURE 16.9 The oscillatory motion of the charges in a dipole antenna produces electromagnetic radiation.
+
+The electric field lines in one plane are shown. The magnetic field is perpendicular to this plane. This radiation field
+has cylindrical symmetry around the axis of the dipole. Field lines near the dipole are not shown. The pattern is not
+at all uniform in all directions. The strongest signal is in directions perpendicular to the axis of the antenna, which
+would be horizontal if the antenna is mounted vertically. There is zero intensity along the axis of the antenna. The
+fields detected far from the antenna are from the changing electric and magnetic fields inducing each other and
+traveling as electromagnetic waves. Far from the antenna, the wave fronts, or surfaces of equal phase for the
+electromagnetic wave, are almost spherical. Even farther from the antenna, the radiation propagates like
+electromagnetic plane waves.
+The electromagnetic waves carry energy away from their source, similar to a sound wave carrying energy away from
+a standing wave on a guitar string. An antenna for receiving electromagnetic signals works in reverse. Incoming
+electromagnetic waves induce oscillating currents in the antenna, each at its own frequency. The radio receiver
+includes a tuner circuit, whose resonant frequency can be adjusted. The tuner responds strongly to the desired
+frequency but not others, allowing the user to tune to the desired broadcast. Electrical components amplify the
+signal formed by the moving electrons. The signal is then converted into an audio and/or video format.
+
+INTERACTIVE
+Use this simulation (https://openstax.org/l/21radwavsim) to broadcast radio waves. Wiggle the transmitter electron
+manually or have it oscillate automatically. Display the field as a curve or vectors. The strip chart shows the electron
+positions at the transmitter and at the receiver.
+
+Access for free at openstax.org
+
+16.3 • Energy Carried by Electromagnetic Waves
+
+16.3 Energy Carried by Electromagnetic Waves
+LEARNING OBJECTIVES
+By the end of this section, you will be able to:
+• Express the time-averaged energy density of electromagnetic waves in terms of their electric and
+magnetic field amplitudes
+• Calculate the Poynting vector and the energy intensity of electromagnetic waves
+• Explain how the energy of an electromagnetic wave depends on its amplitude, whereas the energy of a
+photon is proportional to its frequency
+Anyone who has used a microwave oven knows there is energy in electromagnetic waves. Sometimes this energy is
+obvious, such as in the warmth of the summer Sun. Other times, it is subtle, such as the unfelt energy of gamma
+rays, which can destroy living cells.
+Electromagnetic waves bring energy into a system by virtue of their electric and magnetic fields. These fields can
+exert forces and move charges in the system and, thus, do work on them. However, there is energy in an
+electromagnetic wave itself, whether it is absorbed or not. Once created, the fields carry energy away from a source.
+If some energy is later absorbed, the field strengths are diminished and anything left travels on.
+Clearly, the larger the strength of the electric and magnetic fields, the more work they can do and the greater the
+energy the electromagnetic wave carries. In electromagnetic waves, the amplitude is the maximum field strength of
+the electric and magnetic fields (Figure 16.10). The wave energy is determined by the wave amplitude.
+
+FIGURE 16.10 Energy carried by a wave depends on its amplitude. With electromagnetic waves, doubling the E fields and B fields
+quadruples the energy density u and the energy flux uc.
+
+For a plane wave traveling in the direction of the positive x-axis with the phase of the wave chosen so that the wave
+maximum is at the origin at
+, the electric and magnetic fields obey the equations
+
+The energy in any part of the electromagnetic wave is the sum of the energies of the electric and magnetic fields.
+This energy per unit volume, or energy density u, is the sum of the energy density from the electric field and the
+energy density from the magnetic field. Expressions for both field energy densities were discussed earlier (
+in
+Capacitance and
+in Inductance). Combining these the contributions, we obtain
+
+The expression
+
+then shows that the magnetic energy density
+
+and electric energy density
+
+are equal, despite the fact that changing electric fields generally produce only small magnetic fields. The equality of
+
+671
+
+672
+
+16 • Electromagnetic Waves
+
+the electric and magnetic energy densities leads to
+16.27
+The energy density moves with the electric and magnetic fields in a similar manner to the waves themselves.
+We can find the rate of transport of energy by considering a small time interval . As shown in Figure 16.11, the
+energy contained in a cylinder of length
+and cross-sectional area A passes through the cross-sectional plane in
+the interval
+
+FIGURE 16.11 The energy
+through the area A in time
+
+.
+
+contained in the electric and magnetic fields of the electromagnetic wave in the volume
+
+The energy passing through area A in time
+
+passes
+
+is
+
+The energy per unit area per unit time passing through a plane perpendicular to the wave, called the energy flux and
+denoted by S, can be calculated by dividing the energy by the area A and the time interval .
+
+More generally, the flux of energy through any surface also depends on the orientation of the surface. To take the
+direction into account, we introduce a vector , called the Poynting vector, with the following definition:
+16.28
+
+The cross-product of and points in the direction perpendicular to both vectors. To confirm that the direction of
+is that of wave propagation, and not its negative, return to Figure 16.7. Note that Lenz’s and Faraday’s laws imply
+that when the magnetic field shown is increasing in time, the electric field is greater at x than at
+. The electric
+field is decreasing with increasing x at the given time and location. The proportionality between electric and
+magnetic fields requires the electric field to increase in time along with the magnetic field. This is possible only if the
+wave is propagating to the right in the diagram, in which case, the relative orientations show that
+
+is
+
+specifically in the direction of propagation of the electromagnetic wave.
+The energy flux at any place also varies in time, as can be seen by substituting u from Equation 16.23 into Equation
+16.27.
+16.29
+Because the frequency of visible light is very high, of the order of
+the energy flux for visible light through
+any area is an extremely rapidly varying quantity. Most measuring devices, including our eyes, detect only an
+average over many cycles. The time average of the energy flux is the intensity I of the electromagnetic wave and is
+the power per unit area. It can be expressed by averaging the cosine function in Equation 16.29 over one complete
+cycle, which is the same as time-averaging over many cycles (here, T is one period):
+
+Access for free at openstax.org
+
+16.3 • Energy Carried by Electromagnetic Waves
+
+16.30
+
+We can either evaluate the integral, or else note that because the sine and cosine differ merely in phase, the average
+over a complete cycle for
+is the same as for
+, to obtain
+
+where the angle brackets
+vacuum is then found to be
+
+stand for the time-averaging operation. The intensity of light moving at speed c in
+
+16.31
+
+in terms of the maximum electric field strength
+manipulation produces the relationship
+
+which is also the electric field amplitude. Algebraic
+
+16.32
+
+where
+is the magnetic field amplitude, which is the same as the maximum magnetic field strength. One more
+expression for
+in terms of both electric and magnetic field strengths is useful. Substituting the fact that
+the previous expression becomes
+16.33
+
+We can use whichever of the three preceding equations is most convenient, because the three equations are really
+just different versions of the same result: The energy in a wave is related to amplitude squared. Furthermore,
+because these equations are based on the assumption that the electromagnetic waves are sinusoidal, the peak
+intensity is twice the average intensity; that is,
+
+EXAMPLE 16.3
+A Laser Beam
+The beam from a small laboratory laser typically has an intensity of about
+. Assuming that the
+beam is composed of plane waves, calculate the amplitudes of the electric and magnetic fields in the beam.
+Strategy
+Use the equation expressing intensity in terms of electric field to calculate the electric field from the intensity.
+Solution
+From Equation 16.31, the intensity of the laser beam is
+
+The amplitude of the electric field is therefore
+
+The amplitude of the magnetic field can be obtained from Equation 16.20:
+
+673
+
+674
+
+16 • Electromagnetic Waves
+
+EXAMPLE 16.4
+Light Bulb Fields
+A light bulb emits 5.00 W of power as visible light. What are the average electric and magnetic fields from the light at
+a distance of 3.0 m?
+Strategy
+Assume the bulb’s power output P is distributed uniformly over a sphere of radius 3.0 m to calculate the intensity,
+and from it, the electric field.
+
+Solution
+The power radiated as visible light is then
+
+Significance
+The intensity I falls off as the distance squared if the radiation is dispersed uniformly in all directions.
+
+EXAMPLE 16.5
+Radio Range
+A 60-kW radio transmitter on Earth sends its signal to a satellite 100 km away (Figure 16.12). At what distance in
+the same direction would the signal have the same maximum field strength if the transmitter’s output power were
+increased to 90 kW?
+
+Access for free at openstax.org
+
+16.4 • Momentum and Radiation Pressure
+
+FIGURE 16.12 In three dimensions, a signal spreads over a solid angle as it travels outward from its source.
+
+Strategy
+The area over which the power in a particular direction is dispersed increases as distance squared, as illustrated in
+the figure. Change the power output P by a factor of (90 kW/60 kW) and change the area by the same factor to keep
+the same. Then use the proportion of area A in the diagram to distance squared to find the
+distance that produces the calculated change in area.
+Solution
+Using the proportionality of the areas to the squares of the distances, and solving, we obtain from the diagram
+
+Significance
+The range of a radio signal is the maximum distance between the transmitter and receiver that allows for normal
+operation. In the absence of complications such as reflections from obstacles, the intensity follows an inverse
+square law, and doubling the range would require multiplying the power by four.
+
+16.4 Momentum and Radiation Pressure
+LEARNING OBJECTIVES
+By the end of this section, you will be able to:
+• Describe the relationship of the radiation pressure and the energy density of an electromagnetic wave
+• Explain how the radiation pressure of light, while small, can produce observable astronomical effects
+Material objects consist of charged particles. An electromagnetic wave incident on the object exerts forces on the
+charged particles, in accordance with the Lorentz force, Equation 16.11. These forces do work on the particles of the
+object, increasing its energy, as discussed in the previous section. The energy that sunlight carries is a familiar part
+of every warm sunny day. A much less familiar feature of electromagnetic radiation is the extremely weak pressure
+that electromagnetic radiation produces by exerting a force in the direction of the wave. This force occurs because
+electromagnetic waves contain and transport momentum.
+To understand the direction of the force for a very specific case, consider a plane electromagnetic wave incident on
+a metal in which electron motion, as part of a current, is damped by the resistance of the metal, so that the average
+
+675
+
+676
+
+16 • Electromagnetic Waves
+
+electron motion is in phase with the force causing it. This is comparable to an object moving against friction and
+stopping as soon as the force pushing it stops (Figure 16.13). When the electric field is in the direction of the
+positive y-axis, electrons move in the negative y-direction, with the magnetic field in the direction of the positive
+z-axis. By applying the right-hand rule, and accounting for the negative charge of the electron, we can see that the
+force on the electron from the magnetic field is in the direction of the positive x-axis, which is the direction of wave
+propagation. When the E field reverses, the B field does too, and the force is again in the same direction. Maxwell’s
+equations together with the Lorentz force equation imply the existence of radiation pressure much more generally
+than this specific example, however.
+
+FIGURE 16.13 Electric and magnetic fields of an electromagnetic wave can combine to produce a force in the direction of propagation, as
+illustrated for the special case of electrons whose motion is highly damped by the resistance of a metal.
+
+Maxwell predicted that an electromagnetic wave carries momentum. An object absorbing an electromagnetic wave
+would experience a force in the direction of propagation of the wave. The force corresponds to radiation pressure
+exerted on the object by the wave. The force would be twice as great if the radiation were reflected rather than
+absorbed.
+Maxwell’s prediction was confirmed in 1903 by Nichols and Hull by precisely measuring radiation pressures with a
+torsion balance. The schematic arrangement is shown in Figure 16.14. The mirrors suspended from a fiber were
+housed inside a glass container. Nichols and Hull were able to obtain a small measurable deflection of the mirrors
+from shining light on one of them. From the measured deflection, they could calculate the unbalanced force on the
+mirror, and obtained agreement with the predicted value of the force.
+
+FIGURE 16.14 Simplified diagram of the central part of the apparatus Nichols and Hull used to precisely measure radiation pressure and
+confirm Maxwell’s prediction.
+
+The radiation pressure
+applied by an electromagnetic wave on a perfectly absorbing surface turns out to be
+equal to the energy density of the wave:
+16.34
+If the material is perfectly reflecting, such as a metal surface, and if the incidence is along the normal to the surface,
+then the pressure exerted is twice as much because the momentum direction reverses upon reflection:
+16.35
+
+Access for free at openstax.org
+
+16.4 • Momentum and Radiation Pressure
+
+We can confirm that the units are right:
+
+Equation 16.34 and Equation 16.35 give the instantaneous pressure, but because the energy density oscillates
+rapidly, we are usually interested in the time-averaged radiation pressure, which can be written in terms of intensity:
+16.36
+
+Radiation pressure plays a role in explaining many observed astronomical phenomena, including the appearance of
+comets. Comets are basically chunks of icy material in which frozen gases and particles of rock and dust are
+embedded. When a comet approaches the Sun, it warms up and its surface begins to evaporate. The coma of the
+comet is the hazy area around it from the gases and dust. Some of the gases and dust form tails when they leave the
+comet. Notice in Figure 16.15 that a comet has two tails. The ion tail (or gas tail in Figure 16.15) is composed mainly
+of ionized gases. These ions interact electromagnetically with the solar wind, which is a continuous stream of
+charged particles emitted by the Sun. The force of the solar wind on the ionized gases is strong enough that the ion
+tail almost always points directly away from the Sun. The second tail is composed of dust particles. Because the
+dust tail is electrically neutral, it does not interact with the solar wind. However, this tail is affected by the radiation
+pressure produced by the light from the Sun. Although quite small, this pressure is strong enough to cause the dust
+tail to be displaced from the path of the comet.
+
+FIGURE 16.15 Evaporation of material being warmed by the Sun forms two tails, as shown in this photo of Comet Ison. (credit: modification
+of work by E. Slawik—ESO)
+
+EXAMPLE 16.6
+Halley’s Comet
+On February 9, 1986, Comet Halley was at its closest point to the Sun, about
+Sun. The average power output of the Sun is
+
+from the center of the
+
+(a) Calculate the radiation pressure on the comet at this point in its orbit. Assume that the comet reflects all the
+incident light.
+(b) Suppose that a 10-kg chunk of material of cross-sectional area
+
+breaks loose from the comet.
+
+677
+
+678
+
+16 • Electromagnetic Waves
+
+Calculate the force on this chunk due to the solar radiation. Compare this force with the gravitational force of the
+Sun.
+Strategy
+Calculate the intensity of solar radiation at the given distance from the Sun and use that to calculate the radiation
+pressure. From the pressure and area, calculate the force.
+Solution
+a. The intensity of the solar radiation is the average solar power per unit area. Hence, at
+center of the Sun, we have
+
+from the
+
+Assuming the comet reflects all the incident radiation, we obtain from Equation 16.36
+
+b. The force on the chunk due to the radiation is
+
+whereas the gravitational force of the Sun is
+
+Significance
+The gravitational force of the Sun on the chunk is therefore much greater than the force of the radiation.
+After Maxwell showed that light carried momentum as well as energy, a novel idea eventually emerged, initially only
+as science fiction. Perhaps a spacecraft with a large reflecting light sail could use radiation pressure for propulsion.
+Such a vehicle would not have to carry fuel. It would experience a constant but small force from solar radiation,
+instead of the short bursts from rocket propulsion. It would accelerate slowly, but by being accelerated
+continuously, it would eventually reach great speeds. A spacecraft with small total mass and a sail with a large area
+would be necessary to obtain a usable acceleration.
+When the space program began in the 1960s, the idea started to receive serious attention from NASA. The most
+recent development in light propelled spacecraft has come from a citizen-funded group, the Planetary Society. It is
+currently testing the use of light sails to propel a small vehicle built from CubeSats, tiny satellites that NASA places
+in orbit for various research projects during space launches intended mainly for other purposes.
+The LightSail spacecraft shown below (Figure 16.16) consists of three CubeSats bundled together. It has a total
+mass of only about 5 kg and is about the size as a loaf of bread. Its sails are made of very thin Mylar and open after
+launch to have a surface area of
+
+Access for free at openstax.org
+
+16.4 • Momentum and Radiation Pressure
+
+FIGURE 16.16 Two small CubeSat satellites deployed from the International Space Station in May, 2016. The solar sails open out when the
+CubeSats are far enough away from the Station. (credit: modification of work by NASA)
+
+INTERACTIVE
+The first LightSail spacecraft was launched in 2015 to test the sail deployment system. It was placed in low-earth
+orbit in 2015 by hitching a ride on an Atlas 5 rocket launched for an unrelated mission. The test was successful, but
+the low-earth orbit allowed too much drag on the spacecraft to accelerate it by sunlight. Eventually, it burned in the
+atmosphere, as expected. The next Planetary Society’s LightSail solar sailing spacecraft is scheduled for 2016. An
+illustration (https://openstax.org/l/21lightsail) of the spacecraft, as it is expected to appear in flight, can be seen on
+the Planetary Society’s website.
+
+EXAMPLE 16.7
+LightSail Acceleration
+The intensity of energy from sunlight at a distance of 1 AU from the Sun is
+. The LightSail spacecraft has
+sails with total area of
+and a total mass of 5.0 kg. Calculate the maximum acceleration LightSail spacecraft
+could achieve from radiation pressure when it is about 1 AU from the Sun.
+Strategy
+The maximum acceleration can be expected when the sail is opened directly facing the Sun. Use the light intensity
+to calculate the radiation pressure and from it, the force on the sails. Then use Newton’s second law to calculate the
+acceleration.
+Solution
+The radiation pressure is
+
+The resulting acceleration is
+
+679
+
+680
+
+16 • Electromagnetic Waves
+
+Significance
+If this small acceleration continued for a year, the craft would attain a speed of 1829 m/s, or 6600 km/h.
+
+CHECK YOUR UNDERSTANDING 16.5
+How would the speed and acceleration of a radiation-propelled spacecraft be affected as it moved farther from the
+Sun on an interplanetary space flight?
+
+16.5 The Electromagnetic Spectrum
+LEARNING OBJECTIVES
+By the end of this section, you will be able to:
+• Explain how electromagnetic waves are divided into different ranges, depending on wavelength and
+corresponding frequency
+• Describe how electromagnetic waves in different categories are produced
+• Describe some of the many practical everyday applications of electromagnetic waves
+Electromagnetic waves have a vast range of practical everyday applications that includes such diverse uses as
+communication by cell phone and radio broadcasting, WiFi, cooking, vision, medical imaging, and treating cancer. In
+this module, we discuss how electromagnetic waves are classified into categories such as radio, infrared, ultraviolet,
+and so on. We also summarize some of the main applications for each range.
+The different categories of electromagnetic waves differ in their wavelength range, or equivalently, in their
+corresponding frequency ranges. Their properties change smoothly from one frequency range to the next, with
+different applications in each range. A brief overview of the production and utilization of electromagnetic waves is
+found in Table 16.1.
+Type of
+wave
+
+Production
+
+Applications
+
+Issues
+
+Radio
+
+Accelerating charges
+
+Communications
+Remote controls
+MRI
+
+Requires control for band
+use
+
+Microwaves
+
+Accelerating charges and thermal agitation
+
+Communications
+Ovens
+Radar
+Cell phone use
+
+Infrared
+
+Thermal agitation and electronic
+transitions
+
+Thermal imaging
+Heating
+
+Visible light
+
+Thermal agitation and electronic
+transitions
+
+Photosynthesis
+Human vision
+
+Ultraviolet
+
+Thermal agitation and electronic
+transitions
+
+Sterilization
+Vitamin D
+production
+
+TABLE 16.1 Electromagnetic Waves
+
+Access for free at openstax.org
+
+Absorbed by atmosphere
+Greenhouse effect
+
+Ozone depletion
+Cancer causing
+
+16.5 • The Electromagnetic Spectrum
+
+Type of
+wave
+
+Production
+
+Applications
+
+Issues
+
+X-rays
+
+Inner electronic transitions and fast
+collisions
+
+Security
+Medical diagnosis
+Cancer therapy
+
+Cancer causing
+
+Gamma rays
+
+Nuclear decay
+
+Nuclear medicine
+Security
+Medical diagnosis
+Cancer therapy
+
+Cancer causing
+Radiation damage
+
+TABLE 16.1 Electromagnetic Waves
+
+The relationship
+between frequency f and wavelength applies to all waves and ensures that greater
+frequency means smaller wavelength. Figure 16.17 shows how the various types of electromagnetic waves are
+categorized according to their wavelengths and frequencies—that is, it shows the electromagnetic spectrum.
+
+FIGURE 16.17 The electromagnetic spectrum, showing the major categories of electromagnetic waves.
+
+Radio Waves
+The term radio waves refers to electromagnetic radiation with wavelengths greater than about 0.1 m. Radio waves
+are commonly used for audio communications (i.e., for radios), but the term is used for electromagnetic waves in
+this range regardless of their application. Radio waves typically result from an alternating current in the wires of a
+broadcast antenna. They cover a very broad wavelength range and are divided into many subranges, including
+microwaves, electromagnetic waves used for AM and FM radio, cellular telephones, and TV signals.
+There is no lowest frequency of radio waves, but ELF waves, or “extremely low frequency” are among the lowest
+frequencies commonly encountered, from 3 Hz to 3 kHz. The accelerating charge in the ac currents of electrical
+power lines produce electromagnetic waves in this range. ELF waves are able to penetrate sea water, which strongly
+absorbs electromagnetic waves of higher frequency, and therefore are useful for submarine communications.
+In order to use an electromagnetic wave to transmit information, the amplitude, frequency, or phase of the wave is
+modulated, or varied in a controlled way that encodes the intended information into the wave. In AM radio
+transmission, the amplitude of the wave is modulated to mimic the vibrations of the sound being conveyed. Fourier’s
+theorem implies that the modulated AM wave amounts to a superposition of waves covering some narrow frequency
+range. Each AM station is assigned a specific carrier frequency that, by international agreement, is allowed to vary
+by
+. In FM radio transmission, the frequency of the wave is modulated to carry this information, as illustrated
+
+681
+
+682
+
+16 • Electromagnetic Waves
+
+in Figure 16.18, and the frequency of each station is allowed to use 100 kHz on each side of its carrier frequency.
+The electromagnetic wave produces a current in a receiving antenna, and the radio or television processes the signal
+to produce the sound and any image. The higher the frequency of the radio wave used to carry the data, the greater
+the detailed variation of the wave that can be carried by modulating it over each time unit, and the more data that
+can be transmitted per unit of time. The assigned frequencies for AM broadcasting are 540 to 1600 kHz, and for FM
+are 88 MHz to108 MHz.
+
+FIGURE 16.18 Electromagnetic waves are used to carry communications signals by varying the wave’s amplitude (AM), its frequency (FM),
+or its phase.
+
+Cell phone conversations, and television voice and video images are commonly transmitted as digital data, by
+converting the signal into a sequence of binary ones and zeros. This allows clearer data transmission when the
+signal is weak, and allows using computer algorithms to compress the digital data to transmit more data in each
+frequency range. Computer data as well is transmitted as a sequence of binary ones and zeros, each one or zero
+constituting one bit of data.
+
+Microwaves
+Microwaves are the highest-frequency electromagnetic waves that can be produced by currents in macroscopic
+circuits and devices. Microwave frequencies range from about
+to nearly
+. Their high frequencies
+correspond to short wavelengths compared with other radio waves—hence the name “microwave.” Microwaves also
+occur naturally as the cosmic background radiation left over from the origin of the universe. Along with other ranges
+of electromagnetic waves, they are part of the radiation that any object above absolute zero emits and absorbs
+because of thermal agitation, that is, from the thermal motion of its atoms and molecules.
+Most satellite-transmitted information is carried on microwaves. Radar is a common application of microwaves. By
+detecting and timing microwave echoes, radar systems can determine the distance to objects as diverse as clouds,
+aircraft, or even the surface of Venus.
+Microwaves of 2.45 GHz are commonly used in microwave ovens. The electrons in a water molecule tend to remain
+closer to the oxygen nucleus than the hydrogen nuclei (Figure 16.19). This creates two separated centers of equal
+and opposite charges, giving the molecule a dipole moment (see Electric Field). The oscillating electric field of the
+microwaves inside the oven exerts a torque that tends to align each molecule first in one direction and then in the
+other, with the motion of each molecule coupled to others around it. This pumps energy into the continual thermal
+motion of the water to heat the food. The plate under the food contains no water, and remains relatively unheated.
+
+Access for free at openstax.org
+
+16.5 • The Electromagnetic Spectrum
+
+FIGURE 16.19 The oscillating electric field in a microwave oven exerts a torque on water molecules because of their dipole moment, and
+the torque reverses direction
+times per second. Interactions between the molecules distributes the energy being pumped into
+them. The
+and
+denote the charge distribution on the molecules.
+
+The microwaves in a microwave oven reflect off the walls of the oven, so that the superposition of waves produces
+standing waves, similar to the standing waves of a vibrating guitar or violin string (see Normal Modes of a Standing
+Sound Wave (http://openstax.org/books/university-physics-volume-1/pages/17-4-normal-modes-of-a-standingsound-wave)). A rotating fan acts as a stirrer by reflecting the microwaves in different directions, and food
+turntables, help spread out the hot spots.
+
+EXAMPLE 16.8
+Why Microwave Ovens Heat Unevenly
+How far apart are the hotspots in a 2.45-GHz microwave oven?
+Strategy
+Consider the waves along one direction in the oven, being reflected at the opposite wall from where they are
+generated.
+Solution
+The antinodes, where maximum intensity occurs, are half the wavelength apart, with separation
+
+Significance
+The distance between the hot spots in a microwave oven are determined by the wavelength of the microwaves.
+A cell phone has a radio receiver and a weak radio transmitter, both of which can quickly tune to hundreds of
+specifically assigned microwave frequencies. The low intensity of the transmitted signal gives it an intentionally
+limited range. A ground-based system links the phone to only to the broadcast tower assigned to the specific small
+area, or cell, and smoothly transitions its connection to the next cell when the signal reception there is the stronger
+one. This enables a cell phone to be used while changing location.
+Microwaves also provide the WiFi that enables owners of cell phones, laptop computers, and similar devices to
+connect wirelessly to the Internet at home and at coffee shops and airports. A wireless WiFi router is a device that
+exchanges data over the Internet through the cable or another connection, and uses microwaves to exchange the
+data wirelessly with devices such as cell phones and computers. The term WiFi itself refers to the standards
+followed in modulating and analyzing the microwaves so that wireless routers and devices from different
+manufacturers work compatibly with one another. The computer data in each direction consist of sequences of
+binary zeros and ones, each corresponding to a binary bit. The microwaves are in the range of 2.4 GHz to 5.0 GHz
+range.
+
+683
+
+684
+
+16 • Electromagnetic Waves
+
+Other wireless technologies also use microwaves to provide everyday communications between devices. Bluetooth
+developed alongside WiFi as a standard for radio communication in the 2.4-GHz range between nearby devices, for
+example, to link to headphones and audio earpieces to devices such as radios, or a driver’s cell phone to a handsfree device to allow answering phone calls without fumbling directly with the cell phone.
+Microwaves find use also in radio tagging, using RFID (radio frequency identification) technology. Examples are RFID
+tags attached to store merchandize, transponder for toll booths use attached to the windshield of a car, or even a
+chip embedded into a pet’s skin. The device responds to a microwave signal by emitting a signal of its own with
+encoded information, allowing stores to quickly ring up items at their cash registers, drivers to charge tolls to their
+account without stopping, and lost pets to be reunited with their owners. NFC (near field communication) works
+similarly, except it is much shorter range. Its mechanism of interaction is the induced magnetic field at microwave
+frequencies between two coils. Cell phones that have NFC capability and the right software can supply information
+for purchases using the cell phone instead of a physical credit card. The very short range of the data transfer is a
+desired security feature in this case.
+
+Infrared Radiation
+The boundary between the microwave and infrared regions of the electromagnetic spectrum is not well defined (see
+Figure 16.17). Infrared radiation is generally produced by thermal motion, and the vibration and rotation of atoms
+and molecules. Electronic transitions in atoms and molecules can also produce infrared radiation. About half of the
+solar energy arriving at Earth is in the infrared region, with most of the rest in the visible part of the spectrum. About
+23% of the solar energy is absorbed in the atmosphere, about 48% is absorbed at Earth’s surface, and about 29% is
+1
+reflected back into space.
+The range of infrared frequencies extends up to the lower limit of visible light, just below red. In fact, infrared means
+“below red.” Water molecules rotate and vibrate particularly well at infrared frequencies. Reconnaissance satellites
+can detect buildings, vehicles, and even individual humans by their infrared emissions, whose power radiation is
+proportional to the fourth power of the absolute temperature. More mundanely, we use infrared lamps, including
+those called quartz heaters, to preferentially warm us because we absorb infrared better than our surroundings.
+The familiar handheld “remotes” for changing channels and settings on television sets often transmit their signal by
+modulating an infrared beam. If you try to use a TV remote without the infrared emitter being in direct line of sight
+with the infrared detector, you may find the television not responding. Some remotes use Bluetooth instead and
+reduce this annoyance.
+
+Visible Light
+Visible light is the narrow segment of the electromagnetic spectrum between about 400 nm and about 750 nm to
+which the normal human eye responds. Visible light is produced by vibrations and rotations of atoms and molecules,
+as well as by electronic transitions within atoms and molecules. The receivers or detectors of light largely utilize
+electronic transitions.
+Red light has the lowest frequencies and longest wavelengths, whereas violet has the highest frequencies and
+shortest wavelengths (Figure 16.20). Blackbody radiation from the Sun peaks in the visible part of the spectrum but
+is more intense in the red than in the violet, making the sun yellowish in appearance.
+
+FIGURE 16.20 A small part of the electromagnetic spectrum that includes its visible components. The divisions between infrared, visible,
+and ultraviolet are not perfectly distinct, nor are those between the seven rainbow colors.
+
+Living things—plants and animals—have evolved to utilize and respond to parts of the electromagnetic spectrum in
+which they are embedded. We enjoy the beauty of nature through visible light. Plants are more selective.
+1 http://earthobservatory.nasa.gov/Features/EnergyBalance/page4.php
+
+Access for free at openstax.org
+
+16.5 • The Electromagnetic Spectrum
+
+Photosynthesis uses parts of the visible spectrum to make sugars.
+
+Ultraviolet Radiation
+Ultraviolet means “above violet.” The electromagnetic frequencies of ultraviolet radiation (UV) extend upward from
+violet, the highest-frequency visible light. The highest-frequency ultraviolet overlaps with the lowest-frequency Xrays. The wavelengths of ultraviolet extend from 400 nm down to about 10 nm at its highest frequencies. Ultraviolet
+is produced by atomic and molecular motions and electronic transitions.
+UV radiation from the Sun is broadly subdivided into three wavelength ranges: UV-A (320–400 nm) is the lowest
+frequency, then UV-B (290–320 nm) and UV-C (220–290 nm). Most UV-B and all UV-C are absorbed by ozone ( )
+molecules in the upper atmosphere. Consequently, 99% of the solar UV radiation reaching Earth’s surface is UV-A.
+Sunburn is caused by large exposures to UV-B and UV-C, and repeated exposure can increase the likelihood of skin
+cancer. The tanning response is a defense mechanism in which the body produces pigments in inert skin layers to
+reduce exposure of the living cells below. However, tanning is not sufficient protection, and people are generally
+advised to avoid prolonged exposure to sunlight and to wear sunscreen or protective clothing when outside — even
+on cloudy days.
+Because it absorbs harmful UV radiation, ozone is important to many life forms and to the overall climate. Ozone is
+depleted by chemicals, which can result in areas of lower concentration -- often referred to as "holes" although the
+term is entirely accurate. Mario Molina and F. Sherwood Rowland found that chlorofluorocarbons (CFCs), which were
+extremely common commercial substances, were responsible for ozone depletion. UV radiation itself broke down
+CFCs, releasing chlorine atoms that reacted with and eliminated ozone. Other substances have since been proven to
+have the same effect.
+As examined in a later chapter, the shorter the wavelength of light, the greater the energy change of an atom or
+molecule that absorbs the light in an electronic transition. This makes short-wavelength ultraviolet light damaging to
+living cells. It also explains why ultraviolet radiation is better able than visible light to cause some materials to glow,
+or fluoresce.
+Besides the adverse effects of ultraviolet radiation, there are also benefits of exposure in nature and uses in
+technology. Vitamin D production in the skin results from exposure to UV-B radiation, generally from sunlight.
+Several studies suggest vitamin D deficiency is associated with the development of a range of cancers (prostate,
+breast, colon), as well as osteoporosis. Low-intensity ultraviolet has applications such as providing the energy to
+cause certain dyes to fluoresce and emit visible light, for example, in printed money to display hidden watermarks
+as counterfeit protection.
+One of the first illustrations of UV light’s impact on Earth occurred during the Apollo 16 mission in 1972. The mission
+included the first astronomical images taken from the moon, using a compact and resilient Far Ultraviolet Camera/
+Spectrograph designed for moon use by scientist and inventor George Robert Carruthers. Designed to capture UV
+images without the obscuring effects of the Earth’s atmosphere, its most famous image was of the planet itself.
+Carruthers, who also trained the astronauts on the device’s use, mentioned afterward that “the most immediately
+obvious and spectacular results were really for the Earth observations, because this was the first time that the Earth
+had been photographed from a distance in ultraviolet (UV) light, so that you could see the full extent of the hydrogen
+atmosphere, the polar auroris and what we call the tropical airglow belt.”
+
+X-Rays
+X-rays have wavelengths from about
+. They have shorter wavelengths, and higher frequencies,
+than ultraviolet, so that the energy they transfer at an atomic level is greater. As a result, X-rays have adverse effects
+on living cells similar to those of ultraviolet radiation, but they are more penetrating. Cancer and genetic defects can
+be induced by X-rays. Because of their effect on rapidly dividing cells, X-rays can also be used to treat and even cure
+cancer.
+The widest use of X-rays is for imaging objects that are opaque to visible light, such as the human body or aircraft
+parts. In humans, the risk of cell damage is weighed carefully against the benefit of the diagnostic information
+obtained.
+
+685
+
+686
+
+16 • Electromagnetic Waves
+
+Gamma Rays
+Soon after nuclear radioactivity was first detected in 1896, it was found that at least three distinct types of radiation
+were being emitted, and these were designated as alpha, beta, and gamma rays. The most penetrating nuclear
+radiation, the gamma ray ( ray), was later found to be an extremely high-frequency electromagnetic wave.
+The lower end of the ray frequency range overlaps the upper end of the X-ray range. Gamma rays have
+characteristics identical to X-rays of the same frequency—they differ only in source. The name “gamma rays” is
+generally used for electromagnetic radiation emitted by a nucleus, while X-rays are generally produced by
+bombarding a target with energetic electrons in an X-ray tube. At higher frequencies, rays are more penetrating
+and more damaging to living tissue. They have many of the same uses as X-rays, including cancer therapy. Gamma
+radiation from radioactive materials is used in nuclear medicine.
+
+INTERACTIVE
+Engage the Phet simulation below to explore how light interacts with molecules in our atmosphere. Notice that the
+absorption of light depends on the molecule and the type of light. Then, relate the energy of the light to the resulting
+motion. Notice that energy increases from microwave to ultraviolet. Lastly, predict the motion of a molecule based
+on the type of light it absorbs.
+Access multimedia content (https://openstax.org/books/university-physics-volume-2/pages/16-5-theelectromagnetic-spectrum)
+
+CHECK YOUR UNDERSTANDING 16.6
+How do the electromagnetic waves for the different kinds of electromagnetic radiation differ?
+
+Access for free at openstax.org
+
+

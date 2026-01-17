@@ -1,0 +1,2433 @@
+11 • Chapter Review
+
+489
+
+Chapter Review
+Key Terms
+cosmic rays comprised of particles that originate
+mainly from outside the solar system and reach
+Earth
+cyclotron device used to accelerate charged particles
+to large kinetic energies
+dees large metal containers used in cyclotrons that
+serve contain a stream of charged particles as their
+speed is increased
+gauss G, unit of the magnetic field strength;
+Hall effect creation of voltage across a currentcarrying conductor by a magnetic field
+helical motion superposition of circular motion with a
+straight-line motion that is followed by a charged
+particle moving in a region of magnetic field at an
+angle to the field
+magnetic dipole closed-current loop
+magnetic dipole moment term IA of the magnetic
+dipole, also called
+magnetic field lines continuous curves that show the
+direction of a magnetic field; these lines point in the
+same direction as a compass points, toward the
+magnetic south pole of a bar magnet
+magnetic force force applied to a charged particle
+moving through a magnetic field
+mass spectrometer device that separates ions
+
+according to their charge-to-mass ratios
+motor (dc) loop of wire in a magnetic field; when
+current is passed through the loops, the magnetic
+field exerts torque on the loops, which rotates a
+shaft; electrical energy is converted into mechanical
+work in the process
+north magnetic pole currently where a compass
+points to north, near the geographic North Pole; this
+is the effective south pole of a bar magnet but has
+flipped between the effective north and south poles
+of a bar magnet multiple times over the age of Earth
+right-hand rule-1 using your right hand to determine
+the direction of either the magnetic force, velocity of
+a charged particle, or magnetic field
+south magnetic pole currently where a compass
+points to the south, near the geographic South Pole;
+this is the effective north pole of a bar magnet but
+has flipped just like the north magnetic pole
+tesla SI unit for magnetic field: 1 T = 1 N/A-m
+velocity selector apparatus where the crossed
+electric and magnetic fields produce equal and
+opposite forces on a charged particle moving with a
+specific velocity; this particle moves through the
+velocity selector not affected by either field while
+particles moving with different velocities are
+deflected by the apparatus
+
+Key Equations
+Force on a charge in a magnetic field
+Magnitude of magnetic force
+Radius of a particle’s path in a magnetic field
+Period of a particle’s motion in a magnetic field
+Force on a current-carrying wire in a uniform magnetic field
+Magnetic dipole moment
+Torque on a current loop
+Energy of a magnetic dipole
+Drift velocity in crossed electric and magnetic fields
+Hall potential
+Hall potential in terms of drift velocity
+Charge-to-mass ratio in a mass spectrometer
+Maximum speed of a particle in a cyclotron
+
+Summary
+11.1 Magnetism and Its Historical Discoveries
+• Magnets have two types of magnetic poles,
+
+called the north magnetic pole and the south
+magnetic pole. North magnetic poles are those
+that are attracted toward Earth’s geographic
+
+490
+
+11 • Chapter Review
+
+North Pole.
+• Like poles repel and unlike poles attract.
+• Discoveries of how magnets respond to currents
+by Oersted and others created a framework that
+led to the invention of modern electronic devices,
+electric motors, and magnetic imaging
+technology.
+11.2 Magnetic Fields and Lines
+• Charges moving across a magnetic field
+experience a force determined by
+The force is perpendicular to the plane formed by
+and
+• The direction of the force on a moving charge is
+given by the right hand rule 1 (RHR-1): Sweep
+your fingers in a velocity, magnetic field plane.
+Start by pointing them in the direction of velocity
+and sweep towards the magnetic field. Your
+thumb points in the direction of the magnetic
+force for positive charges.
+• Magnetic fields can be pictorially represented by
+magnetic field lines, which have the following
+properties:
+1. The field is tangent to the magnetic field line.
+2. Field strength is proportional to the line
+density.
+3. Field lines cannot cross.
+4. Field lines form continuous, closed loops.
+• Magnetic poles always occur in pairs of north and
+south—it is not possible to isolate north and
+south poles.
+11.3 Motion of a Charged Particle in a Magnetic Field
+• A magnetic force can supply centripetal force
+and cause a charged particle to move in a circular
+path of radius
+• The period of circular motion for a charged
+particle moving in a magnetic field perpendicular
+to the plane of motion is
+• Helical motion results if the velocity of the
+charged particle has a component parallel to the
+magnetic field as well as a component
+perpendicular to the magnetic field.
+
+11.4 Magnetic Force on a Current-Carrying
+Conductor
+• An electrical current produces a magnetic field
+around the wire.
+• The directionality of the magnetic field produced
+is determined by the right hand rule-2, where
+your thumb points in the direction of the current
+and your fingers wrap around the wire in the
+direction of the magnetic field.
+• The magnetic force on current-carrying
+conductors is given by
+where I is
+the current and l is the length of a wire in a
+uniform magnetic field B.
+11.5 Force and Torque on a Current Loop
+• The net force on a current-carrying loop of any
+plane shape in a uniform magnetic field is zero.
+• The net torque τ on a current-carrying loop of
+any shape in a uniform magnetic field is
+calculated using
+
+where
+
+is the
+
+magnetic dipole moment and is the magnetic
+field strength.
+• The magnetic dipole moment is the product of
+the number of turns of wire N, the current in the
+loop I, and the area of the loop A or
+11.6 The Hall Effect
+• Perpendicular electric and magnetic fields exert
+equal and opposite forces for a specific velocity
+of entering particles, thereby acting as a velocity
+selector. The velocity that passes through
+undeflected is calculated by
+• The Hall effect can be used to measure the sign
+of the majority of charge carriers for metals. It
+can also be used to measure a magnetic field.
+11.7 Applications of Magnetic Forces and Fields
+• A mass spectrometer is a device that separates
+ions according to their charge-to-mass ratios by
+first sending them through a velocity selector,
+then a uniform magnetic field.
+• Cyclotrons are used to accelerate charged
+particles to large kinetic energies through applied
+electric and magnetic fields.
+
+Conceptual Questions
+11.2 Magnetic Fields and Lines
+1. Discuss the similarities and differences between
+the electrical force on a charge and the magnetic
+force on a charge.
+
+Access for free at openstax.org
+
+2. (a) Is it possible for the magnetic force on a
+charge moving in a magnetic field to be zero? (b)
+Is it possible for the electric force on a charge
+moving in an electric field to be zero? (c) Is it
+possible for the resultant of the electric and
+magnetic forces on a charge moving
+
+11 • Chapter Review
+
+simultaneously through both fields to be zero?
+11.3 Motion of a Charged Particle in a Magnetic Field
+3. At a given instant, an electron and a proton are
+moving with the same velocity in a constant
+magnetic field. Compare the magnetic forces on
+these particles. Compare their accelerations.
+4. Does increasing the magnitude of a uniform
+magnetic field through which a charge is
+traveling necessarily mean increasing the
+magnetic force on the charge? Does changing
+the direction of the field necessarily mean a
+change in the force on the charge?
+5. An electron passes through a magnetic field
+without being deflected. What do you conclude
+about the magnetic field?
+6. If a charged particle moves in a straight line and
+no non-magnetic force acts on it, can you
+conclude that there is no magnetic field present?
+7. How could you determine which pole of an
+electromagnet is north and which pole is south?
+11.4 Magnetic Force on a Current-Carrying
+Conductor
+8. Describe the error that results from accidently
+
+Problems
+11.2 Magnetic Fields and Lines
+15. What is the direction of the magnetic force on a
+positive charge that moves as shown in each of the
+six cases?
+
+491
+
+using your left rather than your right hand when
+determining the direction of a magnetic force.
+9. Considering the magnetic force law, are the
+velocity and magnetic field always
+perpendicular? Are the force and velocity always
+perpendicular? What about the force and
+magnetic field?
+10. Why can a nearby magnet distort a cathode ray
+tube television picture?
+11. A magnetic field exerts a force on the moving
+electrons in a current carrying wire. What exerts
+the force on a wire?
+12. There are regions where the magnetic field of
+earth is almost perpendicular to the surface of
+Earth. What difficulty does this cause in the use
+of a compass?
+11.6 The Hall Effect
+13. Hall potentials are much larger for poor
+conductors than for good conductors with the
+same current. Why?
+11.7 Applications of Magnetic Forces and Fields
+14. Describe the primary function of the electric
+field and the magnetic field in a cyclotron.
+
+492
+
+11 • Chapter Review
+
+18. Repeat previous exercise for a positive charge.
+19. What is the direction of the magnetic field that
+produces the magnetic force on a positive
+charge as shown in each of the three cases,
+assuming
+
+is perpendicular to ?
+
+16. Repeat previous exercise for a negative charge.
+17. What is the direction of the velocity of a negative
+charge that experiences the magnetic force
+shown in each of the three cases, assuming it
+moves perpendicular to B?
+
+20. Repeat previous exercise for a negative charge.
+21. (a) Aircraft sometimes acquire small static
+charges. Suppose a supersonic jet has a
+0.500-μC charge and flies due west at a speed
+
+Access for free at openstax.org
+
+11 • Chapter Review
+
+of 660. m/s over Earth’s south magnetic pole,
+where the
+magnetic field
+points straight down into the ground. What are
+the direction and the magnitude of the magnetic
+force on the plane? (b) Discuss whether the
+value obtained in part (a) implies this is a
+significant or negligible effect.
+22. (a) A cosmic ray proton moving toward Earth at
+experiences a magnetic force of
+What is the strength of the
+magnetic field if there is a 45º angle between it
+and the proton’s velocity? (b) Is the value
+obtained in part a. consistent with the known
+strength of Earth’s magnetic field on its surface?
+Discuss.
+23. An electron moving at
+in a
+1.25-T magnetic field experiences a magnetic
+force of
+What angle does the
+velocity of the electron make with the magnetic
+field? There are two answers.
+24. (a) A physicist performing a sensitive
+measurement wants to limit the magnetic force
+on a moving charge in her equipment to less
+than
+What is the greatest the
+charge can be if it moves at a maximum speed of
+30.0 m/s in Earth’s field? (b) Discuss whether it
+would be difficult to limit the charge to less than
+the value found in (a) by comparing it with
+typical static electricity and noting that static is
+often absent.
+11.3 Motion of a Charged Particle in a Magnetic Field
+25. A cosmic-ray electron moves at
+perpendicular to Earth’s magnetic field at an
+altitude where the field strength is
+What is the radius of the circular
+path the electron follows?
+26. (a) Viewers of Star Trek have heard of an
+antimatter drive on the Starship Enterprise. One
+possibility for such a futuristic energy source is
+to store antimatter charged particles in a
+vacuum chamber, circulating in a magnetic field,
+and then extract them as needed. Antimatter
+annihilates normal matter, producing pure
+energy. What strength magnetic field is needed
+to hold antiprotons, moving at
+in
+a circular path 2.00 m in radius? Antiprotons
+have the same mass as protons but the opposite
+(negative) charge. (b) Is this field strength
+obtainable with today’s technology or is it a
+futuristic possibility?
+
+493
+
+27. (a) An oxygen-16 ion with a mass of
+travels at
+perpendicular to a 1.20-T magnetic field, which
+makes it move in a circular arc with a 0.231-m
+radius. What positive charge is on the ion? (b)
+What is the ratio of this charge to the charge of
+an electron? (c) Discuss why the ratio found in
+(b) should be an integer.
+28. An electron in a TV CRT moves with a speed of
+in a direction perpendicular to
+Earth’s field, which has a strength of
+(a) What strength electric field
+must be applied perpendicular to the Earth’s
+field to make the electron moves in a straight
+line? (b) If this is done between plates separated
+by 1.00 cm, what is the voltage applied? (Note
+that TVs are usually surrounded by a
+ferromagnetic material to shield against external
+magnetic fields and avoid the need for such a
+correction.)
+29. (a) At what speed will a proton move in a circular
+path of the same radius as the electron in the
+previous exercise? (b) What would the radius of
+the path be if the proton had the same speed as
+the electron? (c) What would the radius be if the
+proton had the same kinetic energy as the
+electron? (d) The same momentum?
+30. (a) What voltage will accelerate electrons to a
+speed of
+(b) Find the radius of
+curvature of the path of a proton accelerated
+through this potential in a 0.500-T field and
+compare this with the radius of curvature of an
+electron accelerated through the same
+potential.
+31. An alpha-particle
+travels in a circular path of
+radius 25 cm in a uniform magnetic field of
+magnitude 1.5 T. (a) What is the speed of the
+particle? (b) What is the kinetic energy in
+electron-volts? (c) Through what potential
+difference must the particle be accelerated in
+order to give it this kinetic energy?
+32. A particle of charge q and mass m is accelerated
+from rest through a potential difference V, after
+which it encounters a uniform magnetic field B.
+If the particle moves in a plane perpendicular to
+B, what is the radius of its circular orbit?
+
+494
+
+11 • Chapter Review
+
+11.4 Magnetic Force on a Current-Carrying
+Conductor
+33. What is the direction of the magnetic force on the
+current in each of the six cases?
+
+35. What is the direction of the magnetic field that
+produces the magnetic force shown on the
+currents in each of the three cases, assuming
+is perpendicular to I?
+
+34. What is the direction of a current that
+experiences the magnetic force shown in each of
+the three cases, assuming the current runs
+perpendicular to
+
+?
+
+36. (a) What is the force per meter on a lightning
+bolt at the equator that carries 20,000 A
+perpendicular to Earth’s
+field? (b)
+What is the direction of the force if the current is
+
+Access for free at openstax.org
+
+11 • Chapter Review
+
+straight up and Earth’s field direction is due
+north, parallel to the ground?
+37. (a) A dc power line for a light-rail system carries
+1000 A at an angle of 30.0º to Earth’s
+field. What is the force on a
+100-m section of this line? (b) Discuss practical
+concerns this presents, if any.
+38. A wire carrying a 30.0-A current passes between
+the poles of a strong magnet that is
+perpendicular to its field and experiences a
+2.16-N force on the 4.00 cm of wire in the field.
+What is the average field strength?
+11.5 Force and Torque on a Current Loop
+39. (a) By how many percent is the torque of a motor
+decreased if its permanent magnets lose 5.0%
+of their strength? (b) How many percent would
+the current need to be increased to return the
+torque to original values?
+
+495
+
+of
+What are the direction and
+magnitude of the torque on the loop? (b) Does
+this device have any practical applications as a
+motor?
+
+47. Repeat the previous problem, but with the loop
+lying flat on the ground with its current
+circulating counterclockwise (when viewed from
+above) in a location where Earth’s field is north,
+but at an angle 45.0° below the horizontal and
+with a strength of
+
+40. (a) What is the maximum torque on a 150-turn
+square loop of wire 18.0 cm on a side that
+carries a 50.0-A current in a 1.60-T field? (b)
+What is the torque when θ is 10.9º?
+41. Find the current through a loop needed to create
+a maximum torque of
+The loop has 50
+square turns that are 15.0 cm on a side and is in
+a uniform 0.800-T magnetic field.
+42. Calculate the magnetic field strength needed on
+a 200-turn square loop 20.0 cm on a side to
+create a maximum torque of 300 N ⋅ m if the
+loop is carrying 25.0 A.
+43. Since the equation for torque on a currentcarrying loop is τ = NIAB sin θ, the units of N ⋅ m
+must equal units of A ⋅ m2 T. Verify this.
+44. (a) At what angle θ is the torque on a current
+loop 90.0% of maximum? (b) 50.0% of
+maximum? (c) 10.0% of maximum?
+45. A proton has a magnetic field due to its spin. The
+field is similar to that created by a circular
+current loop
+in radius with a
+current of
+Find the maximum
+torque on a proton in a 2.50-T field. (This is a
+significant torque on a small particle.)
+46. (a) A 200-turn circular loop of radius 50.0 cm is
+vertical, with its axis on an east-west line. A
+current of 100 A circulates clockwise in the loop
+when viewed from the east. Earth’s field here is
+due north, parallel to the ground, with a strength
+
+11.6 The Hall Effect
+48. A strip of copper is placed in a uniform magnetic
+field of magnitude 2.5 T. The Hall electric field is
+measured to be
+(a) What is the
+drift speed of the conduction electrons? (b)
+Assuming that n =
+electrons per
+cubic meter and that the cross-sectional area of
+the strip is
+calculate the current
+in the strip. (c) What is the Hall coefficient 1/nq?
+49. The cross-sectional dimensions of the copper strip
+shown are 2.0 cm by 2.0 mm. The strip carries a
+current of 100 A, and it is placed in a magnetic field
+of magnitude B = 1.5 T. What are the value and
+polarity of the Hall potential in the copper strip?
+
+50. The magnitudes of the electric and magnetic
+fields in a velocity selector are
+and 0.080 T, respectively. (a) What speed must a
+proton have to pass through the selector? (b)
+
+496
+
+11 • Chapter Review
+
+Also calculate the speeds required for an alphaparticle and a singly ionized
+atom to pass
+through the selector.
+51. A charged particle moves through a velocity
+selector at constant velocity. In the selector, E =
+and B = 0.250 T. When the
+electric field is turned off, the charged particle
+travels in a circular path of radius 3.33 mm.
+Determine the charge-to-mass ratio of the
+particle.
+52. A Hall probe gives a reading of
+for a
+current of 2 A when it is placed in a magnetic
+field of 1 T. What is the magnetic field in a region
+where the reading is
+for 1.7 A of current?
+11.7 Applications of Magnetic Forces and Fields
+53. A physicist is designing a cyclotron to accelerate
+protons to one-tenth the speed of light. The
+magnetic field will have a strength of 1.5 T.
+Determine (a) the rotational period of the
+circulating protons and (b) the maximum radius
+of the protons’ orbit.
+54. The strengths of the fields in the velocity
+selector of a Bainbridge mass spectrometer are
+B = 0.500 T and E =
+and the
+strength of the magnetic field that separates the
+ions is
+A stream of singly charged
+Li ions is found to bend in a circular arc of radius
+2.32 cm. What is the mass of the Li ions?
+55. The magnetic field in a cyclotron is 1.25 T, and
+the maximum orbital radius of the circulating
+
+protons is 0.40 m. (a) What is the kinetic energy
+of the protons when they are ejected from the
+cyclotron? (b) What is this energy in MeV? (c)
+Through what potential difference would a
+proton have to be accelerated to acquire this
+kinetic energy? (d) What is the period of the
+voltage source used to accelerate the protons?
+(e) Repeat the calculations for alpha-particles.
+56. A mass spectrometer is being used to separate
+common oxygen-16 from the much rarer
+oxygen-18, taken from a sample of old glacial
+ice. (The relative abundance of these oxygen
+isotopes is related to climatic temperature at the
+time the ice was deposited.) The ratio of the
+masses of these two ions is 16 to 18, the mass
+of oxygen-16 is
+and they are
+singly charged and travel at
+in a
+1.20-T magnetic field. What is the separation
+between their paths when they hit a target after
+traversing a semicircle?
+57. (a) Triply charged uranium-235 and
+uranium-238 ions are being separated in a mass
+spectrometer. (The much rarer uranium-235 is
+used as reactor fuel.) The masses of the ions are
+and
+respectively, and they travel at
+in
+a 0.250-T field. What is the separation between
+their paths when they hit a target after traversing
+a semicircle? (b) Discuss whether this distance
+between their paths seems to be big enough to
+be practical in the separation of uranium-235
+from uranium-238.
+
+Additional Problems
+58. Calculate the magnetic force on a hypothetical
+particle of charge
+moving with a
+velocity of
+in a magnetic field of
+
+62. Four different proton velocities are given. For
+each case, determine the magnetic force on the
+proton in terms of e,
+and
+
+59. Repeat the previous problem with a new
+magnetic field of
+60. An electron is projected into a uniform magnetic
+field
+
+with a velocity of
+What is the magnetic
+
+force on the electron?
+61. The mass and charge of a water droplet are
+and
+respectively. If
+the droplet is given an initial horizontal velocity
+of
+what magnetic field will keep
+it moving in this direction? Why must gravity be
+considered here?
+
+Access for free at openstax.org
+
+63. An electron of kinetic energy 2000 eV passes
+between parallel plates that are 1.0 cm apart
+
+11 • Chapter Review
+
+and kept at a potential difference of 300 V. What
+is the strength of the uniform magnetic field B
+that will allow the electron to travel undeflected
+through the plates? Assume E and B are
+perpendicular.
+64. An alpha-particle
+moving with a velocity
+enters a region
+where
+
+and
+What is the initial
+
+force on it?
+65. An electron moving with a velocity
+enters a
+region where there is a uniform electric field and
+a uniform magnetic field. The magnetic field is
+given by
+If the electron travels through a region without
+being deflected, what is the electric field?
+66. At a particular instant, an electron is traveling
+west to east with a kinetic energy of 10 keV.
+Earth’s magnetic field has a horizontal
+component of
+north and a vertical
+component of
+down. (a) What is
+the path of the electron? (b) What is the radius of
+curvature of the path?
+67. What is the (a) path of a proton and (b) the
+magnetic force on the proton that is traveling
+west to east with a kinetic energy of 10 keV in
+Earth’s magnetic field that has a horizontal
+component of 1.8 x 10–5 T north and a vertical
+component of 5.0 x 10–5 T down?
+68. What magnetic field is required in order to
+confine a proton moving with a speed of
+to a circular orbit of radius 10
+cm?
+69. An electron and a proton move with the same
+speed in a plane perpendicular to a uniform
+magnetic field. Compare the radii and periods of
+their orbits.
+70. A proton and an alpha-particle have the same
+kinetic energy and both move in a plane
+perpendicular to a uniform magnetic field.
+Compare the periods of their orbits.
+71. A singly charged ion takes
+to
+complete eight revolutions in a uniform
+magnetic field of magnitude
+What is the mass of the ion?
+
+497
+
+72. A particle moving downward at a speed of
+enters a uniform magnetic field
+that is horizontal and directed from east to west.
+(a) If the particle is deflected initially to the
+north in a circular arc, is its charge positive or
+negative? (b) If B = 0.25 T and the charge-tomass ratio (q/m) of the particle is
+what is the radius of the path?
+(c) What is the speed of the particle after it has
+moved in the field for
+for 2.0 s?
+73. A proton, deuteron, and an alpha-particle are all
+accelerated from rest through the same
+potential difference. They then enter the same
+magnetic field, moving perpendicular to it.
+Compute the ratios of the radii of their circular
+paths. Assume that
+and
+74. A singly charged ion is moving in a uniform
+magnetic field of
+completes 10
+revolutions in
+Identify the ion.
+75. Two particles have the same linear momentum,
+but particle A has four times the charge of
+particle B. If both particles move in a plane
+perpendicular to a uniform magnetic field, what
+is the ratio
+of the radii of their circular
+orbits?
+76. A uniform magnetic field of magnitude is
+directed parallel to the z-axis. A proton enters
+the field with a velocity
+and travels in a
+helical path with a radius of 5.0 cm. (a) What is
+the value of ? (b) What is the time required for
+one trip around the helix? (c) Where is the
+proton
+after entering the field?
+77. An electron moving along the +x -axis at
+enters a magnetic field that
+makes a
+angle with the x-axis of magnitude
+0.20 T. Calculate the (a) pitch and (b) radius of
+the trajectory.
+78. (a) A 0.750-m-long section of cable carrying
+current to a car starter motor makes an angle of
+60º with Earth’s
+field. What is the
+current when the wire experiences a force of
+(b) If you run the wire between
+the poles of a strong horseshoe magnet,
+subjecting 5.00 cm of it to a 1.75-T field, what
+force is exerted on this segment of wire?
+79. (a) What is the angle between a wire carrying an
+8.00-A current and the 1.20-T field it is in if 50.0
+cm of the wire experiences a magnetic force of
+
+498
+
+11 • Chapter Review
+
+2.40 N? (b) What is the force on the wire if it is
+rotated to make an angle of 90º with the field?
+80. A 1.0-m-long segment of wire lies along the
+x-axis and carries a current of 2.0 A in the
+positive x-direction. Around the wire is the
+magnetic field of
+Find the magnetic force on this segment.
+81. A 5.0-m section of a long, straight wire carries a
+current of 10 A while in a uniform magnetic field
+of magnitude
+Calculate the
+magnitude of the force on the section if the
+angle between the field and the direction of the
+current is (a) 45°; (b) 90°; (c) 0°; or (d) 180°.
+82. An electromagnet produces a magnetic field of
+magnitude 1.5 T throughout a cylindrical region
+of radius 6.0 cm. A straight wire carrying a
+current of 25 A passes through the field as
+shown in the accompanying figure. What is the
+magnetic force on the wire?
+
+85. A circular coil of wire of radius 5.0 cm has 20
+turns and carries a current of 2.0 A. The coil lies
+in a magnetic field of magnitude 0.50 T that is
+directed parallel to the plane of the coil. (a) What
+is the magnetic dipole moment of the coil? (b)
+What is the torque on the coil?
+86. A current-carrying coil in a magnetic field
+experiences a torque that is 75% of the
+maximum possible torque. What is the angle
+between the magnetic field and the normal to
+the plane of the coil?
+87. A 4.0-cm by 6.0-cm rectangular current loop
+carries a current of 10 A. What is the magnetic
+dipole moment of the loop?
+88. A circular coil with 200 turns has a radius of 2.0
+cm. (a) What current through the coil results in a
+magnetic dipole moment of 3.0 Am2? (b) What is
+the maximum torque that the coil will
+experience in a uniform field of strength
+(c) If the angle between μ and B
+is 45°, what is the magnitude of the torque on
+the coil? (d) What is the magnetic potential
+energy of coil for this orientation?
+89. The current through a circular wire loop of radius
+10 cm is 5.0 A. (a) Calculate the magnetic dipole
+moment of the loop. (b) What is the torque on
+the loop if it is in a uniform 0.20-T magnetic field
+such that and B are directed at
+to each
+other? (c) For this position, what is the potential
+energy of the dipole?
+
+83. The current loop shown in the accompanying
+figure lies in the plane of the page, as does the
+magnetic field. Determine the net force and the
+net torque on the loop if I = 10 A and B = 1.5 T.
+
+90. A wire of length 1.0 m is wound into a singleturn planar loop. The loop carries a current of
+5.0 A, and it is placed in a uniform magnetic field
+of strength 0.25 T. (a) What is the maximum
+torque that the loop will experience if it is
+square? (b) If it is circular? (c) At what angle
+relative to B would the normal to the circular coil
+have to be oriented so that the torque on it
+would be the same as the maximum torque on
+the square coil?
+91. Consider an electron rotating in a circular orbit
+of radius r. Show that the magnitudes of the
+magnetic dipole moment μ and the angular
+momentum L of the electron are related by:
+
+84. A circular coil of radius 5.0 cm is wound with five
+turns and carries a current of 5.0 A. If the coil is
+placed in a uniform magnetic field of strength
+5.0 T, what is the maximum torque on it?
+
+Access for free at openstax.org
+
+92. The Hall effect is to be used to find the sign of
+charge carriers in a semiconductor sample. The
+probe is placed between the poles of a magnet
+so that magnetic field is pointed up. A current is
+
+11 • Chapter Review
+
+passed through a rectangular sample placed
+horizontally. As current is passed through the
+sample in the east direction, the north side of
+the sample is found to be at a higher potential
+than the south side. Decide if the number
+density of charge carriers is positively or
+negatively charged.
+93. The density of charge carriers for copper is
+electrons per cubic meter. What
+will be the Hall voltage reading from a probe
+made up of
+copper
+plate when a current of 1.5 A is passed through
+it in a magnetic field of 2.5 T perpendicular to
+the
+94. The Hall effect is to be used to find the density
+of charge carriers in an unknown material. A Hall
+voltage 40
+for 3-A current is observed in a
+3-T magnetic field for a rectangular sample with
+length 2 cm, width 1.5 cm, and height 0.4 cm.
+Determine the density of the charge carriers.
+95. Show that the Hall voltage across wires made of
+the same material, carrying identical currents,
+and subjected to the same magnetic field is
+inversely proportional to their diameters. (Hint:
+Consider how drift velocity depends on wire
+diameter.)
+96. A velocity selector in a mass spectrometer uses
+a 0.100-T magnetic field. (a) What electric field
+strength is needed to select a speed of
+(b) What is the voltage between
+the plates if they are separated by 1.00 cm?
+97. Find the radius of curvature of the path of a
+
+499
+
+25.0-MeV proton moving perpendicularly to the
+1.20-T field of a cyclotron.
+98. Unreasonable results To construct a nonmechanical water meter, a 0.500-T magnetic
+field is placed across the supply water pipe to a
+home and the Hall voltage is recorded. (a) Find
+the flow rate through a 3.00-cm-diameter pipe if
+the Hall voltage is 60.0 mV. (b) What would the
+Hall voltage be for the same flow rate through a
+10.0-cm-diameter pipe with the same field
+applied?
+99. Unreasonable results A charged particle having
+mass
+(that of a helium atom)
+moving at
+perpendicular to a
+1.50-T magnetic field travels in a circular path of
+radius 16.0 mm. (a) What is the charge of the
+particle? (b) What is unreasonable about this
+result? (c) Which assumptions are responsible?
+100. Unreasonable results An inventor wants to
+generate 120-V power by moving a 1.00-m-long
+wire perpendicular to Earth’s
+field. (a) Find the speed with which the wire
+must move. (b) What is unreasonable about this
+result? (c) Which assumption is responsible?
+101. Unreasonable results Frustrated by the small
+Hall voltage obtained in blood flow
+measurements, a medical physicist decides to
+increase the applied magnetic field strength to
+get a 0.500-V output for blood moving at 30.0
+cm/s in a 1.50-cm-diameter vessel. (a) What
+magnetic field strength is needed? (b) What is
+unreasonable about this result? (c) Which
+premise is responsible?
+
+Challenge Problems
+102. A particle of charge +q and mass m moves with
+velocity
+pointed in the +y-direction as it
+crosses the x-axis at x = R at a particular time.
+There is a negative charge –Q fixed at the origin,
+and there exists a uniform magnetic field
+pointed in the +z-direction. It is found that the
+particle describes a circle of radius R about –Q.
+Find
+
+in terms of the given quantities.
+
+103. A proton of speed v =
+enters a
+region of uniform magnetic field of B = 0.5 T at
+an angle of
+to the magnetic field. In the
+region of magnetic field proton describes a
+helical path with radius R and pitch p (distance
+between loops). Find R and p.
+
+104. A particle’s path is bent when it passes through a
+region of non-zero magnetic field although its
+speed remains unchanged. This is very useful for
+“beam steering” in particle accelerators.
+Consider a proton of speed
+entering
+a region of uniform magnetic field 0.2 T over a
+5-cm-wide region. Magnetic field is
+perpendicular to the velocity of the particle. By
+how much angle will the path of the proton be
+bent? (Hint: The particle comes out tangent to a
+circle.)
+
+500
+
+11 • Chapter Review
+
+105. In a region a non-uniform magnetic field exists
+such that
+where
+a is a constant. At some time t, a wire of length L
+is carrying a current I is located along the x-axis
+from origin to x = L. Find the magnetic force on
+the wire at this instant in time.
+106. A copper rod of mass m and length L is hung from
+the ceiling using two springs of spring constant k. A
+uniform magnetic field of magnitude
+pointing
+perpendicular to the rod and spring (coming into the
+page in the figure) exists in a region of space
+covering a length w of the copper rod. The ends of
+the rod are then connected by flexible copper wire
+across the terminals of a battery of voltage V.
+Determine the change in the length of the springs
+when a current I runs through the copper rod in the
+direction shown in figure. (Ignore any force by the
+flexible wire.)
+
+108. A wire is made into a circular shape of radius R and
+pivoted along a central support. The two ends of the
+wire are touching a brush that is connected to a dc
+power source. The structure is between the poles of
+a magnet such that we can assume there is a
+uniform magnetic field on the wire. In terms of a
+coordinate system with origin at the center of the
+ring, magnetic field is
+and
+the ring rotates about the z-axis. Find the torque on
+the ring when it is not in the xz-plane.
+
+109. A long-rigid wire lies along the x-axis and carries
+a current of 2.5 A in the positive x-direction.
+Around the wire is the magnetic field
+
+107. The accompanied figure shows an arrangement
+for measuring mass of ions by an instrument
+called the mass spectrometer. An ion of mass m
+and charge +q is produced essentially at rest in
+source S, a chamber in which a gas discharge is
+taking place. The ion is accelerated by a
+potential difference
+and allowed to enter a
+region of constant magnetic field
+In the
+uniform magnetic field region, the ion moves in a
+semicircular path striking a photographic plate
+at a distance x from the entry point. Derive a
+formula for mass m in terms of
+q,
+and
+x.
+
+Access for free at openstax.org
+
+with x in meters and B in
+millitesla. Calculate the magnetic force on the
+segment of wire between x = 2.0 m and x = 4.0
+m.
+110. A circular loop of wire of area 10 cm2 carries a
+current of 25 A. At a particular instant, the loop
+lies in the xy-plane and is subjected to a
+magnetic field
+As
+viewed from above the xy-plane, the current is
+circulating clockwise. (a) What is the magnetic
+dipole moment of the current loop? (b) At this
+instant, what is the magnetic torque on the loop?
+
+CHAPTER 12
+
+Sources of Magnetic Fields
+
+FIGURE 12.1 An external hard drive attached to a computer works by magnetically encoding information that can be stored or retrieved
+quickly. A key idea in the development of digital devices is the ability to produce and use magnetic fields in this way. (credit: modification
+of work by “Miss Karen”/Flickr)
+
+CHAPTER OUTLINE
+12.1 The Biot-Savart Law
+12.2 Magnetic Field Due to a Thin Straight Wire
+12.3 Magnetic Force between Two Parallel Currents
+12.4 Magnetic Field of a Current Loop
+12.5 Ampère’s Law
+12.6 Solenoids and Toroids
+12.7 Magnetism in Matter
+INTRODUCTION In the preceding chapter, we saw that a moving charged particle produces a magnetic field. This
+connection between electricity and magnetism is exploited in electromagnetic devices, such as a computer hard
+drive. In fact, it is the underlying principle behind most of the technology in modern society, including telephones,
+television, computers, and the internet.
+In this chapter, we examine how magnetic fields are created by arbitrary distributions of electric current, using the
+Biot-Savart law. Then we look at how current-carrying wires create magnetic fields and deduce the forces that arise
+between two current-carrying wires due to these magnetic fields. We also study the torques produced by the
+magnetic fields of current loops. We then generalize these results to an important law of electromagnetism, called
+Ampère’s law.
+We examine some devices that produce magnetic fields from currents in geometries based on loops, known as
+solenoids and toroids. Finally, we look at how materials behave in magnetic fields and categorize materials based on
+their responses to magnetic fields.
+
+502
+
+12 • Sources of Magnetic Fields
+
+12.1 The Biot-Savart Law
+LEARNING OBJECTIVES
+By the end of this section, you will be able to:
+• Explain how to derive a magnetic field from an arbitrary current in a line segment
+• Calculate magnetic field from the Biot-Savart law in specific geometries, such as a current in a line and a
+current in a circular arc
+We have seen that mass produces a gravitational field and also interacts with that field. Charge produces an electric
+field and also interacts with that field. Since moving charge (that is, current) interacts with a magnetic field, we
+might expect that it also creates that field—and it does.
+The equation used to calculate the magnetic field produced by a current is known as the Biot-Savart law. It is an
+empirical law named in honor of two scientists who investigated the interaction between a straight, current-carrying
+wire and a permanent magnet. This law enables us to calculate the magnitude and direction of the magnetic field
+produced by a current in a wire. The Biot-Savart law states that at any point P (Figure 12.2), the magnetic field
+due to an element
+
+of a current-carrying wire is given by
+12.1
+
+FIGURE 12.2 A current element
+
+The constant
+
+produces a magnetic field at point P given by the Biot-Savart law.
+
+is known as the permeability of free space and is exactly
+12.2
+
+in the SI system. The infinitesimal wire segment
+
+is in the same direction as the current I (assumed positive), r is
+
+the distance from
+
+to P and
+
+The direction of
+
+is determined by applying the right-hand rule to the vector product
+
+is a unit vector that points from
+
+to P, as shown in the figure.
+The magnitude of
+
+is
+12.3
+
+where
+
+is the angle between
+
+and
+
+Notice that if
+
+then
+
+The field produced by a current element
+
+has no component parallel to
+The magnetic field due to a finite length of current-carrying wire is found by integrating Equation 12.3 along the
+wire, giving us the usual form of the Biot-Savart law.
+
+Access for free at openstax.org
+
+12.1 • The Biot-Savart Law
+
+BIOT-SAVART LAW
+The magnetic field
+
+due to a current-carrying wire is found by
+12.4
+
+Since this is a vector integral, contributions from different current elements may not point in the same direction.
+Consequently, the integral is often difficult to evaluate, even for fairly simple geometries. The following strategy may
+be helpful.
+
+PROBLEM-SOLVING STRATEGY
+Solving Biot-Savart Problems
+To solve Biot-Savart law problems, the following steps are helpful:
+1. Identify that the Biot-Savart law is the chosen method to solve the given problem. If there is symmetry in the
+problem comparing and
+discussed in Ampère’s Law.
+
+Ampère’s law may be the preferred method to solve the question, which will be
+
+2. Draw the current element length
+and the unit vector noting that
+points in the direction of the current
+and points from the current element toward the point where the field is desired.
+3. Calculate the cross product
+The resultant vector gives the direction of the magnetic field according to
+the Biot-Savart law.
+4. Use Equation 12.4 and substitute all given quantities into the expression to solve for the magnetic field. Note
+all variables that remain constant over the entire length of the wire may be factored out of the integration.
+5. Use the right-hand rule to verify the direction of the magnetic field produced from the current or to write down
+the direction of the magnetic field if only the magnitude was solved for in the previous part.
+
+EXAMPLE 12.1
+Calculating Magnetic Fields of Short Current Segments
+A short wire of length 1.0 cm carries a current of 2.0 A in the vertical direction (Figure 12.3). The rest of the wire is
+shielded so it does not add to the magnetic field produced by the wire. Calculate the magnetic field at point P, which
+is 1 meter from the wire in the x-direction.
+
+FIGURE 12.3 A small line segment carries a current I in the vertical direction. What is the magnetic field at a distance x from the segment?
+
+Strategy
+We can determine the magnetic field at point P using the Biot-Savart law. Since the current segment is much smaller
+
+503
+
+504
+
+12 • Sources of Magnetic Fields
+
+than the distance x, we can drop the integral from the expression. The integration is converted back into a
+summation, but only for small dl, which we now write as
+Another way to think about it is that each of the radius
+values is nearly the same, no matter where the current element is on the line segment, if
+is small compared to x.
+The angle is calculated using a tangent function. Using the numbers given, we can calculate the magnetic field at
+P.
+Solution
+The angle between
+
+and
+
+is calculated from trigonometry, knowing the distances l and x from the problem:
+
+The magnetic field at point P is calculated by the Biot-Savart law:
+
+From the right-hand rule and the Biot-Savart law, the field is directed into the page.
+Significance
+This approximation is only good if the length of the line segment is very small compared to the distance from the
+current element to the point. If not, the integral form of the Biot-Savart law must be used over the entire line
+segment to calculate the magnetic field.
+
+CHECK YOUR UNDERSTANDING 12.1
+Using Example 12.1, at what distance would P have to be to measure a magnetic field half of the given answer?
+
+EXAMPLE 12.2
+Calculating Magnetic Field of a Circular Arc of Wire
+A wire carries a current I in a circular arc with radius R swept through an arbitrary angle
+the magnetic field at the center of this arc at point P.
+
+FIGURE 12.4 A wire segment carrying a current I. The path
+
+and radial direction
+
+(Figure 12.4). Calculate
+
+are indicated.
+
+Strategy
+We can determine the magnetic field at point P using the Biot-Savart law. The radial and path length directions are
+always at a right angle, so the cross product turns into multiplication. We also know that the distance along the path
+dl is related to the radius times the angle (in radians). Then we can pull all constants out of the integration and
+solve for the magnetic field.
+Solution
+The Biot-Savart law starts with the following equation:
+
+Access for free at openstax.org
+
+12.2 • Magnetic Field Due to a Thin Straight Wire
+
+As we integrate along the arc, all the contributions to the magnetic field are in the same direction (out of the page),
+so we can work with the magnitude of the field. The cross product turns into multiplication because the path dl and
+the radial direction are perpendicular. We can also substitute the arc length formula,
+:
+
+The current and radius can be pulled out of the integral because they are the same regardless of where we are on
+the path. This leaves only the integral over the angle,
+
+The angle varies on the wire from 0 to ; hence, the result is
+
+Significance
+The direction of the magnetic field at point P is determined by the right-hand rule, as shown in the previous chapter.
+If there are other wires in the diagram along with the arc, and you are asked to find the net magnetic field, find each
+contribution from a wire or arc and add the results by superposition of vectors. Make sure to pay attention to the
+direction of each contribution. Also note that in a symmetric situation, like a straight or circular wire, contributions
+from opposite sides of point P cancel each other.
+
+CHECK YOUR UNDERSTANDING 12.2
+The wire loop forms a full circle of radius R and current I. What is the magnitude of the magnetic field at the center?
+
+12.2 Magnetic Field Due to a Thin Straight Wire
+LEARNING OBJECTIVES
+By the end of this section, you will be able to:
+• Explain how the Biot-Savart law is used to determine the magnetic field due to a thin, straight wire.
+• Determine the dependence of the magnetic field from a thin, straight wire based on the distance from it
+and the current flowing in the wire.
+• Sketch the magnetic field created from a thin, straight wire by using the second right-hand rule.
+How much current is needed to produce a significant magnetic field, perhaps as strong as Earth’s field? Surveyors
+will tell you that overhead electric power lines create magnetic fields that interfere with their compass readings.
+Indeed, when Oersted discovered in 1820 that a current in a wire affected a compass needle, he was not dealing
+with extremely large currents. How does the shape of wires carrying current affect the shape of the magnetic field
+created? We noted in Magnetic Forces and Fields that a current loop created a magnetic field similar to that of a bar
+magnet, but what about a straight wire? We can use the Biot-Savart law to answer all of these questions, including
+determining the magnetic field of a long straight wire.
+Figure 12.5 shows a section of an infinitely long, straight wire that carries a current I. What is the magnetic field at a
+point P, located a distance R from the wire?
+
+505
+
+506
+
+12 • Sources of Magnetic Fields
+
+FIGURE 12.5 A section of a thin, straight current-carrying wire. The independent variable
+
+has the limits
+
+and
+
+Let’s begin by considering the magnetic field due to the current element
+located at the position x. Using the
+right-hand rule 1 from the previous chapter,
+points out of the page for any element along the wire. At point
+P, therefore, the magnetic fields due to all current elements have the same direction. This means that we can
+calculate the net field there by evaluating the scalar sum of the contributions of the elements. With
+we have from the Biot-Savart law
+12.5
+
+The wire is symmetrical about point O, so we can set the limits of the integration from zero to infinity and double the
+answer, rather than integrate from negative infinity to positive infinity. Based on the picture and geometry, we can
+write expressions for r and
+in terms of x and R, namely:
+
+Substituting these expressions into Equation 12.5, the magnetic field integration becomes
+
+∞
+
+12.6
+
+Evaluating the integral yields
+
+∞
+
+12.7
+
+Substituting the limits gives us the solution
+12.8
+
+The magnetic field lines of the infinite wire are circular and centered at the wire (Figure 12.6), and they are identical
+in every plane perpendicular to the wire. Since the field decreases with distance from the wire, the spacing of the
+field lines must increase correspondingly with distance. The direction of this magnetic field may be found with a
+second form of the right-hand rule (illustrated in Figure 12.6). If you hold the wire with your right hand so that your
+thumb points along the current, then your fingers wrap around the wire in the same sense as
+
+Access for free at openstax.org
+
+12.2 • Magnetic Field Due to a Thin Straight Wire
+
+FIGURE 12.6 Some magnetic field lines of an infinite wire. The direction of
+
+can be found with a form of the right-hand rule.
+
+The direction of the field lines can be observed experimentally by placing several small compass needles on a circle
+near the wire, as illustrated in Figure 12.7. When there is no current in the wire, the needles align with Earth’s
+magnetic field. However, when a large current is sent through the wire, the compass needles all point tangent to the
+circle. Iron filings sprinkled on a horizontal surface also delineate the field lines, as shown in Figure 12.7.
+
+FIGURE 12.7 The shape of the magnetic field lines of a long wire can be seen using (a) small compass needles and (b) iron filings.
+
+EXAMPLE 12.3
+Calculating Magnetic Field Due to Three Wires
+Three wires sit at the corners of a square, all carrying currents of 2 amps into the page as shown in Figure 12.8.
+Calculate the magnitude of the magnetic field at the other corner of the square, point P, if the length of each side of
+the square is 1 cm.
+
+FIGURE 12.8 Three wires have current flowing into the page. The magnetic field is determined at the fourth corner of the square.
+
+Strategy
+The magnetic field due to each wire at the desired point is calculated. The diagonal distance is calculated using the
+Pythagorean theorem. Next, the direction of each magnetic field’s contribution is determined by drawing a circle
+centered at the point of the wire and out toward the desired point. The direction of the magnetic field contribution
+
+507
+
+508
+
+12 • Sources of Magnetic Fields
+
+from that wire is tangential to the curve. Lastly, working with these vectors, the resultant is calculated.
+Solution
+Wires 1 and 3 both have the same magnitude of magnetic field contribution at point P:
+
+Wire 2 has a longer distance and a magnetic field contribution at point P of:
+
+The vectors for each of these magnetic field contributions are shown.
+
+The magnetic field in the x-direction has contributions from wire 3 and the x-component of wire 2:
+
+The y-component is similarly the contributions from wire 1 and the y-component of wire 2:
+
+Therefore, the net magnetic field is the resultant of these two components:
+
+Significance
+The geometry in this problem results in the magnetic field contributions in the x- and y-directions having the same
+magnitude. This is not necessarily the case if the currents were different values or if the wires were located in
+different positions. Regardless of the numerical results, working on the components of the vectors will yield the
+resulting magnetic field at the point in need.
+
+CHECK YOUR UNDERSTANDING 12.3
+Using Example 12.3, keeping the currents the same in wires 1 and 3, what should the current be in wire 2 to
+counteract the magnetic fields from wires 1 and 3 so that there is no net magnetic field at point P?
+
+Access for free at openstax.org
+
+12.3 • Magnetic Force between Two Parallel Currents
+
+12.3 Magnetic Force between Two Parallel Currents
+LEARNING OBJECTIVES
+By the end of this section, you will be able to:
+• Explain how parallel wires carrying currents can attract or repel each other
+• Define the ampere and describe how it is related to current-carrying wires
+• Calculate the force of attraction or repulsion between two current-carrying wires
+You might expect that two current-carrying wires generate significant forces between them, since ordinary currents
+produce magnetic fields and these fields exert significant forces on ordinary currents. But you might not expect that
+the force between wires is used to define the ampere. It might also surprise you to learn that this force has
+something to do with why large circuit breakers burn up when they attempt to interrupt large currents.
+The force between two long, straight, and parallel conductors separated by a distance r can be found by applying
+what we have developed in the preceding sections. Figure 12.9 shows the wires, their currents, the field created by
+one wire, and the consequent force the other wire experiences from the created field. Let us consider the field
+produced by wire 1 and the force it exerts on wire 2 (call the force
+). The field due to
+at a distance r is
+12.9
+
+FIGURE 12.9 (a) The magnetic field produced by a long straight conductor is perpendicular to a parallel conductor, as indicated by righthand rule (RHR)-2. (b) A view from above of the two wires shown in (a), with one magnetic field line shown for wire 1. RHR-1 shows that the
+force between the parallel conductors is attractive when the currents are in the same direction. A similar analysis shows that the force is
+repulsive between currents in opposite directions.
+
+This field is uniform from the wire 1 and perpendicular to it, so the force
+by
+with
+
+it exerts on a length l of wire 2 is given
+12.10
+
+The forces on the wires are equal in magnitude, so we just write F for the magnitude of
+(Note that
+Since the wires are very long, it is convenient to think in terms of F/l, the force per unit length. Substituting the
+expression for
+into Equation 12.10 and rearranging terms gives
+
+)
+
+12.11
+
+The ratio F/l is the force per unit length between two parallel currents
+and
+separated by a distance r. The force
+is attractive if the currents are in the same direction and repulsive if they are in opposite directions.
+This force is responsible for the pinch effect in electric arcs and other plasmas. The force exists whether the
+currents are in wires or not. It is only apparent if the overall charge density is zero; otherwise, the Coulomb repulsion
+overwhelms the magnetic attraction. In an electric arc, where charges are moving parallel to one another, an
+attractive force squeezes currents into a smaller tube. In large circuit breakers, such as those used in neighborhood
+power distribution systems, the pinch effect can concentrate an arc between plates of a switch trying to break a
+
+509
+
+510
+
+12 • Sources of Magnetic Fields
+
+large current, burn holes, and even ignite the equipment. Another example of the pinch effect is found in the solar
+plasma, where jets of ionized material, such as solar flares, are shaped by magnetic forces.
+The definition of the ampere is based on the force between current-carrying wires. Note that for long, parallel wires
+separated by 1 meter with each carrying 1 ampere, the force per meter is
+12.12
+Since
+
+is exactly
+by definition, and because
+This is the basis of the definition of the ampere.
+
+the force per meter is exactly
+
+Infinite-length wires are impractical, so in practice, a current balance is constructed with coils of wire separated by
+a few centimeters. Force is measured to determine current. This also provides us with a method for measuring the
+coulomb. We measure the charge that flows for a current of one ampere in one second. That is,
+For
+both the ampere and the coulomb, the method of measuring force between conductors is the most accurate in
+practice.
+
+EXAMPLE 12.4
+Calculating Forces on Wires
+Two wires, both carrying current out of the page, have a current of magnitude 5.0 mA. The first wire is located at (0.0
+cm, 3.0 cm) while the other wire is located at (4.0 cm, 0.0 cm) as shown in Figure 12.10. What is the magnetic force
+per unit length of the first wire on the second and the second wire on the first?
+
+FIGURE 12.10 Two current-carrying wires at given locations with currents out of the page.
+
+Strategy
+Each wire produces a magnetic field felt by the other wire. The distance along the hypotenuse of the triangle
+between the wires is the radial distance used in the calculation to determine the force per unit length. Since both
+wires have currents flowing in the same direction, the direction of the force is toward each other.
+Solution
+The distance between the wires results from finding the hypotenuse of a triangle:
+
+The force per unit length can then be calculated using the known currents in the wires:
+
+The force from the first wire pulls the second wire. The angle between the radius and the x-axis is
+
+The unit vector for this is calculated by
+
+Therefore, the force per unit length from wire one on wire 2 is
+
+Access for free at openstax.org
+
+12.4 • Magnetic Field of a Current Loop
+
+The force per unit length from wire 2 on wire 1 is the negative of the previous answer:
+
+Significance
+These wires produced magnetic fields of equal magnitude but opposite directions at each other’s locations.
+Whether the fields are identical or not, the forces that the wires exert on each other are always equal in magnitude
+and opposite in direction (Newton’s third law).
+
+CHECK YOUR UNDERSTANDING 12.4
+Two wires, both carrying current out of the page, have a current of magnitude 2.0 mA and 3.0 mA, respectively. The
+first wire is located at (0.0 cm, 5.0 cm) while the other wire is located at (12.0 cm, 0.0 cm). What is the magnitude of
+the magnetic force per unit length of the first wire on the second and the second wire on the first?
+
+12.4 Magnetic Field of a Current Loop
+LEARNING OBJECTIVES
+By the end of this section, you will be able to:
+• Explain how the Biot-Savart law is used to determine the magnetic field due to a current in a loop of wire
+at a point along a line perpendicular to the plane of the loop.
+• Determine the magnetic field of an arc of current.
+The circular loop of Figure 12.11 has a radius R, carries a current I, and lies in the xz-plane. What is the magnetic
+field due to the current at an arbitrary point P along the axis of the loop?
+
+511
+
+512
+
+12 • Sources of Magnetic Fields
+
+FIGURE 12.11 Determining the magnetic field at point P along the axis of a current-carrying loop of wire.
+
+We can use the Biot-Savart law to find the magnetic field due to a current. We first consider arbitrary segments on
+opposite sides of the loop to qualitatively show by the vector results that the net magnetic field direction is along the
+central axis from the loop. From there, we can use the Biot-Savart law to derive the expression for magnetic field.
+Let P be a distance y from the center of the loop. From the right-hand rule, the magnetic field
+the current element
+is directed at an angle above the y-axis as shown. Since
+and is in the yz-plane, the two vectors are perpendicular, so we have
+
+at P, produced by
+
+is parallel along the x-axis
+12.13
+
+where we have used
+Now consider the magnetic field
+The magnitude of
+
+due to the current element
+
+which is directly opposite
+
+is also given by Equation 12.13, but it is directed at an angle
+
+on the loop.
+
+below the y-axis. The
+
+components of
+and
+perpendicular to the y-axis therefore cancel, and in calculating the net magnetic field,
+only the components along the y-axis need to be considered. The components perpendicular to the axis of the loop
+sum to zero in pairs. Hence at point P:
+12.14
+
+For all elements
+
+on the wire, y, R, and
+
+are constant and are related by
+
+Now from Equation 12.14, the magnetic field at P is
+
+Access for free at openstax.org
+
+12.4 • Magnetic Field of a Current Loop
+
+12.15
+
+where we have used
+
+As discussed in the previous chapter, the closed current loop is a magnetic
+
+dipole of moment
+
+For this example,
+
+and
+
+so the magnetic field at P can also be written as
+12.16
+
+By setting
+
+in Equation 12.15, we obtain the magnetic field at the center of the loop:
+12.17
+
+for a flat coil of N loops per length. It can also be expressed as
+
+This equation becomes
+
+12.18
+If we consider
+a dipole:
+
+in Equation 12.16, the expression reduces to an expression known as the magnetic field from
+12.19
+
+The calculation of the magnetic field due to the circular current loop at points off-axis requires rather complex
+mathematics, so we’ll just look at the results. The magnetic field lines are shaped as shown in Figure 12.12. Notice
+that one field line follows the axis of the loop. This is the field line we just found. Also, very close to the wire, the
+field lines are almost circular, like the lines of a long straight wire.
+
+FIGURE 12.12 Sketch of the magnetic field lines of a circular current loop.
+
+EXAMPLE 12.5
+Magnetic Field between Two Loops
+Two loops of wire carry the same current of 10 mA, but flow in opposite directions as seen in Figure 12.13. One loop
+is measured to have a radius of
+while the other loop has a radius of
+The distance from the
+first loop to the point where the magnetic field is measured is 0.25 m, and the distance from that point to the
+second loop is 0.75 m. What is the magnitude of the net magnetic field at point P?
+
+513
+
+514
+
+12 • Sources of Magnetic Fields
+
+FIGURE 12.13 Two loops of different radii have the same current but flowing in opposite directions. The magnetic field at point P is
+measured to be zero.
+
+Strategy
+The magnetic field at point P has been determined in Equation 12.15. Since the currents are flowing in opposite
+directions, the net magnetic field is the difference between the two fields generated by the coils. Using the given
+quantities in the problem, the net magnetic field is then calculated.
+Solution
+Solving for the net magnetic field using Equation 12.15 and the given quantities in the problem yields
+
+Significance
+Helmholtz coils typically have loops with equal radii with current flowing in the same direction to have a strong
+uniform field at the midpoint between the loops. A similar application of the magnetic field distribution created by
+Helmholtz coils is found in a magnetic bottle that can temporarily trap charged particles. See Magnetic Forces and
+Fields for a discussion on this.
+
+CHECK YOUR UNDERSTANDING 12.5
+Using Example 12.5, at what distance would you have to move the first coil to have zero measurable magnetic field
+at point P?
+
+12.5 Ampère’s Law
+LEARNING OBJECTIVES
+By the end of this section, you will be able to:
+• Explain how Ampère’s law relates the magnetic field produced by a current to the value of the current
+• Calculate the magnetic field from a long straight wire, either thin or thick, by Ampère’s law
+
+Access for free at openstax.org
+
+12.5 • Ampère’s Law
+
+A fundamental property of a static magnetic field is that, unlike an electrostatic field, it is not conservative. A
+conservative vector field is one whose line integral between two end points is the same regardless of the path
+chosen. Magnetic fields do not have such a property. Instead, there is a relationship between the magnetic field and
+its source, electric current. It is expressed in terms of the line integral of and is known as Ampère’s law. This law
+can also be derived directly from the Biot-Savart law. We now consider that derivation for the special case of an
+infinite, straight wire.
+Figure 12.14 shows an arbitrary plane perpendicular to an infinite, straight wire whose current I is directed out of
+the page. The magnetic field lines are circles directed counterclockwise and centered on the wire. To begin, let’s
+consider
+
+over the closed paths M and N. Notice that one path (M) encloses the wire, whereas the other (N)
+
+does not. Since the field lines are circular,
+through
+
+is the product of B and the projection of dl onto the circle passing
+
+If the radius of this particular circle is r, the projection is
+
+and
+
+FIGURE 12.14 The current I of a long, straight wire is directed out of the page. The integral
+
+equals
+
+and 0, respectively, for paths M
+
+and N.
+
+With
+
+given by Equation 12.9,
+12.20
+
+For path M, which circulates around the wire,
+
+and
+12.21
+
+Path N, on the other hand, circulates through both positive (counterclockwise) and negative (clockwise)
+Figure 12.14), and since it is closed,
+
+(see
+
+Thus for path N,
+12.22
+
+515
+
+516
+
+12 • Sources of Magnetic Fields
+
+The extension of this result to the general case is Ampère’s law.
+
+AMPÈRE’S LAW
+Over an arbitrary closed path,
+12.23
+where I is the total current passing through any open surface S whose perimeter is the path of integration. Only
+currents inside the path of integration need be considered.
+To determine whether a specific current I is positive or negative, curl the fingers of your right hand in the direction of
+the path of integration, as shown in Figure 12.14. If I passes through S in the same direction as your extended
+thumb, I is positive; if I passes through S in the direction opposite to your extended thumb, it is negative.
+
+PROBLEM-SOLVING STRATEGY
+Ampère’s Law
+To calculate the magnetic field created from current in wire(s), use the following steps:
+1. Identify the symmetry of the current in the wire(s). If there is no symmetry, use the Biot-Savart law to
+determine the magnetic field.
+2. Determine the direction of the magnetic field created by the wire(s) by right-hand rule 2.
+3. Choose a path loop where the magnetic field is either constant or zero.
+4. Calculate the current inside the loop.
+5. Calculate the line integral
+6. Equate
+
+with
+
+around the closed loop.
+and solve for
+
+EXAMPLE 12.6
+Using Ampère’s Law to Calculate the Magnetic Field Due to a Wire
+Use Ampère’s law to calculate the magnetic field due to a steady current I in an infinitely long, thin, straight wire as
+shown in Figure 12.15.
+
+Access for free at openstax.org
+
+12.5 • Ampère’s Law
+
+FIGURE 12.15 The possible components of the magnetic field B due to a current I, which is directed out of the page. The field has no radial
+component, so there is no radial contribution to the integral.
+
+Strategy
+Consider an arbitrary plane perpendicular to the wire, with the current directed out of the page. The possible
+magnetic field components in this plane,
+and
+are shown at arbitrary points on a circle of radius r centered on
+the wire. Since the field is cylindrically symmetric, neither
+nor
+varies with the position on this circle. Also from
+symmetry, the radial lines, if they exist, must be directed either all inward or all outward from the wire. This would
+mean, however, that there must be a net magnetic flux across an arbitrary cylinder concentric with the wire.
+However, because magnetic field lines are continuous, forming closed loops without a beginning or end (see the
+discussion in Magnetic Fields and Lines) the net magnetic flux through any closed test surface must be zero. We can
+therefore conclude that the radial component of the magnetic field must be zero. Therefore, we can apply Ampère’s
+law to the circular path as shown.
+Solution
+Over this path
+
+is constant and parallel to
+
+so
+
+Thus Ampère’s law reduces to
+
+Finally, since
+
+is the only component of
+
+we can drop the subscript and write
+
+This agrees with the Biot-Savart calculation above.
+Significance
+Ampère’s law works well if you have a path to integrate over which
+has results that are easy to simplify. For
+the infinite wire, this works easily with a path that is circular around the wire so that the magnetic field factors out of
+the integration. If the path dependence looks complicated, you can always go back to the Biot-Savart law and use
+that to find the magnetic field.
+
+517
+
+518
+
+12 • Sources of Magnetic Fields
+
+EXAMPLE 12.7
+Calculating the Magnetic Field of a Thick Wire with Ampère’s Law
+The radius of the long, straight wire of Figure 12.16 is a, and the wire carries a current
+that is distributed
+uniformly over its cross-section. Find the magnetic field both inside and outside the wire.
+
+FIGURE 12.16 (a) A model of a current-carrying wire of radius a and current
+and the Ampère’s loop of radius r.
+
+(b) A cross-section of the same wire showing the radius a
+
+Strategy
+This problem has the same geometry as Example 12.6, but the enclosed current changes as we move the
+integration path from outside the wire to inside the wire, where it doesn’t capture the entire current enclosed (see
+Figure 12.16).
+Solution
+For any circular path of radius r that is centered on the wire,
+
+From Ampère’s law, this equals the total current passing through any surface bounded by the path of integration.
+Consider first a circular path that is inside the wire
+such as that shown in part (a) of Figure 12.16. We need
+the current I passing through the area enclosed by the path. It’s equal to the current density J times the area
+enclosed. Since the current is uniform, the current density inside the path equals the current density in the whole
+wire, which is
+Therefore the current I passing through the area enclosed by the path is
+
+We can consider this ratio because the current density J is constant over the area of the wire. Therefore, the current
+density of a part of the wire is equal to the current density in the whole area. Using Ampère’s law, we obtain
+
+and the magnetic field inside the wire is
+
+Outside the wire, the situation is identical to that of the infinite thin wire of the previous example; that is,
+
+The variation of B with r is shown in Figure 12.17.
+
+Access for free at openstax.org
+
+12.5 • Ampère’s Law
+
+FIGURE 12.17 Variation of the magnetic field produced by a current
+
+in a long, straight wire of radius a.
+
+Significance
+The results show that as the radial distance increases inside the thick wire, the magnetic field increases from zero to
+a familiar value of the magnetic field of a thin wire. Outside the wire, the field drops off regardless of whether it was
+a thick or thin wire.
+This result is similar to how Gauss’s law for electrical charges behaves inside a uniform charge distribution, except
+that Gauss’s law for electrical charges has a uniform volume distribution of charge, whereas Ampère’s law here has
+a uniform area of current distribution. Also, the drop-off outside the thick wire is similar to how an electric field
+drops off outside of a linear charge distribution, since the two cases have the same geometry and neither case
+depends on the configuration of charges or currents once the loop is outside the distribution.
+
+EXAMPLE 12.8
+Using Ampère’s Law with Arbitrary Paths
+Use Ampère’s law to evaluate
+
+for the current configurations and paths in Figure 12.18.
+
+FIGURE 12.18 Current configurations and paths for Example 12.8.
+
+519
+
+520
+
+12 • Sources of Magnetic Fields
+
+Strategy
+Ampère’s law states that
+
+where I is the total current passing through the enclosed loop. The
+
+quickest way to evaluate the integral is to calculate
+by finding the net current through the loop. Positive
+currents flow with your right-hand thumb if your fingers wrap around in the direction of the loop. This will tell us the
+sign of the answer.
+Solution
+(a) The current going downward through the loop equals the current going out of the loop, so the net current is zero.
+Thus,
+(b) The only current to consider in this problem is 2A because it is the only current inside the loop. The right-hand
+rule shows us the current going downward through the loop is in the positive direction. Therefore, the answer is
+
+(c) The right-hand rule shows us the current going downward through the loop is in the positive direction. There are
+of current going downward and –3 A going upward. Therefore, the total current is 9 A and
+
+Significance
+If the currents all wrapped around so that the same current went into the loop and out of the loop, the net current
+would be zero and no magnetic field would be present. This is why wires are very close to each other in an electrical
+cord. The currents flowing toward a device and away from a device in a wire equal zero total current flow through an
+Ampère loop around these wires. Therefore, no stray magnetic fields can be present from cords carrying current.
+
+CHECK YOUR UNDERSTANDING 12.6
+Consider using Ampère’s law to calculate the magnetic fields of a finite straight wire and of a circular loop of wire.
+Why is it not useful for these calculations?
+
+12.6 Solenoids and Toroids
+LEARNING OBJECTIVES
+By the end of this section, you will be able to:
+• Establish a relationship for how the magnetic field of a solenoid varies with distance and current by using
+both the Biot-Savart law and Ampère’s law
+• Establish a relationship for how the magnetic field of a toroid varies with distance and current by using
+Ampère’s law
+Two of the most common and useful electromagnetic devices are called solenoids and toroids. In one form or
+another, they are part of numerous instruments, both large and small. In this section, we examine the magnetic field
+typical of these devices.
+
+Solenoids
+A long wire wound in the form of a helical coil is known as a solenoid. Solenoids are commonly used in experimental
+research requiring magnetic fields. A solenoid is generally easy to wind, and near its center, its magnetic field is
+quite uniform and directly proportional to the current in the wire.
+Figure 12.19 shows a solenoid consisting of N turns of wire tightly wound over a length L. A current I is flowing along
+the wire of the solenoid. The number of turns per unit length is N/L; therefore, the number of turns in an infinitesimal
+length dy are (N/L)dy turns. This produces a current
+
+Access for free at openstax.org
+
+12.6 • Solenoids and Toroids
+
+12.24
+We first calculate the magnetic field at the point P of Figure 12.19. This point is on the central axis of the solenoid.
+We are basically cutting the solenoid into thin slices that are dy thick and treating each as a current loop. Thus, dI is
+the current through each slice. The magnetic field
+Equation 12.15 and Equation 12.24:
+
+due to the current dI in dy can be found with the help of
+12.25
+
+where we used Equation 12.24 to replace dI. The resultant field at P is found by integrating
+along the entire
+length of the solenoid. It’s easiest to evaluate this integral by changing the independent variable from y to From
+inspection of Figure 12.19, we have:
+12.26
+
+FIGURE 12.19 (a) A solenoid is a long wire wound in the shape of a helix. (b) The magnetic field at the point P on the axis of the solenoid is
+the net field due to all of the current loops.
+
+Taking the differential of both sides of this equation, we obtain
+
+521
+
+522
+
+12 • Sources of Magnetic Fields
+
+When this is substituted into the equation for
+
+we have
+12.27
+
+which is the magnetic field along the central axis of a finite solenoid.
+Of special interest is the infinitely long solenoid, for which
+solenoid is one whose length is much larger than its radius
+
+∞ From a practical point of view, the infinite
+In this case,
+
+and
+
+Then from
+
+Equation 12.27, the magnetic field along the central axis of an infinite solenoid is
+
+or
+12.28
+where n is the number of turns per unit length. You can find the direction of with a right-hand rule: Curl your
+fingers in the direction of the current, and your thumb points along the magnetic field in the interior of the solenoid.
+We now use these properties, along with Ampère’s law, to calculate the magnitude of the magnetic field at any
+location inside the infinite solenoid. Consider the closed path of Figure 12.20. Along segment 1,
+
+is uniform and
+
+parallel to the path as shown in Equation 12.28. Along segments 2 and 4, is perpendicular to part of the path and
+vanishes over the rest of it. Therefore, segments 2 and 4 do not contribute to the line integral in Ampère’s law. Along
+segment 3,
+because the magnetic field is zero outside the solenoid. If you consider an Ampère’s law loop
+outside of the solenoid, the current flows in opposite directions on different segments of the loop. Therefore, there
+is no enclosed current and no magnetic field according to Ampère’s law. Thus, there is no contribution to the line
+integral from segment 3. As a result, we find
+12.29
+
+FIGURE 12.20 The path of integration used in Ampère’s law to evaluate the magnetic field of an infinite solenoid.
+
+The solenoid has n turns per unit length, so the current that passes through the surface enclosed by the path is
+Therefore, from Ampère’s law,
+
+.
+
+and
+12.30
+within the solenoid. This agrees with what we found earlier for B on the central axis of the solenoid. Here, however,
+the location of segment 1 is arbitrary, so we have found that this equation gives the magnetic field everywhere
+inside the infinite solenoid.
+
+Access for free at openstax.org
+
+12.6 • Solenoids and Toroids
+
+When a patient undergoes a magnetic resonance imaging (MRI) scan, the person lies down on a table that is moved
+into the center of a large solenoid that can generate very large magnetic fields. The solenoid is capable of these high
+fields from high currents flowing through superconducting wires. The large magnetic field is used to change the spin
+of protons in the patient’s body. The time it takes for the spins to align or relax (return to original orientation) is a
+signature of different tissues that can be analyzed to see if the structures of the tissues is normal (Figure 12.21).
+
+FIGURE 12.21 In an MRI machine, a large magnetic field is generated by the cylindrical solenoid surrounding the patient. (credit: Liz West)
+
+EXAMPLE 12.9
+Magnetic Field Inside a Solenoid
+A solenoid has 300 turns wound around a cylinder of diameter 1.20 cm and length 14.0 cm. If the current through
+the coils is 0.410 A, what is the magnitude of the magnetic field inside and near the middle of the solenoid?
+Strategy
+We are given the number of turns and the length of the solenoid so we can find the number of turns per unit length.
+Therefore, the magnetic field inside and near the middle of the solenoid is given by Equation 12.30. Outside the
+solenoid, the magnetic field is zero.
+Solution
+The number of turns per unit length is
+
+The magnetic field produced inside the solenoid is
+
+Significance
+This solution is valid only if the length of the solenoid is reasonably large compared with its diameter. This example
+is a case where this is valid.
+
+CHECK YOUR UNDERSTANDING 12.7
+What is the ratio of the magnetic field produced from using a finite formula over the infinite approximation for an
+angle of (a)
+(b)
+The solenoid has 1000 turns in 50 cm with a current of 1.0 A flowing through the coils
+
+523
+
+524
+
+12 • Sources of Magnetic Fields
+
+Toroids
+A toroid is a donut-shaped coil closely wound with one continuous wire, as illustrated in part (a) of Figure 12.22. If
+the toroid has N windings and the current in the wire is I, what is the magnetic field both inside and outside the
+toroid?
+
+FIGURE 12.22 (a) A toroid is a coil wound into a donut-shaped object. (b) A loosely wound toroid does not have cylindrical symmetry. (c) In
+a tightly wound toroid, cylindrical symmetry is a very good approximation. (d) Several paths of integration for Ampère’s law.
+
+We begin by assuming cylindrical symmetry around the axis OO’. Actually, this assumption is not precisely correct,
+for as part (b) of Figure 12.22 shows, the view of the toroidal coil varies from point to point (for example,
+and
+) on a circular path centered around OO’. However, if the toroid is tightly wound, all points on the circle
+become essentially equivalent [part (c) of Figure 12.22], and cylindrical symmetry is an accurate approximation.
+With this symmetry, the magnetic field must be tangent to and constant in magnitude along any circular path
+centered on OO’. This allows us to write for each of the paths
+and
+shown in part (d) of Figure 12.22,
+12.31
+Ampère’s law relates this integral to the net current passing through any surface bounded by the path of integration.
+For a path that is external to the toroid, either no current passes through the enclosing surface (path
+), or the
+current passing through the surface in one direction is exactly balanced by the current passing through it in the
+opposite direction
+In either case, there is no net current passing through the surface, so
+
+and
+
+12.32
+
+The turns of a toroid form a helix, rather than circular loops. As a result, there is a small field external to the coil;
+however, the derivation above holds if the coils were circular.
+For a circular path within the toroid (path
+), the current in the wire cuts the surface N times, resulting in a net
+current NI through the surface. We now find with Ampère’s law,
+
+Access for free at openstax.org
+
+12.7 • Magnetism in Matter
+
+and
+12.33
+
+The magnetic field is directed in the counterclockwise direction for the windings shown. When the current in the
+coils is reversed, the direction of the magnetic field also reverses.
+The magnetic field inside a toroid is not uniform, as it varies inversely with the distance r from the axis OO’. However,
+if the central radius R (the radius midway between the inner and outer radii of the toroid) is much larger than the
+cross-sectional diameter of the coils r, the variation is fairly small, and the magnitude of the magnetic field may be
+calculated by Equation 12.33 where
+
+12.7 Magnetism in Matter
+LEARNING OBJECTIVES
+By the end of this section, you will be able to:
+• Classify magnetic materials as paramagnetic, diamagnetic, or ferromagnetic, based on their response to
+a magnetic field
+• Sketch how magnetic dipoles align with the magnetic field in each type of substance
+• Define hysteresis and magnetic susceptibility, which determines the type of magnetic material
+Why are certain materials magnetic and others not? And why do certain substances become magnetized by a field,
+whereas others are unaffected? To answer such questions, we need an understanding of magnetism on a
+microscopic level.
+Within an atom, every electron travels in an orbit and spins on an internal axis. Both types of motion produce current
+loops and therefore magnetic dipoles. For a particular atom, the net magnetic dipole moment is the vector sum of
+the magnetic dipole moments. Values of for several types of atoms are given in Table 12.1. Notice that some
+atoms have a zero net dipole moment and that the magnitudes of the nonvanishing moments are typically
+
+Atom
+
+Magnetic Moment
+
+H
+
+9.27
+
+He
+
+0
+
+Li
+
+9.27
+
+O
+
+13.9
+
+Na
+
+9.27
+
+S
+
+13.9
+
+TABLE 12.1 Magnetic Moments of Some Atoms
+
+A handful of matter has approximately
+atoms and ions, each with its magnetic dipole moment. If no external
+magnetic field is present, the magnetic dipoles are randomly oriented—as many are pointed up as down, as many
+are pointed east as west, and so on. Consequently, the net magnetic dipole moment of the sample is zero. However,
+if the sample is placed in a magnetic field, these dipoles tend to align with the field (see Equation 12.14), and this
+alignment determines how the sample responds to the field. On the basis of this response, a material is said to be
+either paramagnetic, ferromagnetic, or diamagnetic.
+In a paramagnetic material, only a small fraction (roughly one-third) of the magnetic dipoles are aligned with the
+
+525
+
+526
+
+12 • Sources of Magnetic Fields
+
+applied field. Since each dipole produces its own magnetic field, this alignment contributes an extra magnetic field,
+which enhances the applied field. When a ferromagnetic material is placed in a magnetic field, its magnetic dipoles
+also become aligned; furthermore, they become locked together so that a permanent magnetization results, even
+when the field is turned off or reversed. This permanent magnetization happens in ferromagnetic materials but not
+paramagnetic materials. Diamagnetic materials are composed of atoms that have no net magnetic dipole moment.
+However, when a diamagnetic material is placed in a magnetic field, a magnetic dipole moment is directed opposite
+to the applied field and therefore produces a magnetic field that opposes the applied field. We now consider each
+type of material in greater detail.
+
+Paramagnetic Materials
+For simplicity, we assume our sample is a long, cylindrical piece that completely fills the interior of a long, tightly
+wound solenoid. When there is no current in the solenoid, the magnetic dipoles in the sample are randomly oriented
+and produce no net magnetic field. With a solenoid current, the magnetic field due to the solenoid exerts a torque on
+the dipoles that tends to align them with the field. In competition with the aligning torque are thermal collisions that
+tend to randomize the orientations of the dipoles. The relative importance of these two competing processes can be
+estimated by comparing the energies involved. From Equation 12.14, the energy difference between a magnetic
+dipole aligned with and against a magnetic field is
+If
+(the value of atomic
+hydrogen) and B = 1.0 T, then
+
+At a room temperature of
+
+the thermal energy per atom is
+
+which is about 220 times greater than
+Clearly, energy exchanges in thermal collisions can seriously interfere
+with the alignment of the magnetic dipoles. As a result, only a small fraction of the dipoles is aligned at any instant.
+The four sketches of Figure 12.23 furnish a simple model of this alignment process. In part (a), before the field of
+the solenoid (not shown) containing the paramagnetic sample is applied, the magnetic dipoles are randomly
+oriented and there is no net magnetic dipole moment associated with the material. With the introduction of the field,
+a partial alignment of the dipoles takes place, as depicted in part (b). The component of the net magnetic dipole
+moment that is perpendicular to the field vanishes. We may then represent the sample by part (c), which shows a
+collection of magnetic dipoles completely aligned with the field. By treating these dipoles as current loops, we can
+picture the dipole alignment as equivalent to a current around the surface of the material, as in part (d). This
+fictitious surface current produces its own magnetic field, which enhances the field of the solenoid.
+
+Access for free at openstax.org
+
+12.7 • Magnetism in Matter
+
+FIGURE 12.23 The alignment process in a paramagnetic material filling a solenoid (not shown). (a) Without an applied field, the magnetic
+dipoles are randomly oriented. (b) With a field, partial alignment occurs. (c) An equivalent representation of part (b). (d) The internal
+currents cancel, leaving an effective surface current that produces a magnetic field similar to that of a finite solenoid.
+
+We can express the total magnetic field
+
+in the material as
+12.34
+
+where
+
+is the field due to the current
+
+the sample. Now
+
+in the solenoid and
+
+is usually proportional to
+
+is the field due to the surface current
+
+around
+
+a fact we express by
+12.35
+
+where is a dimensionless quantity called the magnetic susceptibility. Values of for some paramagnetic
+materials are given in Table 12.2. Since the alignment of magnetic dipoles is so weak, is very small for
+paramagnetic materials. By combining Equation 12.34 and Equation 12.35, we obtain:
+12.36
+For a sample within an infinite solenoid, this becomes
+
+12.37
+
+This expression tells us that the insertion of a paramagnetic material into a solenoid increases the field by a factor of
+However, since is so small, the field isn’t enhanced very much.
+The quantity
+12.38
+is called the magnetic permeability of a material. In terms of
+
+Equation 12.37 can be written as
+12.39
+
+for the filled solenoid.
+
+527
+
+528
+
+12 • Sources of Magnetic Fields
+
+Paramagnetic Materials
+
+Diamagnetic Materials
+
+Aluminum
+
+Bismuth
+
+Calcium
+
+Carbon (diamond)
+
+Chromium
+
+Copper
+
+Magnesium
+
+Lead
+
+Oxygen gas (1 atm)
+
+Mercury
+
+Oxygen liquid (90 K)
+
+Hydrogen gas (1 atm)
+
+Tungsten
+
+Nitrogen gas (1 atm)
+
+Air (1 atm)
+
+Water
+
+TABLE 12.2 Magnetic Susceptibilities *Note: Unless otherwise specified, values given are for room
+temperature.
+
+Diamagnetic Materials
+A magnetic field always induces a magnetic dipole in an atom. This induced dipole points opposite to the applied
+field, so its magnetic field is also directed opposite to the applied field. In paramagnetic and ferromagnetic
+materials, the induced magnetic dipole is masked by much stronger permanent magnetic dipoles of the atoms.
+However, in diamagnetic materials, whose atoms have no permanent magnetic dipole moments, the effect of the
+induced dipole is observable.
+We can now describe the magnetic effects of diamagnetic materials with the same model developed for
+paramagnetic materials. In this case, however, the fictitious surface current flows opposite to the solenoid current,
+and the magnetic susceptibility is negative. Values of for some diamagnetic materials are also given in Table
+12.2.
+
+INTERACTIVE
+Water is a common diamagnetic material. Animals are mostly composed of water. Experiments have been
+performed on frogs (https://openstax.org/l/21frogs) and mice (https://openstax.org/l/21mice) in diverging magnetic
+fields. The water molecules are repelled from the applied magnetic field against gravity until the animal reaches an
+equilibrium. The result is that the animal is levitated by the magnetic field.
+
+Ferromagnetic Materials
+Common magnets are made of a ferromagnetic material such as iron or one of its alloys. Experiments reveal that a
+ferromagnetic material consists of tiny regions known as magnetic domains. Their volumes typically range from
+to
+and they contain about
+to
+atoms. Within a domain, the magnetic dipoles are rigidly
+aligned in the same direction by coupling among the atoms. This coupling, which is due to quantum mechanical
+effects, is so strong that even thermal agitation at room temperature cannot break it. The result is that each domain
+has a net dipole moment. Some materials have weaker coupling and are ferromagnetic only at lower temperatures.
+If the domains in a ferromagnetic sample are randomly oriented, as shown in Figure 12.24, the sample has no net
+magnetic dipole moment and is said to be unmagnetized. Suppose that we fill the volume of a solenoid with an
+unmagnetized ferromagnetic sample. When the magnetic field
+of the solenoid is turned on, the dipole moments
+of the domains rotate so that they align somewhat with the field, as depicted in Figure 12.24. In addition, the
+aligned domains tend to increase in size at the expense of unaligned ones. The net effect of these two processes is
+
+Access for free at openstax.org
+
+12.7 • Magnetism in Matter
+
+the creation of a net magnetic dipole moment for the ferromagnet that is directed along the applied magnetic field.
+This net magnetic dipole moment is much larger than that of a paramagnetic sample, and the domains, with their
+large numbers of atoms, do not become misaligned by thermal agitation. Consequently, the field due to the
+alignment of the domains is quite large.
+
+FIGURE 12.24 (a) Domains are randomly oriented in an unmagnetized ferromagnetic sample such as iron. The arrows represent the
+orientations of the magnetic dipoles within the domains. (b) In an applied magnetic field, the domains align somewhat with the field. (c)
+The domains of a single crystal of nickel. The white lines show the boundaries of the domains. These lines are produced by iron oxide
+powder sprinkled on the crystal.
+
+Besides iron, only four elements contain the magnetic domains needed to exhibit ferromagnetic behavior: cobalt,
+nickel, gadolinium, and dysprosium. Many alloys of these elements are also ferromagnetic. Ferromagnetic materials
+can be described using Equation 12.34 through Equation 12.39, the paramagnetic equations. However, the value of
+for ferromagnetic material is usually on the order of
+to
+and it also depends on the history of the magnetic
+field to which the material has been subject. A typical plot of B (the total field in the material) versus
+(the applied
+field) for an initially unmagnetized piece of iron is shown in Figure 12.25. Some sample numbers are (1) for
+and
+; (2) for
+and
+
+FIGURE 12.25 The magnetic field B in annealed iron as a function of the applied field
+
+When
+is varied over a range of positive and negative values, B is found to behave as shown in Figure 12.26. Note
+that the same
+(corresponding to the same current in the solenoid) can produce different values of B in the
+material. The magnetic field B produced in a ferromagnetic material by an applied field
+depends on the magnetic
+history of the material. This effect is called hysteresis, and the curve of Figure 12.26 is called a hysteresis loop.
+Notice that B does not disappear when
+(i.e., when the current in the solenoid is turned off). The iron stays
+magnetized, which means that it has become a permanent magnet.
+
+529
+
+530
+
+12 • Sources of Magnetic Fields
+
+FIGURE 12.26 A typical hysteresis loop for a ferromagnet. When the material is first magnetized, it follows a curve from 0 to a. When
+reversed, it takes the path shown from a to b. If
+is reversed again, the material follows the curve from b to a.
+
+is
+
+Like the paramagnetic sample of Figure 12.23, the partial alignment of the domains in a ferromagnet is equivalent to
+a current flowing around the surface. A bar magnet can therefore be pictured as a tightly wound solenoid with a
+large current circulating through its coils (the surface current). You can see in Figure 12.27 that this model fits quite
+well. The fields of the bar magnet and the finite solenoid are strikingly similar. The figure also shows how the poles
+of the bar magnet are identified. To form closed loops, the field lines outside the magnet leave the north (N) pole
+and enter the south (S) pole, whereas inside the magnet, they leave S and enter N.
+
+FIGURE 12.27 Comparison of the magnetic fields of a finite solenoid and a bar magnet.
+
+Ferromagnetic materials are found in computer hard disk drives and permanent data storage devices (Figure 12.28).
+A material used in your hard disk drives is called a spin valve, which has alternating layers of ferromagnetic (aligning
+with the external magnetic field) and antiferromagnetic (each atom is aligned opposite to the next) metals. It was
+observed that a significant change in resistance was discovered based on whether an applied magnetic field was on
+the spin valve or not. This large change in resistance creates a quick and consistent way for recording or reading
+information by an applied current.
+
+Access for free at openstax.org
+
+12.7 • Magnetism in Matter
+
+FIGURE 12.28 The inside of a hard disk drive. The silver disk contains the information, whereas the thin stylus on top of the disk reads and
+writes information to the disk.
+
+EXAMPLE 12.10
+Iron Core in a Coil
+A long coil is tightly wound around an iron cylinder whose magnetization curve is shown in Figure 12.25. (a) If
+turns per centimeter, what is the applied field
+when
+(b) What is the net magnetic field for
+this same current? (c) What is the magnetic susceptibility in this case?
+Strategy
+(a) The magnetic field of a solenoid is calculated using Equation 12.28. (b) The graph is read to determine the net
+magnetic field for this same current. (c) The magnetic susceptibility is calculated using Equation 12.37.
+Solution
+a. The applied field
+
+of the coil is
+
+b. From inspection of the magnetization curve of Figure 12.25, we see that, for this value of
+Notice that the internal field of the aligned atoms is much larger than the externally applied field.
+c. The magnetic susceptibility is calculated to be
+
+Significance
+Ferromagnetic materials have susceptibilities in the range of
+which compares well to our results here.
+Paramagnetic materials have fractional susceptibilities, so their applied field of the coil is much greater than the
+magnetic field generated by the material.
+
+CHECK YOUR UNDERSTANDING 12.8
+Repeat the calculations from the previous example for
+
+531
+
+532
+
+12 • Chapter Review
+
+Chapter Review
+Key Terms
+Ampère’s law physical law that states that the line
+integral of the magnetic field around an electric
+current is proportional to the current
+Biot-Savart law an equation giving the magnetic field
+at a point produced by a current-carrying wire
+diamagnetic materials their magnetic dipoles align
+oppositely to an applied magnetic field; when the
+field is removed, the material is unmagnetized
+ferromagnetic materials contain groups of dipoles,
+called domains, that align with the applied magnetic
+field; when this field is removed, the material is still
+magnetized
+hysteresis property of ferromagnets that is seen
+when a material’s magnetic field is examined versus
+the applied magnetic field; a loop is created
+resulting from sweeping the applied field forward
+and reverse
+magnetic domains groups of magnetic dipoles that
+are all aligned in the same direction and are coupled
+
+together quantum mechanically
+magnetic susceptibility ratio of the magnetic field in
+the material over the applied field at that time;
+positive susceptibilities are either paramagnetic or
+ferromagnetic (aligned with the field) and negative
+susceptibilities are diamagnetic (aligned oppositely
+with the field)
+paramagnetic materials their magnetic dipoles align
+partially in the same direction as the applied
+magnetic field; when this field is removed, the
+material is unmagnetized
+permeability of free space
+measure of the ability
+of a material, in this case free space, to support a
+magnetic field
+solenoid thin wire wound into a coil that produces a
+magnetic field when an electric current is passed
+through it
+toroid donut-shaped coil closely wound around that
+is one continuous wire
+
+Key Equations
+Permeability of free space
+Contribution to magnetic field
+from a current element
+Biot–Savart law
+
+Magnetic field due to a
+long straight wire
+Force between two parallel currents
+Magnetic field of a current loop
+Ampère’s law
+Magnetic field strength
+inside a solenoid
+Magnetic field strength inside a toroid
+Magnetic permeability
+Magnetic field of a solenoid
+filled with paramagnetic material
+
+Summary
+field a distance r away.
+
+12.1 The Biot-Savart Law
+• The magnetic field created by a current-carrying
+wire is found by the Biot-Savart law.
+• The current element
+
+Access for free at openstax.org
+
+produces a magnetic
+
+12.2 Magnetic Field Due to a Thin Straight Wire
+• The strength of the magnetic field created by
+current in a long straight wire is given by
+
+
