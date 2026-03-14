@@ -1,46 +1,10 @@
 -- ╔══════════════════════════════════════════════════════════════════════════╗
 -- ║                        NEOVIM CONFIGURATION                             ║
--- ║              A clean, minimal setup built for productivity              ║
+-- ║              Compatible with Neovim 0.11+ and 0.12+                     ║
 -- ╚══════════════════════════════════════════════════════════════════════════╝
 
 -- =============================================================================
--- AUTO-ESCAPE TO NORMAL MODE
--- Returns to normal mode after `timeout_ms` of inactivity in insert mode.
--- Temporarily lowers `updatetime` on InsertEnter and restores it on exit
--- so the rest of neovim (autosave CursorHold, gitsigns, etc.) is unaffected.
--- =============================================================================
-local auto_escape_group      = vim.api.nvim_create_augroup("auto_escape", { clear = true })
-local auto_escape_timeout_ms = 3000 -- adjust to taste (milliseconds)
-local original_updatetime
-
-vim.api.nvim_create_autocmd("InsertEnter", {
-  group    = auto_escape_group,
-  desc     = "Lower updatetime while in insert mode for auto-escape",
-  callback = function()
-    original_updatetime = vim.o.updatetime
-    vim.o.updatetime    = auto_escape_timeout_ms
-  end,
-})
-
-vim.api.nvim_create_autocmd("CursorHoldI", {
-  group    = auto_escape_group,
-  desc     = "Escape to normal mode after inactivity timeout",
-  callback = function() vim.cmd("stopinsert") end,
-})
-
-vim.api.nvim_create_autocmd("InsertLeave", {
-  group    = auto_escape_group,
-  desc     = "Restore updatetime after leaving insert mode",
-  callback = function()
-    if original_updatetime then
-      vim.o.updatetime = original_updatetime
-    end
-  end,
-})
-
--- =============================================================================
 -- PROVIDERS
--- Disable unused language providers to suppress startup warnings.
 -- =============================================================================
 vim.g.loaded_python3_provider = 0
 vim.g.loaded_ruby_provider    = 0
@@ -49,65 +13,63 @@ vim.g.loaded_node_provider    = 0
 
 -- =============================================================================
 -- LEADER
--- Space as leader for both global and buffer-local mappings.
--- Must be set before any plugin loads so keymaps bind correctly.
 -- =============================================================================
-vim.g.mapleader      = " "
-vim.g.maplocalleader = " "
+vim.g.mapleader               = " "
+vim.g.maplocalleader          = " "
 
 -- =============================================================================
 -- CORE OPTIONS
 -- =============================================================================
-local opt = vim.opt
+local opt                     = vim.opt
 
---  ── Appearance ──────────────────────────────────────────────────────────────
-opt.termguicolors  = true  -- enable 24-bit RGB colour in the TUI
-opt.number         = true  -- show absolute line number on the current line
-opt.relativenumber = true  -- show relative line numbers for all other lines
-opt.wrap           = false -- do not wrap long lines
-opt.scrolloff      = 20    -- keep 20 lines visible above/below the cursor
-opt.sidescrolloff  = 36    -- keep 36 columns visible left/right of the cursor
+-- Appearance
+opt.termguicolors             = true
+opt.number                    = true
+opt.relativenumber            = true
+opt.wrap                      = false
+opt.scrolloff                 = 8
+opt.sidescrolloff             = 16
 
---  ── Indentation ─────────────────────────────────────────────────────────────
-opt.tabstop    = 2    -- a tab character renders as 2 spaces wide
-opt.shiftwidth = 2    -- >> and << shift by 2 spaces
-opt.expandtab  = true -- insert spaces instead of tab characters
+-- Indentation
+opt.tabstop                   = 2
+opt.shiftwidth                = 2
+opt.expandtab                 = true
 
---  ── Search ──────────────────────────────────────────────────────────────────
-opt.ignorecase = true -- case-insensitive search by default
-opt.smartcase  = true -- switch to case-sensitive when query has uppercase
+-- Search
+opt.ignorecase                = true
+opt.smartcase                 = true
 
---  ── Files & History ─────────────────────────────────────────────────────────
-opt.undofile  = true -- persist undo history across sessions
-opt.autoread  = true -- reload files changed on disk (required by opencode.nvim)
-opt.clipboard = ""   -- isolate neovim's clipboard from the system clipboard;
-                     -- wl-clipboard config below takes full control instead
+-- Files & History
+opt.undofile                  = true
+opt.autoread                  = true
+-- NOTE: clipboard is now managed manually via keymaps, not global setting
+-- opt.clipboard                 = "unnamedplus"
 
 -- =============================================================================
--- WAYLAND CLIPBOARD
--- Use wl-copy/wl-paste as the clipboard provider.
---   "+"  — selection clipboard (Ctrl-C / Ctrl-V)
---   "*"  — primary clipboard   (middle-click paste)
+-- CLIPBOARD FUNCTIONS (System vs Internal)
 -- =============================================================================
-vim.g.clipboard = {
-  name          = "wl-clipboard",
-  copy          = {
-    ["+"] = { "wl-copy", "--type", "text/plain" },
-    ["*"] = { "wl-copy", "--primary" },
-  },
-  paste         = {
-    ["+"] = { "wl-paste", "--no-newline" },
-    ["*"] = { "wl-paste", "--primary", "--no-newline" },
-  },
-  cache_enabled = true,
-}
+
+-- System clipboard operations (using + register)
+vim.keymap.set({ "n", "v" }, "<leader>y", '"+y', { desc = "Yank to system clipboard" })
+vim.keymap.set("n", "<leader>Y", '"+Y', { desc = "Yank line to system clipboard" })
+vim.keymap.set({ "n", "v" }, "<leader>p", '"+p', { desc = "Paste from system clipboard" })
+vim.keymap.set({ "n", "v" }, "<leader>P", '"+P', { desc = "Paste before from system clipboard" })
+
+-- Internal Neovim clipboard (using 0 register - last yank)
+-- Default yank/paste stays internal (unnamed register)
+vim.keymap.set({ "n", "v" }, "y", "y", { desc = "Yank (internal)" })
+vim.keymap.set({ "n", "v" }, "p", "p", { desc = "Paste (internal)" })
+vim.keymap.set({ "n", "v" }, "P", "P", { desc = "Paste before (internal)" })
+
+-- Quick paste from yank register (explicit)
+vim.keymap.set({ "n", "v" }, "<leader>ip", '"0p', { desc = "Paste from internal yank" })
+vim.keymap.set({ "n", "v" }, "<leader>iP", '"0P', { desc = "Paste before from internal yank" })
 
 -- =============================================================================
 -- AUTOCMDS
 -- =============================================================================
 
--- Flash yanked region so you can see what was copied
--- TODO(nvim-0.12): rename vim.highlight.on_yank → vim.hl.on_yank
+-- Flash yanked region
 vim.api.nvim_create_autocmd("TextYankPost", {
   group    = vim.api.nvim_create_augroup("highlight_yank", { clear = true }),
   desc     = "Flash yanked region",
@@ -116,71 +78,17 @@ vim.api.nvim_create_autocmd("TextYankPost", {
   end,
 })
 
--- Open :help in a vertical split on the right instead of a horizontal split
+-- Open :help in vertical split
 vim.api.nvim_create_autocmd("FileType", {
   pattern  = "help",
   callback = function() vim.cmd("wincmd L") end,
 })
 
 -- =============================================================================
--- AUTOSAVE
--- Saves the current buffer automatically in three situations:
---   CursorHold   — no keypress for `updatetime` ms while in normal mode
---   ModeChanged  — every time you return to normal mode
---   BufLeave     — when you switch away from a buffer
---   FocusLost    — when the neovim window loses focus
---
--- Skips buffers that are: invalid, unmodified, unnamed, read-only,
--- or a special type (terminal, quickfix, nofile, prompt).
--- =============================================================================
-local autosave_group    = vim.api.nvim_create_augroup("autosave", { clear = true })
-local non_file_buftypes = { terminal = true, quickfix = true, nofile = true, prompt = true }
-
-local function should_save(buf)
-  if not vim.api.nvim_buf_is_valid(buf)     then return false end
-  if not vim.bo[buf].modified               then return false end
-  if vim.bo[buf].readonly                   then return false end
-  if vim.fn.bufname(buf) == ""              then return false end
-  if non_file_buftypes[vim.bo[buf].buftype] then return false end
-  return true
-end
-
-local function save(buf)
-  if should_save(buf) then
-    vim.api.nvim_buf_call(buf, function() vim.cmd("silent! write") end)
-  end
-end
-
-vim.api.nvim_create_autocmd("CursorHold", {
-  group    = autosave_group,
-  desc     = "Autosave after updatetime ms of inactivity in normal mode",
-  callback = function() save(vim.api.nvim_get_current_buf()) end,
-})
-
-vim.api.nvim_create_autocmd("ModeChanged", {
-  group    = autosave_group,
-  pattern  = "*:n",
-  desc     = "Autosave on every return to normal mode",
-  callback = function() save(vim.api.nvim_get_current_buf()) end,
-})
-
-vim.api.nvim_create_autocmd({ "BufLeave", "FocusLost" }, {
-  group    = autosave_group,
-  desc     = "Autosave when leaving a buffer or losing window focus",
-  callback = function(args)
-    local buf = args.buf or vim.api.nvim_get_current_buf()
-    -- Defer 100 ms so plugins finish their own BufLeave/FocusLost handlers
-    vim.defer_fn(function() save(buf) end, 100)
-  end,
-})
-
--- =============================================================================
 -- BOOTSTRAP LAZY.NVIM
--- Clone lazy.nvim into the data directory if it isn't already present.
 -- =============================================================================
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 
--- TODO(nvim-0.12): vim.loop was removed — swap to vim.uv here
 if not vim.uv.fs_stat(lazypath) then
   local lazyrepo = "https://github.com/folke/lazy.nvim.git"
   local out = vim.fn.system({
@@ -188,9 +96,9 @@ if not vim.uv.fs_stat(lazypath) then
   })
   if vim.v.shell_error ~= 0 then
     vim.api.nvim_echo({
-      { "Failed to clone lazy.nvim:\n", "ErrorMsg"   },
+      { "Failed to clone lazy.nvim:\n", "ErrorMsg" },
       { out,                            "WarningMsg" },
-      { "\nPress any key to exit..."                 },
+      { "\nPress any key to exit..." },
     }, true, {})
     vim.fn.getchar()
     os.exit(1)
@@ -210,7 +118,6 @@ require("lazy").setup({
     -- └─────────────────────────────────────────────────────────────────────┘
 
     -- ── Colorscheme: rose-pine ───────────────────────────────────────────
-    -- Loaded eagerly at priority 1000 so it applies before any other UI plugin.
     {
       "rose-pine/neovim",
       name     = "rose-pine",
@@ -222,8 +129,6 @@ require("lazy").setup({
     },
 
     -- ── Lualine: status line ─────────────────────────────────────────────
-    -- Uses the rose-pine theme to match the colorscheme.
-    -- globalstatus = true means one status line shared across all splits.
     {
       "nvim-lualine/lualine.nvim",
       dependencies = { "echasnovski/mini.nvim" },
@@ -231,13 +136,13 @@ require("lazy").setup({
         options  = {
           theme                = "rose-pine",
           component_separators = { left = "|", right = "|" },
-          section_separators   = { left = "",  right = "" },
+          section_separators   = { left = "", right = "" },
           globalstatus         = true,
         },
         sections = {
           lualine_a = { "mode" },
           lualine_b = { "branch", "diff", "diagnostics" },
-          lualine_c = { { "filename", path = 1 } }, -- path=1: show relative path
+          lualine_c = { { "filename", path = 1 } },
           lualine_x = { "encoding", "fileformat", "filetype" },
           lualine_y = { "progress" },
           lualine_z = { "location" },
@@ -246,54 +151,33 @@ require("lazy").setup({
     },
 
     -- ── Barbar: buffer/tab line ──────────────────────────────────────────
-    -- Renders open buffers as tabs at the top. Integrates with gitsigns
-    -- to show diff indicators on each tab.
-    --
-    -- KEYBINDS:
-    --   <Tab>        — go to next buffer
-    --   <S-Tab>      — go to previous buffer
-    --   <leader>bd   — close current buffer
-    --   <leader>bp   — pin / unpin buffer (pinned survive close-all)
-    --   <leader>bo   — close every buffer except the current one
-    --   <leader>bD   — close all unpinned buffers
-    --   <leader>bl   — shift buffer one tab slot to the right
-    --   <leader>bh   — shift buffer one tab slot to the left
-    --   <leader>1-5  — jump directly to buffer in tab slot 1–5
     {
       "romgrk/barbar.nvim",
       lazy         = false,
       dependencies = { "echasnovski/mini.nvim", "lewis6991/gitsigns.nvim" },
       version      = "^1.0.0",
       init         = function()
-        vim.g.barbar_auto_setup = false -- configure manually via opts below
+        vim.g.barbar_auto_setup = false
       end,
       opts         = {},
       keys         = {
-        { "<Tab>",      "<cmd>BufferNext<cr>",               desc = "Go to next buffer"                              },
-        { "<S-Tab>",    "<cmd>BufferPrevious<cr>",           desc = "Go to previous buffer"                          },
-        { "<leader>bd", "<cmd>BufferClose<cr>",              desc = "Close current buffer"                           },
-        { "<leader>bp", "<cmd>BufferPin<cr>",                desc = "Pin/unpin current buffer"                       },
-        { "<leader>bo", "<cmd>BufferCloseAllButCurrent<cr>", desc = "Close every buffer except the current one"      },
-        { "<leader>bD", "<cmd>BufferCloseAllButPinned<cr>",  desc = "Close all unpinned buffers"                     },
-        { "<leader>bl", "<cmd>BufferMoveNext<cr>",           desc = "Shift current buffer one position to the right" },
-        { "<leader>bh", "<cmd>BufferMovePrevious<cr>",       desc = "Shift current buffer one position to the left"  },
-        { "<leader>1",  "<cmd>BufferGoto 1<cr>",             desc = "Jump to buffer in tab slot 1"                   },
-        { "<leader>2",  "<cmd>BufferGoto 2<cr>",             desc = "Jump to buffer in tab slot 2"                   },
-        { "<leader>3",  "<cmd>BufferGoto 3<cr>",             desc = "Jump to buffer in tab slot 3"                   },
-        { "<leader>4",  "<cmd>BufferGoto 4<cr>",             desc = "Jump to buffer in tab slot 4"                   },
-        { "<leader>5",  "<cmd>BufferGoto 5<cr>",             desc = "Jump to buffer in tab slot 5"                   },
+        { "<Tab>",      "<cmd>BufferNext<cr>",               desc = "Next buffer" },
+        { "<S-Tab>",    "<cmd>BufferPrevious<cr>",           desc = "Previous buffer" },
+        { "<leader>bd", "<cmd>BufferClose<cr>",              desc = "Close buffer" },
+        { "<leader>bp", "<cmd>BufferPin<cr>",                desc = "Pin buffer" },
+        { "<leader>bo", "<cmd>BufferCloseAllButCurrent<cr>", desc = "Close other buffers" },
+        { "<leader>bD", "<cmd>BufferCloseAllButPinned<cr>",  desc = "Close unpinned buffers" },
+        { "<leader>bl", "<cmd>BufferMoveNext<cr>",           desc = "Move buffer right" },
+        { "<leader>bh", "<cmd>BufferMovePrevious<cr>",       desc = "Move buffer left" },
+        { "<leader>1",  "<cmd>BufferGoto 1<cr>",             desc = "Go to buffer 1" },
+        { "<leader>2",  "<cmd>BufferGoto 2<cr>",             desc = "Go to buffer 2" },
+        { "<leader>3",  "<cmd>BufferGoto 3<cr>",             desc = "Go to buffer 3" },
+        { "<leader>4",  "<cmd>BufferGoto 4<cr>",             desc = "Go to buffer 4" },
+        { "<leader>5",  "<cmd>BufferGoto 5<cr>",             desc = "Go to buffer 5" },
       },
     },
 
     -- ── Neominimap: file overview panel ─────────────────────────────────
-    -- Renders a small overview map of the file in a side column.
-    -- auto_enable = true turns it on for every buffer automatically.
-    --
-    -- KEYBINDS:
-    --   <leader>mt   — toggle minimap on / off
-    --   <leader>mf   — move cursor into the minimap panel
-    --   <leader>mu   — return focus from minimap back to the editor
-    --   <leader>mr   — force-refresh minimap content
     {
       "Isrothy/neominimap.nvim",
       version = "v3.x.x",
@@ -302,96 +186,154 @@ require("lazy").setup({
         vim.g.neominimap = { auto_enable = true }
       end,
       keys    = {
-        { "<leader>mt", "<cmd>Neominimap Toggle<cr>",  desc = "Toggle minimap"                      },
-        { "<leader>mf", "<cmd>Neominimap Focus<cr>",   desc = "Move cursor into minimap"            },
-        { "<leader>mu", "<cmd>Neominimap Unfocus<cr>", desc = "Return focus from minimap to editor" },
-        { "<leader>mr", "<cmd>Neominimap Refresh<cr>", desc = "Force-refresh minimap content"       },
+        -- make this keybinds simpler like leader mf to focus and unfocus depending whether in focus or not
+
+        { "<leader>mt", "<cmd>Neominimap Toggle<cr>",  desc = "Toggle minimap" },
+        { "<leader>mf", "<cmd>Neominimap Focus<cr>",   desc = "Focus minimap" },
+        { "<leader>mu", "<cmd>Neominimap Unfocus<cr>", desc = "Unfocus minimap" },
+        { "<leader>mr", "<cmd>Neominimap Refresh<cr>", desc = "Refresh minimap" },
       },
     },
 
     -- ┌─────────────────────────────────────────────────────────────────────┐
     -- │  SYNTAX & LANGUAGE                                                  │
+    -- │  nvim-treesitter main branch (complete rewrite)                     │
     -- └─────────────────────────────────────────────────────────────────────┘
 
-    -- ── Treesitter: syntax highlighting & indentation ────────────────────
-    -- Parses source files into concrete syntax trees for accurate highlighting.
-    -- :TSUpdate keeps all parsers up to date after lazy updates.
+    -- ── Treesitter: parser management ─────────────────────────────────────
+    -- NOTE: main branch is incompatible rewrite. setup() no longer takes
+    -- ensure_installed, highlight, indent. You must manually install parsers
+    -- and enable features via vim.treesitter.start()
     {
       "nvim-treesitter/nvim-treesitter",
-      lazy  = false,
-      build = ":TSUpdate",
-      opts  = {
-        ensure_installed = {
+      lazy   = false,
+      branch = "main", -- Explicitly use main branch
+      build  = ":TSUpdate",
+      config = function()
+        -- Minimal setup - only install_dir is configurable
+        require("nvim-treesitter").setup({
+          install_dir = vim.fn.stdpath('data') .. '/site'
+        })
+
+        -- Install parsers explicitly (async)
+        -- Use :TSInstall interactively, or install here
+        local parsers = {
           "c", "lua", "vim", "vimdoc", "query",
           "bash", "json", "yaml",
           "latex", "typst", "markdown", "markdown_inline", "regex",
-        },
-        highlight = { enable = true },
-        indent    = { enable = true },
-      },
-      -- TODO(nvim-0.12): nvim-treesitter v1+ dropped setup() entirely.
-      --   Remove the require("nvim-treesitter").setup(opts) call and let lazy
-      --   apply opts automatically. Keep only the language.register line:
-      --
-      --   config = function(_, opts)
-      --     vim.treesitter.language.register("bash", "sh")
-      --   end,
-      config = function(_, opts)
-        require("nvim-treesitter").setup(opts)
-        vim.treesitter.language.register("bash", "sh") -- treat .sh files as bash
+        }
+
+        -- Install parsers if not present (async, non-blocking)
+        vim.defer_fn(function()
+          for _, lang in ipairs(parsers) do
+            local ok, has_parser = pcall(vim.treesitter.language.inspect, lang)
+            if not ok or not has_parser then
+              require("nvim-treesitter").install({ lang })
+            end
+          end
+        end, 100)
+
+        -- Auto-enable treesitter for all filetypes with parsers available
+        vim.api.nvim_create_autocmd("FileType", {
+          group = vim.api.nvim_create_augroup("treesitter_enable", { clear = true }),
+          pattern = "*",
+          callback = function(args)
+            local buf = args.buf
+            local ft = vim.bo[buf].filetype
+            if not ft or ft == "" then return end
+
+            -- Try to start treesitter if parser exists
+            local ok = pcall(vim.treesitter.start, buf)
+            if ok then
+              -- Enable treesitter-based features
+              vim.bo[buf].indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+              -- foldexpr is set globally below
+            end
+          end,
+        })
+
+        -- Register bash for sh files
+        vim.treesitter.language.register("bash", "sh")
       end,
     },
 
-    -- ── Treesitter textobjects: function/class/argument motions ─────────
-    -- Adds text objects and jump motions powered by the treesitter parse tree
-    -- rather than fragile regex patterns.
-    --
-    -- TEXT OBJECTS (visual / operator-pending):
-    --   af / if  — around / inside function   (e.g. daf deletes whole function)
-    --   ac / ic  — around / inside class
-    --   aa / ia  — around / inside argument   (aa includes the comma)
-    --
-    -- MOTIONS (normal mode):
-    --   ]f / [f  — start of next / previous function
-    --   ]F / [F  — end   of next / previous function
-    --   ]c / [c  — start of next / previous class
-    --   ]C / [C  — end   of next / previous class
+    -- ── Treesitter textobjects ──────────────────────────────────────────
+    -- NOTE: textobjects also moved to main branch with new API
     {
       "nvim-treesitter/nvim-treesitter-textobjects",
-      branch       = "main",
+      branch       = "main", -- Must match treesitter branch
       dependencies = { "nvim-treesitter/nvim-treesitter" },
-      opts         = {
-        select = {
-          enable    = true,
-          lookahead = true,              -- jump forward to the next match automatically
-          keymaps   = {
-            ["af"] = "@function.outer",  -- around function (including signature)
-            ["if"] = "@function.inner",  -- inside function body only
-            ["ac"] = "@class.outer",     -- around class
-            ["ic"] = "@class.inner",     -- inside class body
-            ["aa"] = "@parameter.outer", -- around argument (includes the comma)
-            ["ia"] = "@parameter.inner", -- inside argument value only
+      config       = function()
+        require("nvim-treesitter-textobjects").setup({
+          select = {
+            enable                         = true,
+            lookahead                      = true,
+            selection_modes                = {
+              ['@parameter.outer'] = 'v',
+              ['@function.outer'] = 'V',
+              ['@class.outer'] = '<c-v>',
+            },
+            include_surrounding_whitespace = false,
           },
-        },
-        move = {
-          enable              = true,
-          set_jumps           = true, -- add positions to the jumplist
-          goto_next_start     = { ["]f"] = "@function.outer", ["]c"] = "@class.outer" },
-          goto_next_end       = { ["]F"] = "@function.outer", ["]C"] = "@class.outer" },
-          goto_previous_start = { ["[f"] = "@function.outer", ["[c"] = "@class.outer" },
-          goto_previous_end   = { ["[F"] = "@function.outer", ["[C"] = "@class.outer" },
-        },
-      },
-      config       = function(_, opts)
-        require("nvim-treesitter-textobjects").setup(opts)
+          move = {
+            enable    = true,
+            set_jumps = true,
+          },
+        })
+
+        -- Manual keymap setup required in main branch
+        local select = require("nvim-treesitter-textobjects.select")
+        local move = require("nvim-treesitter-textobjects.move")
+
+        -- Text objects
+        vim.keymap.set({ "x", "o" }, "af", function()
+          select.select_textobject("@function.outer", "textobjects")
+        end, { desc = "Around function" })
+        vim.keymap.set({ "x", "o" }, "if", function()
+          select.select_textobject("@function.inner", "textobjects")
+        end, { desc = "Inside function" })
+        vim.keymap.set({ "x", "o" }, "ac", function()
+          select.select_textobject("@class.outer", "textobjects")
+        end, { desc = "Around class" })
+        vim.keymap.set({ "x", "o" }, "ic", function()
+          select.select_textobject("@class.inner", "textobjects")
+        end, { desc = "Inside class" })
+        vim.keymap.set({ "x", "o" }, "aa", function()
+          select.select_textobject("@parameter.outer", "textobjects")
+        end, { desc = "Around argument" })
+        vim.keymap.set({ "x", "o" }, "ia", function()
+          select.select_textobject("@parameter.inner", "textobjects")
+        end, { desc = "Inside argument" })
+
+        -- Movement
+        vim.keymap.set({ "n", "x", "o" }, "]f", function()
+          move.goto_next_start("@function.outer", "textobjects")
+        end, { desc = "Next function start" })
+        vim.keymap.set({ "n", "x", "o" }, "[f", function()
+          move.goto_previous_start("@function.outer", "textobjects")
+        end, { desc = "Prev function start" })
+        vim.keymap.set({ "n", "x", "o" }, "]F", function()
+          move.goto_next_end("@function.outer", "textobjects")
+        end, { desc = "Next function end" })
+        vim.keymap.set({ "n", "x", "o" }, "[F", function()
+          move.goto_previous_end("@function.outer", "textobjects")
+        end, { desc = "Prev function end" })
+        vim.keymap.set({ "n", "x", "o" }, "]c", function()
+          move.goto_next_start("@class.outer", "textobjects")
+        end, { desc = "Next class start" })
+        vim.keymap.set({ "n", "x", "o" }, "[c", function()
+          move.goto_previous_start("@class.outer", "textobjects")
+        end, { desc = "Prev class start" })
+        vim.keymap.set({ "n", "x", "o" }, "]C", function()
+          move.goto_next_end("@class.outer", "textobjects")
+        end, { desc = "Next class end" })
+        vim.keymap.set({ "n", "x", "o" }, "[C", function()
+          move.goto_previous_end("@class.outer", "textobjects")
+        end, { desc = "Prev class end" })
       end,
     },
 
     -- ── Markview: rendered markdown preview ──────────────────────────────
-    -- Renders markdown in-buffer with beautiful formatting in normal mode.
-    --
-    -- KEYBINDS:
-    --   <leader>mv   — toggle markview rendering on / off
     {
       "OXY2DEV/markview.nvim",
       ft           = { "markdown" },
@@ -401,7 +343,7 @@ require("lazy").setup({
           modes        = { "n", "no", "c" },
           hybrid_modes = { "n" },
         })
-        vim.keymap.set("n", "<leader>mv", "<cmd>Markview toggle<CR>", { desc = "Toggle markview rendering" })
+        vim.keymap.set("n", "<leader>mv", "<cmd>Markview toggle<CR>", { desc = "Toggle markview" })
       end,
     },
 
@@ -409,47 +351,15 @@ require("lazy").setup({
     -- │  EDITING                                                            │
     -- └─────────────────────────────────────────────────────────────────────┘
 
-    -- ── Mini.nvim: a collection of focused editing plugins ───────────────
-    -- Single repo containing: pairs, surround, icons, comments, and sessions.
-    --
-    -- PAIRS:
-    --   Handles (, [, {, ", ', ` globally (built-in defaults).
-    --   $ is added as a buffer-local pair for typst and tex files so that
-    --   typing $ inserts $│$ with the cursor between them (math mode).
-    --
-    -- SURROUND KEYBINDS (prefixed gz to avoid flash.nvim conflict):
-    --   gza<motion>  — add surrounding    (e.g. gzaiw" wraps word in quotes)
-    --   gzd<motion>  — delete surrounding (e.g. gzd" removes nearest quotes)
-    --   gzr          — replace surrounding
-    --   gzf / gzF    — find right / left surrounding
-    --   gzh          — highlight surrounding
-    --   gzn          — update n_lines search range
-    --
-    -- COMMENT KEYBINDS:
-    --   gcc          — toggle line comment
-    --   gc<motion>   — toggle comment over motion (e.g. gcip comments paragraph)
-    --
-    -- SESSION KEYBINDS:
-    --   <leader>ss   — save current session (prompts for name)
-    --   <leader>sl   — load a saved session (fuzzy picker)
-    --   <leader>sd   — delete a saved session (fuzzy picker)
-    --   <leader>sr   — quick-save local (cwd) Session.vim
+    -- ── Mini.nvim: pairs, surround, icons, comments, sessions ────────────
     {
       "echasnovski/mini.nvim",
       version = "*",
       config  = function()
-
-        -- ── mini.pairs ───────────────────────────────────────────────────
-        -- Use all built-in defaults: (, [, {, ", ', `.
-        -- $ is intentionally omitted here and added per-buffer below so it
-        -- only activates in math-oriented filetypes.
+        -- mini.pairs: auto-insert closing pairs
         require("mini.pairs").setup()
 
-        -- Buffer-local $…$ pair for typst and tex (inline math delimiter).
-        -- neigh_pattern "[^\\$]." means:
-        --   [^\\$] — character before cursor is not \ (literal escape) or $
-        --            (already inside a pair), preventing double-insertion.
-        --   .      — character after cursor is anything (permissive right side).
+        -- Buffer-local $ pair for typst/tex (math mode)
         vim.api.nvim_create_autocmd("FileType", {
           group    = vim.api.nvim_create_augroup("mini_pairs_math", { clear = true }),
           pattern  = { "typst", "tex" },
@@ -461,67 +371,51 @@ require("lazy").setup({
           end,
         })
 
-        -- ── mini.surround ────────────────────────────────────────────────
-        -- Surround text objects: add / delete / replace surrounding characters.
-        -- Remapped to gz prefix to avoid conflicting with flash.nvim's s/S.
+        -- mini.surround: DEFAULT MAPPINGS (sa, sd, sr, sf, sF, sh)
+        -- Default: sa=add, sd=delete, sr=replace, sf=find right, sF=find left, sh=highlight
+        -- This conflicts with flash.nvim's default 's' key, so we use a different approach:
+        -- Option 1: Use mini.surround defaults (sa/sd/sr) and map flash to <CR> or other
+        -- Option 2: Change mini.surround prefix (e.g., to 'gz' as before)
+        --
+        -- Here we use Option 1: mini.surround gets 's' prefix, flash uses '<CR>'
         require("mini.surround").setup({
-          mappings = {
-            add            = "gza", -- add surrounding
-            delete         = "gzd", -- delete surrounding
-            find           = "gzf", -- find right surrounding
-            find_left      = "gzF", -- find left surrounding
-            highlight      = "gzh", -- highlight surrounding
-            replace        = "gzr", -- replace surrounding
-            update_n_lines = "gzn", -- update n_lines search range
-          },
+          -- Using defaults: sa, sd, sr, sf, sF, sh
+          -- No custom mappings needed unless you want to change them
+          n_lines = 20,
+          search_method = 'cover',
         })
 
-        -- ── mini.icons ───────────────────────────────────────────────────
-        -- Icon provider — mocks nvim-web-devicons so dependent plugins work
-        -- without installing the actual devicons plugin.
+        -- mini.icons: icon provider
         require("mini.icons").setup()
         MiniIcons.mock_nvim_web_devicons()
 
-        -- ── mini.comment ─────────────────────────────────────────────────
-        -- gc / gcc commenting with treesitter-aware comment strings.
+        -- mini.comment: gc/gcc commenting (using built-in commentstring)
         require("mini.comment").setup({
           options = {
             custom_commentstring = function()
-              return require("ts_context_commentstring.internal").calculate_commentstring()
-                  or vim.bo.commentstring
+              return vim.bo.commentstring
             end,
           },
         })
 
-        -- ── mini.sessions ────────────────────────────────────────────────
-        -- Lightweight session management. Sssions are stored in the
-        -- default data directory (~/.local/share/nvim/session/).
-        -- autoread  = true  → on a bare `nvim` launch (no file args), restore
-        --                      the local session for cwd if one exists, else
-        --                      restore the most recently written global session.
-        -- autowrite = true  → write the currently active session on VimLeavePre
-        --                      so you never lose your layout.
-        -- force.delete      → require explicit confirmation before deleting.
+        -- mini.sessions: session management
         require("mini.sessions").setup({
-          autoread  = true,                                  -- auto-restore session on bare nvim launch
-          autowrite = true,                                  -- auto-persist session on exit
-          directory = vim.fn.stdpath("data") .. "/session", -- global session storage
-          file      = "Session.vim",                        -- local session filename (cwd-relative)
+          autoread  = true,
+          autowrite = true,
+          directory = vim.fn.stdpath("data") .. "/session",
+          file      = "Session.vim",
           force     = { read = false, write = true, delete = false },
           verbose   = { read = false, write = true, delete = true },
         })
 
-        -- MiniSessions is the global object created by mini.sessions.setup()
         local MS = MiniSessions
 
-        -- <leader>ss — save a named global session (prompts for a name)
         vim.keymap.set("n", "<leader>ss", function()
           vim.ui.input({ prompt = "Session name: " }, function(name)
             if name and name ~= "" then MS.write(name) end
           end)
-        end, { desc = "Session: save with name" })
+        end, { desc = "Save session" })
 
-        -- <leader>sl — load a session chosen from the detected list
         vim.keymap.set("n", "<leader>sl", function()
           local sessions = vim.tbl_keys(MS.detected)
           if vim.tbl_isempty(sessions) then
@@ -531,9 +425,8 @@ require("lazy").setup({
           vim.ui.select(sessions, { prompt = "Load session:" }, function(choice)
             if choice then MS.read(choice) end
           end)
-        end, { desc = "Session: load from list" })
+        end, { desc = "Load session" })
 
-        -- <leader>sd — delete a session chosen from the detected list
         vim.keymap.set("n", "<leader>sd", function()
           local sessions = vim.tbl_keys(MS.detected)
           if vim.tbl_isempty(sessions) then
@@ -543,41 +436,21 @@ require("lazy").setup({
           vim.ui.select(sessions, { prompt = "Delete session:" }, function(choice)
             if choice then MS.delete(choice, { force = true }) end
           end)
-        end, { desc = "Session: delete from list" })
+        end, { desc = "Delete session" })
 
-        -- <leader>sr — quick-save: write the local (cwd) Session.vim immediately
         vim.keymap.set("n", "<leader>sr", function()
-          MS.write(nil) -- nil → writes to the configured `file` (local session)
-        end, { desc = "Session: quick-save local session" })
-
+          MS.write(nil)
+        end, { desc = "Quick-save local session" })
       end,
     },
 
-    -- ── ts-context-commentstring ─────────────────────────────────────────
-    -- Provides the correct comment syntax for embedded languages (e.g. JSX
-    -- inside a .tsx file). Used by mini.comment above; autocmd disabled
-    -- because mini.comment calls it manually.
-    {
-      "JoosepAlviste/nvim-ts-context-commentstring",
-      lazy = true,
-      opts = { enable_autocmd = false },
-    },
-
-    -- ── Blink.cmp: LSP / snippet / buffer popup completion ───────────────
-    -- Ghost-text AI completion (Neocodeium) is kept separate and NOT wired
-    -- into blink, keeping the two systems independent.
-    --
-    -- KEYBINDS (insert mode, preset = "default"):
-    --   <C-n> / <C-p>  — navigate down / up through suggestions
-    --   <CR>           — confirm selected suggestion
-    --   <C-e>          — close the completion menu
-    --   <C-space>      — manually trigger completion
+    -- ── Blink.cmp: completion ────────────────────────────────────────────
     {
       "saghen/blink.cmp",
       dependencies = { "rafamadriz/friendly-snippets" },
-      version      = "1.*",
+      version      = "1.1.1", -- Pinned for stability
       opts         = {
-        keymap     = { preset = "default" },
+        keymap     = { preset = "super-tab" },
         appearance = { nerd_font_variant = "mono" },
         completion = {
           documentation = { auto_show = true, auto_show_delay_ms = 300 },
@@ -588,28 +461,23 @@ require("lazy").setup({
       opts_extend  = { "sources.default" },
     },
 
-    -- ── Conform.nvim: auto-formatting on save ────────────────────────────
-    -- Each filetype maps to one or more formatters; stop_after_first means
-    -- the first available formatter wins.
-    --
-    -- KEYBINDS:
-    --   <leader>cf   — manually trigger async format for the current buffer
+    -- ── Conform.nvim: auto-formatting ────────────────────────────────────
     {
       "stevearc/conform.nvim",
       opts = {
         formatters_by_ft = {
-          lua      = { "stylua"                                        },
+          lua      = { "stylua" },
           python   = { "ruff_format", "black", stop_after_first = true },
-          sh       = { "shfmt"                                         },
-          bash     = { "shfmt"                                         },
-          c        = { "clang_format"                                  },
-          cpp      = { "clang_format"                                  },
-          tex      = { "latexindent"                                   },
-          typst    = { "typstyle"                                      },
-          json     = { "jq"                                            },
-          yaml     = { "prettier"                                      },
-          markdown = { "prettier"                                      },
-          ["_"]    = { "trim_whitespace" }, -- fallback for any unmatched filetype
+          sh       = { "shfmt" },
+          bash     = { "shfmt" },
+          c        = { "clang_format" },
+          cpp      = { "clang_format" },
+          tex      = { "latexindent" },
+          typst    = { "typstyle" },
+          json     = { "jq" },
+          yaml     = { "prettier" },
+          markdown = { "prettier" },
+          ["_"]    = { "trim_whitespace" },
         },
         format_on_save = { timeout_ms = 500, lsp_format = "fallback" },
       },
@@ -623,26 +491,19 @@ require("lazy").setup({
     },
 
     -- ── Typst-preview: live Typst document preview ───────────────────────
-    -- Only loads for .typ files (ft=typst). Uses system-installed tinymist
-    -- and websocat instead of downloading its own binaries.
-    --
-    -- KEYBINDS (typst files only):
-    --   <leader>tp   — open live preview in browser
-    --   <leader>ts   — sync browser scroll position to cursor location
     {
       "chomosuke/typst-preview.nvim",
       ft      = "typst",
       version = "1.*",
-      build   = ":", -- skip the plugin's own binary download step
       opts    = {
         dependencies_bin = {
-          ["tinymist"] = "tinymist", -- must be on $PATH
-          ["websocat"] = "websocat", -- must be on $PATH
+          ["tinymist"] = "tinymist",
+          ["websocat"] = "websocat",
         },
       },
       keys    = {
-        { "<leader>tp", "<cmd>TypstPreview<cr>",     desc = "Open Typst live preview in browser"       },
-        { "<leader>ts", "<cmd>TypstPreviewSync<cr>", desc = "Sync browser preview to cursor position"  },
+        { "<leader>tp", "<cmd>TypstPreview<cr>",     desc = "Typst preview" },
+        { "<leader>ts", "<cmd>TypstPreviewSync<cr>", desc = "Sync typst preview" },
       },
     },
 
@@ -651,65 +512,38 @@ require("lazy").setup({
     -- └─────────────────────────────────────────────────────────────────────┘
 
     -- ── Snacks.nvim: UI suite ────────────────────────────────────────────
-    -- Fuzzy picker, file explorer, dashboard, indent guides, smooth scroll,
-    -- word highlights, notifications, and more — all in one plugin.
-    --
-    -- PICKER KEYBINDS:
-    --   <leader>ff   — find files in cwd
-    --   <leader>fg   — live grep in cwd
-    --   <leader>fb   — list open buffers
-    --   <leader>fr   — recently opened files
-    --   <leader>fh   — search help tags
-    --   <leader>e    — toggle file explorer
-    --   <leader>xd   — all workspace diagnostics
-    --   <leader>xb   — diagnostics in current buffer
-    --   <leader>nh   — notification history
-    --   <leader>gl   — git log browser
-    --   <leader>gs   — git status browser
-    --
-    -- LSP PICKER KEYBINDS (also see LspAttach section):
-    --   gd           — go to definition
-    --   gr           — list all references
-    --   gI           — go to implementation
-    --   gt           — go to type definition
-    --   <leader>ls   — list document symbols
-    --
-    -- PICKER ITEM ACTION:
-    --   <A-a>        — send focused item to opencode as context
     {
       "folke/snacks.nvim",
       priority = 1000,
       lazy     = false,
       opts     = {
-        bigfile      = { enabled = true }, -- disable heavy features for large files
-        explorer     = { enabled = true }, -- file tree with dotfile support
-        indent       = { enabled = true }, -- animated indent guides
-        input        = { enabled = true }, -- nicer vim.ui.input popup (used by opencode.nvim)
-        notifier     = { enabled = true }, -- floating notification UI
-        quickfile    = { enabled = true }, -- faster rendering for startup files
-        scope        = { enabled = true }, -- highlights current scope in indent guide
-        scroll       = { enabled = true }, -- smooth scrolling
-        statuscolumn = { enabled = true }, -- richer sign/fold/number column
-        words        = { enabled = true }, -- highlight all occurrences of word under cursor
+        bigfile      = { enabled = true },
+        explorer     = { enabled = true },
+        indent       = { enabled = true },
+        input        = { enabled = true },
+        notifier     = { enabled = true },
+        quickfile    = { enabled = true },
+        scope        = { enabled = true },
+        scroll       = { enabled = true },
+        statuscolumn = { enabled = true },
+        words        = { enabled = true },
         dashboard    = {
           enabled = true,
           preset  = {
             keys = {
-              { icon = " ", key = "f", desc = "Find File",       action = ":lua Snacks.picker.files()"                                  },
-              { icon = " ", key = "n", desc = "New File",        action = ":ene | startinsert"                                           },
-              { icon = " ", key = "/", desc = "Find Text",       action = ":lua Snacks.picker.grep()"                                    },
-              { icon = " ", key = "r", desc = "Recent Files",    action = ":lua Snacks.picker.recent()"                                  },
+              { icon = " ", key = "f", desc = "Find File",       action = ":lua Snacks.picker.files()" },
+              { icon = " ", key = "n", desc = "New File",        action = ":ene | startinsert" },
+              { icon = " ", key = "/", desc = "Find Text",       action = ":lua Snacks.picker.grep()" },
+              { icon = " ", key = "r", desc = "Recent Files",    action = ":lua Snacks.picker.recent()" },
               { icon = " ", key = "c", desc = "Config",          action = ":lua Snacks.picker.files({ cwd = vim.fn.stdpath('config') })" },
-              { icon = " ", key = "s", desc = "Restore Session", section = "session"                                                     },
-              { icon = "󰒲 ", key = "L", desc = "Lazy",            action = ":Lazy"                                                       },
-              { icon = " ", key = "q", desc = "Quit",            action = ":qa"                                                          },
+              { icon = " ", key = "s", desc = "Restore Session", section = "session" },
+              { icon = " ", key = "L", desc = "Lazy",            action = ":Lazy" },
+              { icon = " ", key = "q", desc = "Quit",            action = ":qa" },
             },
           },
         },
         picker       = {
           enabled = true,
-          -- opencode_send lets you press <A-a> on any picker item to send
-          -- it to opencode as context. Registered here; opencode.nvim uses it.
           actions = {
             opencode_send = function(...)
               return require("opencode").snacks_picker_send(...)
@@ -724,56 +558,48 @@ require("lazy").setup({
       },
       keys     = {
         -- Files
-        { "<leader>ff", function() Snacks.picker.files() end,                desc = "Find files in cwd"                         },
-        { "<leader>fg", function() Snacks.picker.grep() end,                 desc = "Live grep in cwd"                          },
-        { "<leader>fb", function() Snacks.picker.buffers() end,              desc = "List open buffers"                         },
-        { "<leader>fr", function() Snacks.picker.recent() end,               desc = "List recently opened files"                },
-        { "<leader>fh", function() Snacks.picker.help() end,                 desc = "Search help tags"                          },
+        { "<leader>ff", function() Snacks.picker.files() end,              desc = "Find files" },
+        { "<leader>fg", function() Snacks.picker.grep() end,               desc = "Live grep" },
+        { "<leader>fb", function() Snacks.picker.buffers() end,            desc = "Find buffers" },
+        { "<leader>fr", function() Snacks.picker.recent() end,             desc = "Recent files" },
+        { "<leader>fh", function() Snacks.picker.help() end,               desc = "Help tags" },
         -- Explorer
-        { "<leader>e",  function() Snacks.explorer() end,                    desc = "Toggle file explorer"                      },
+        { "<leader>e",  function() Snacks.explorer() end,                  desc = "File explorer" },
         -- Diagnostics
-        { "<leader>xd", function() Snacks.picker.diagnostics() end,          desc = "List all workspace diagnostics"            },
-        { "<leader>xb", function() Snacks.picker.diagnostics_buffer() end,   desc = "List diagnostics in current buffer"        },
-        -- LSP (also defined in LspAttach autocmd; these use the picker UI)
-        { "gd",         function() Snacks.picker.lsp_definitions() end,      desc = "Go to definition"                          },
-        { "gr",         function() Snacks.picker.lsp_references() end,       desc = "List all references"                       },
-        { "gI",         function() Snacks.picker.lsp_implementations() end,  desc = "Go to implementation"                      },
-        { "gt",         function() Snacks.picker.lsp_type_definitions() end, desc = "Go to type definition"                     },
-        { "<leader>ls", function() Snacks.picker.lsp_symbols() end,          desc = "List LSP document symbols"                 },
+        { "<leader>xd", function() Snacks.picker.diagnostics() end,        desc = "Workspace diagnostics" },
+        { "<leader>xb", function() Snacks.picker.diagnostics_buffer() end, desc = "Buffer diagnostics" },
         -- Notifications
-        { "<leader>nh", function() Snacks.notifier.show_history() end,       desc = "Show notification history"                 },
+        { "<leader>nh", function() Snacks.notifier.show_history() end,     desc = "Notification history" },
         -- Git
-        { "<leader>gl", function() Snacks.picker.git_log() end,              desc = "Browse git log"                            },
-        { "<leader>gs", function() Snacks.picker.git_status() end,           desc = "Browse git status (staged/unstaged files)" },
+        { "<leader>gl", function() Snacks.picker.git_log() end,            desc = "Git log" },
+        { "<leader>gs", function() Snacks.picker.git_status() end,         desc = "Git status" },
       },
     },
 
-    -- ── Flash.nvim: instant on-screen jumps ──────────────────────────────
-    -- Type s + hint chars to jump anywhere on screen instantly.
-    -- Also integrates with / search and operator-pending mode.
-    --
-    -- KEYBINDS:
-    --   s            (n/x/o) — jump to any visible position by label chars
-    --   S            (n/x/o) — select / jump to a whole treesitter node
-    --   r            (o)     — remotely execute operator on a flash label target
-    --   R            (o/x)   — treesitter-node search across the whole file
-    --   <C-s>        (c)     — toggle flash label overlay while in / search
+    -- ── Flash.nvim: instant jumps ─────────────────────────────────────────
+    -- NOTE: Default flash uses 's' which conflicts with mini.surround
+    -- We use '<CR>' (Enter) for flash jump instead to avoid conflict
     {
       "folke/flash.nvim",
       event = "VeryLazy",
-      opts  = {},
+      opts  = {
+        modes = {
+          char = {
+            enabled = false, -- Don't enhance f/F/t/T to avoid conflicts
+          },
+        },
+      },
       keys  = {
-        { "s",     mode = { "n", "x", "o" }, function() require("flash").jump() end,              desc = "Flash: jump to label"           },
-        { "S",     mode = { "n", "x", "o" }, function() require("flash").treesitter() end,        desc = "Flash: select treesitter node"  },
-        { "r",     mode = "o",               function() require("flash").remote() end,            desc = "Flash: remote operator target"  },
-        { "R",     mode = { "o", "x" },      function() require("flash").treesitter_search() end, desc = "Flash: treesitter search"       },
-        { "<c-s>", mode = { "c" },           function() require("flash").toggle() end,            desc = "Flash: toggle labels in search" },
+        -- Use <CR> for flash jump (doesn't conflict with mini.surround's sa/sd/sr)
+        { "<CR>",  mode = { "n", "x", "o" }, function() require("flash").jump() end,              desc = "Flash jump" },
+        { "S",     mode = { "n", "x", "o" }, function() require("flash").treesitter() end,        desc = "Flash treesitter" },
+        { "r",     mode = "o",               function() require("flash").remote() end,            desc = "Flash remote" },
+        { "R",     mode = { "o", "x" },      function() require("flash").treesitter_search() end, desc = "Flash treesitter search" },
+        { "<c-s>", mode = { "c" },           function() require("flash").toggle() end,            desc = "Flash toggle search" },
       },
     },
 
-    -- ── Which-key: keybind discovery popup ───────────────────────────────
-    -- Shows available keybinds when you pause mid-chord, using the desc
-    -- fields defined throughout this config.
+    -- ── Which-key: keybind discovery ─────────────────────────────────────
     { "folke/which-key.nvim", opts = { preset = "modern" } },
 
     -- ┌─────────────────────────────────────────────────────────────────────┐
@@ -781,30 +607,6 @@ require("lazy").setup({
     -- └─────────────────────────────────────────────────────────────────────┘
 
     -- ── Gitsigns: diff signs, staging, and blame ─────────────────────────
-    -- Shows git diff indicators in the sign column and provides hunk-level
-    -- staging, resetting, diffing, and blame directly from the buffer.
-    --
-    -- HUNK NAVIGATION:
-    --   ]h / [h      — jump to next / previous hunk
-    --
-    -- STAGING:
-    --   <leader>hs   (n/v) — stage hunk under cursor
-    --   <leader>hr   (n/v) — reset hunk to HEAD
-    --   <leader>hS   (n)   — stage entire buffer
-    --   <leader>hR   (n)   — reset entire buffer to HEAD
-    --   <leader>hu   (n)   — undo last stage_hunk call
-    --   <leader>hp   (n)   — preview hunk diff in a float
-    --
-    -- BLAME:
-    --   <leader>hb   (n)   — show full blame popup for current line
-    --   <leader>hB   (n)   — toggle inline blame on current line
-    --
-    -- DIFF:
-    --   <leader>hd   (n)   — diff buffer against index
-    --   <leader>hD   (n)   — diff buffer against last commit (~)
-    --
-    -- TEXT OBJECT:
-    --   ih           (o/x) — select the hunk under cursor
     {
       "lewis6991/gitsigns.nvim",
       event = { "BufReadPre", "BufNewFile" },
@@ -824,36 +626,33 @@ require("lazy").setup({
             vim.keymap.set(mode, l, r, { buffer = bufnr, desc = desc })
           end
 
-          -- Hunk navigation (falls back to ]c/[c in diff mode)
           map("n", "]h", function()
-            if vim.wo.diff then vim.cmd.normal({ "]c", bang = true })
-            else gs.nav_hunk("next") end
+            if vim.wo.diff then
+              vim.cmd.normal({ "]c", bang = true })
+            else
+              gs.nav_hunk("next")
+            end
           end, "Next hunk")
 
           map("n", "[h", function()
-            if vim.wo.diff then vim.cmd.normal({ "[c", bang = true })
-            else gs.nav_hunk("prev") end
+            if vim.wo.diff then
+              vim.cmd.normal({ "[c", bang = true })
+            else
+              gs.nav_hunk("prev")
+            end
           end, "Previous hunk")
 
-          -- Staging
-          map({ "n", "v" }, "<leader>hs", gs.stage_hunk,    "Stage hunk under cursor"         )
-          map({ "n", "v" }, "<leader>hr", gs.reset_hunk,    "Reset hunk to HEAD"               )
-          map("n", "<leader>hS", gs.stage_buffer,           "Stage entire buffer"              )
-          map("n", "<leader>hR", gs.reset_buffer,           "Reset entire buffer to HEAD"      )
-          map("n", "<leader>hu", gs.undo_stage_hunk,        "Undo last stage_hunk call"        )
-          map("n", "<leader>hp", gs.preview_hunk,           "Preview hunk diff in float"       )
-
-          -- Blame
-          map("n", "<leader>hb", function() gs.blame_line({ full = true }) end,
-            "Show full blame for current line")
-          map("n", "<leader>hB", gs.toggle_current_line_blame, "Toggle inline blame on current line")
-
-          -- Diff
-          map("n", "<leader>hd", gs.diffthis,               "Diff buffer against index"        )
-          map("n", "<leader>hD", function() gs.diffthis("~") end, "Diff buffer against last commit")
-
-          -- Text object: select the hunk under cursor
-          map({ "o", "x" }, "ih", ":<C-u>Gitsigns select_hunk<cr>", "Select hunk as text object")
+          map({ "n", "v" }, "<leader>hs", gs.stage_hunk, "Stage hunk")
+          map({ "n", "v" }, "<leader>hr", gs.reset_hunk, "Reset hunk")
+          map("n", "<leader>hS", gs.stage_buffer, "Stage buffer")
+          map("n", "<leader>hR", gs.reset_buffer, "Reset buffer")
+          map("n", "<leader>hu", gs.undo_stage_hunk, "Undo stage")
+          map("n", "<leader>hp", gs.preview_hunk, "Preview hunk")
+          map("n", "<leader>hb", function() gs.blame_line({ full = true }) end, "Blame line")
+          map("n", "<leader>hB", gs.toggle_current_line_blame, "Toggle blame")
+          map("n", "<leader>hd", gs.diffthis, "Diff index")
+          map("n", "<leader>hD", function() gs.diffthis("~") end, "Diff last commit")
+          map({ "o", "x" }, "ih", ":<C-u>Gitsigns select_hunk<cr>", "Select hunk")
         end,
       },
     },
@@ -863,114 +662,110 @@ require("lazy").setup({
     -- └─────────────────────────────────────────────────────────────────────┘
 
     -- ── Opencode.nvim: AI assistant integration ──────────────────────────
-    -- Integrates the opencode AI assistant with Neovim. Requires `opencode`
-    -- to be installed and available on $PATH.
-    --
-    -- KEYBINDS:
-    --   <C-a>        (n/x) — ask about current buffer / visual selection
-    --   <leader>oa   (n)   — open command palette (all opencode actions)
-    --   <leader>ot   (n)   — open / focus the embedded opencode terminal
-    --   <leader>oq   (n)   — free-form question (no automatic context)
-    --
-    -- In any snacks picker, <A-a> sends the focused item to opencode.
-    -- Run :checkhealth opencode after install to verify the setup.
     {
       "nickjvandyke/opencode.nvim",
       version      = "*",
       dependencies = { { "folke/snacks.nvim", optional = true } },
       config       = function()
-        ---@type opencode.Opts
         vim.g.opencode_opts = {}
 
         vim.keymap.set({ "n", "x" }, "<C-a>", function()
           require("opencode").ask("@this: ", { submit = true })
-        end, { desc = "Opencode: ask about current buffer / selection" })
+        end, { desc = "Ask about buffer/selection" })
 
         vim.keymap.set("n", "<leader>oa", function()
           require("opencode").select()
-        end, { desc = "Opencode: command palette" })
+        end, { desc = "Opencode palette" })
 
         vim.keymap.set("n", "<leader>ot", function()
           require("opencode").open()
-        end, { desc = "Opencode: open terminal" })
+        end, { desc = "Opencode terminal" })
 
         vim.keymap.set("n", "<leader>oq", function()
           require("opencode").ask("")
-        end, { desc = "Opencode: free-form question" })
+        end, { desc = "Opencode question" })
       end,
     },
 
-    -- ── Neocodeium: AI inline ghost-text completion ───────────────────────
-    -- Intentionally kept separate from blink.cmp so the two systems use
-    -- distinct keybinds and never interfere with each other.
-    --
-    -- KEYBINDS (insert mode only):
-    --   <M-l>        — accept full ghost-text suggestion
-    --   <M-w>        — accept next word only
-    --   <M-a>        — accept next line only
-    --   <M-]>        — cycle to next suggestion
-    --   <M-[>        — cycle to previous suggestion
-    --   <M-e>        — dismiss current suggestion
-    --
-    -- NORMAL MODE:
-    --   <leader>ai   — toggle Neocodeium on / off
+    -- ── Neocodeium: AI inline completion ─────────────────────────────────
+    -- DISABLED by default - enable with :NeoCodeium enable or <leader>ai
     {
       "monkoose/neocodeium",
-      event  = "InsertEnter",
+      event  = "VeryLazy",
       config = function()
         local nc = require("neocodeium")
-        nc.setup({ silent = false }) -- show notification on auth errors
+        nc.setup({
+          enabled = false, -- Start disabled by default
+          silent = false
+        })
 
-        vim.keymap.set("i", "<M-l>", nc.accept,                              { desc = "Neocodeium: accept suggestion"   })
-        vim.keymap.set("i", "<M-w>", nc.accept_word,                         { desc = "Neocodeium: accept next word"    })
-        vim.keymap.set("i", "<M-a>", nc.accept_line,                         { desc = "Neocodeium: accept next line"    })
-        vim.keymap.set("i", "<M-]>", function() nc.cycle_or_complete(1)  end, { desc = "Neocodeium: next suggestion"     })
-        vim.keymap.set("i", "<M-[>", function() nc.cycle_or_complete(-1) end, { desc = "Neocodeium: previous suggestion" })
-        vim.keymap.set("i", "<M-e>", nc.clear,                               { desc = "Neocodeium: dismiss suggestion"  })
-        vim.keymap.set("n", "<leader>ai", "<cmd>NeoCodeium toggle<cr>",      { desc = "Toggle Neocodeium ghost text"    })
+        vim.keymap.set("i", "<M-l>", nc.accept, { desc = "Accept suggestion" })
+        vim.keymap.set("i", "<M-w>", nc.accept_word, { desc = "Accept word" })
+        vim.keymap.set("i", "<M-a>", nc.accept_line, { desc = "Accept line" })
+        vim.keymap.set("i", "<M-]>", function() nc.cycle_or_complete(1) end, { desc = "Next suggestion" })
+        vim.keymap.set("i", "<M-[>", function() nc.cycle_or_complete(-1) end, { desc = "Previous suggestion" })
+        vim.keymap.set("i", "<M-e>", nc.clear, { desc = "Clear suggestion" })
+        vim.keymap.set("n", "<leader>ai", "<cmd>NeoCodeium toggle<cr>", { desc = "Toggle AI completion" })
       end,
     },
 
-  }, -- end spec
+  },
 
   install = { colorscheme = { "rose-pine", "habamax" } },
-  checker = { enabled = true }, -- notify when plugin updates are available
+  checker = { enabled = true },
 })
 
 -- =============================================================================
--- LSP  (Native Neovim 0.11 API)
--- vim.lsp.config / vim.lsp.enable replaces lspconfig entirely.
---
--- KEYBINDS (active when an LSP attaches to a buffer):
---   K            — show hover documentation float
---   <leader>ca   — list available code actions
---   <leader>rn   — rename symbol under cursor
---   <leader>ci   — list incoming calls to the symbol
---   <leader>co   — list outgoing calls from the symbol
---   [d / ]d      — jump to previous / next diagnostic
---   <leader>cd   — show diagnostic detail in a float
+-- LSP (Native Neovim 0.11+ API)
+-- NOTE: vim.lsp.config() and vim.lsp.enable() are the new native APIs
 -- =============================================================================
 vim.api.nvim_create_autocmd("LspAttach", {
   group    = vim.api.nvim_create_augroup("UserLspAttach", { clear = true }),
   callback = function(ev)
     local function map(keys, func, desc)
-      vim.keymap.set("n", keys, func, { buffer = ev.buf, desc = "LSP: " .. desc })
+      vim.keymap.set("n", keys, func, { buffer = ev.buf, desc = desc })
     end
 
-    map("K",          vim.lsp.buf.hover,        "Show hover documentation"        )
-    map("<leader>ca", vim.lsp.buf.code_action,  "List available code actions"     )
-    map("<leader>rn", vim.lsp.buf.rename,       "Rename symbol under cursor"      )
+    -- Use Snacks picker for LSP if available, fallback to native
+    local has_snacks = package.loaded["snacks"] ~= nil
 
-    -- TODO(nvim-0.12): vim.lsp.buf.incoming_calls and outgoing_calls are
-    --   removed. Replace both with vim.lsp.buf.call_hierarchy:
-    --   map("<leader>ci", function() vim.lsp.buf.call_hierarchy("from") end, "List incoming calls")
-    --   map("<leader>co", function() vim.lsp.buf.call_hierarchy("to")   end, "List outgoing calls")
-    map("<leader>ci", vim.lsp.buf.incoming_calls, "List incoming calls to symbol"  )
-    map("<leader>co", vim.lsp.buf.outgoing_calls, "List outgoing calls from symbol")
+    -- Go to definition
+    map("gd", has_snacks and function() Snacks.picker.lsp_definitions() end or vim.lsp.buf.definition,
+      "Go to definition")
 
-    map("[d", function() vim.diagnostic.jump({ count = -1 }) end, "Jump to previous diagnostic")
-    map("]d", function() vim.diagnostic.jump({ count =  1 }) end, "Jump to next diagnostic"    )
-    map("<leader>cd", vim.diagnostic.open_float, "Show diagnostic detail in float")
+    -- List references
+    map("gr", has_snacks and function() Snacks.picker.lsp_references() end or vim.lsp.buf.references,
+      "List references")
+
+    -- Implementation and type definition
+    map("gI", vim.lsp.buf.implementation, "Go to implementation")
+    map("gt", vim.lsp.buf.type_definition, "Go to type definition")
+
+    -- Hover and actions
+    map("K", vim.lsp.buf.hover, "Hover documentation")
+    map("<leader>ca", vim.lsp.buf.code_action, "Code actions")
+    map("<leader>rn", vim.lsp.buf.rename, "Rename symbol")
+
+    -- Document symbols
+    map("<leader>ls", has_snacks and function() Snacks.picker.lsp_symbols() end or vim.lsp.buf.document_symbol,
+      "Document symbols")
+
+    -- Call hierarchy (0.11+ API - works in both 0.11 and 0.12)
+    -- NOTE: incoming_calls/outgoing_calls are deprecated in favor of call_hierarchy
+    map("<leader>ci", function()
+      -- Use call_hierarchy with direction "from" for incoming
+      vim.lsp.buf.call_hierarchy("from")
+    end, "Incoming calls")
+
+    map("<leader>co", function()
+      -- Use call_hierarchy with direction "to" for outgoing
+      vim.lsp.buf.call_hierarchy("to")
+    end, "Outgoing calls")
+
+    -- Diagnostics navigation
+    map("[d", function() vim.diagnostic.jump({ count = -1 }) end, "Previous diagnostic")
+    map("]d", function() vim.diagnostic.jump({ count = 1 }) end, "Next diagnostic")
+    map("<leader>cd", vim.diagnostic.open_float, "Diagnostic detail")
   end,
 })
 
@@ -990,14 +785,14 @@ local servers = {
       },
     },
   },
-  clangd   = { cmd = { "clangd" },                            filetypes = { "c", "cpp", "objc", "objcpp" } },
-  pyright  = { cmd = { "pyright-langserver", "--stdio" },     filetypes = { "python"                      } },
-  bashls   = { cmd = { "bash-language-server", "start" },     filetypes = { "sh", "bash"                  } },
-  texlab   = { cmd = { "texlab" },                            filetypes = { "tex", "bib"                  } },
+  clangd   = { cmd = { "clangd" }, filetypes = { "c", "cpp", "objc", "objcpp" } },
+  pyright  = { cmd = { "pyright-langserver", "--stdio" }, filetypes = { "python" } },
+  bashls   = { cmd = { "bash-language-server", "start" }, filetypes = { "sh", "bash" } },
+  texlab   = { cmd = { "texlab" }, filetypes = { "tex", "bib" } },
   tinymist = {
     cmd       = { "tinymist" },
     filetypes = { "typst" },
-    settings  = { exportPdf = "onSave" }, -- regenerate PDF on every save
+    settings  = { exportPdf = "onSave" },
   },
 }
 
@@ -1010,10 +805,10 @@ vim.lsp.enable(vim.tbl_keys(servers))
 
 -- ── Diagnostic display ────────────────────────────────────────────────────────
 vim.diagnostic.config({
-  virtual_text     = { prefix = "●" }, -- inline diagnostic marker
+  virtual_text     = { prefix = "●" },
   signs            = true,
   underline        = true,
-  update_in_insert = false,            -- only update diagnostics on leaving insert mode
+  update_in_insert = false,
   severity_sort    = true,
   float            = { border = "rounded", source = true },
 })
@@ -1027,60 +822,68 @@ local function map(mode, lhs, rhs, opts)
   vim.keymap.set(mode, lhs, rhs, opts)
 end
 
--- ── Clipboard ─────────────────────────────────────────────────────────────────
--- Explicit bridge between neovim's internal clipboard and the system clipboard.
--- Neovim's "+" register maps to wl-clipboard via the config above.
---
--- KEYBINDS:
---   <leader>y    (n/v) — yank selection to system clipboard
---   <leader>Y    (n)   — yank current line to system clipboard
---   <leader>p    (n/v) — paste from system clipboard after cursor
---   <leader>P    (n/v) — paste from system clipboard before cursor
-map({ "n", "v" }, "<leader>y", '"+y',  { desc = "Yank selection to system clipboard"        })
-map("n",          "<leader>Y", '"+yy', { desc = "Yank current line to system clipboard"     })
-map({ "n", "v" }, "<leader>p", '"+p',  { desc = "Paste from system clipboard after cursor"  })
-map({ "n", "v" }, "<leader>P", '"+P',  { desc = "Paste from system clipboard before cursor" })
+-- ── Save & Quit ───────────────────────────────────────────────────────────────
+map("n", "<leader>w", "<cmd>write<cr>", { desc = "Save file" })
+map("n", "<leader>W", "<cmd>wall<cr>", { desc = "Save all files" })
+map("n", "<leader>q", "<cmd>quit<cr>", { desc = "Quit window" })
+map("n", "<leader>Q", "<cmd>qa<cr>", { desc = "Quit all" })
 
 -- ── Window navigation ─────────────────────────────────────────────────────────
--- Move between splits with Ctrl + hjkl (mirrors tmux-style navigation).
---
--- KEYBINDS:
---   <C-h/j/k/l>  — focus the split to the left / below / above / right
-map("n", "<C-h>", "<C-w>h", { desc = "Focus split to the left"  })
-map("n", "<C-j>", "<C-w>j", { desc = "Focus split below"        })
-map("n", "<C-k>", "<C-w>k", { desc = "Focus split above"        })
-map("n", "<C-l>", "<C-w>l", { desc = "Focus split to the right" })
+map("n", "<C-h>", "<C-w>h", { desc = "Focus left window" })
+map("n", "<C-j>", "<C-w>j", { desc = "Focus below window" })
+map("n", "<C-k>", "<C-w>k", { desc = "Focus above window" })
+map("n", "<C-l>", "<C-w>l", { desc = "Focus right window" })
 
 -- ── Window resize ─────────────────────────────────────────────────────────────
--- Ctrl + arrow keys grow or shrink the current split by 2 units at a time.
---
--- KEYBINDS:
---   <C-Up/Down>    — increase / decrease window height by 2 rows
---   <C-Left/Right> — decrease / increase window width by 2 columns
-map("n", "<C-Up>",    "<cmd>resize +2<cr>",          { desc = "Increase window height by 2 rows"   })
-map("n", "<C-Down>",  "<cmd>resize -2<cr>",          { desc = "Decrease window height by 2 rows"   })
-map("n", "<C-Left>",  "<cmd>vertical resize -2<cr>", { desc = "Decrease window width by 2 columns" })
-map("n", "<C-Right>", "<cmd>vertical resize +2<cr>", { desc = "Increase window width by 2 columns" })
+map("n", "<C-Up>", "<cmd>resize +2<cr>", { desc = "Increase height" })
+map("n", "<C-Down>", "<cmd>resize -2<cr>", { desc = "Decrease height" })
+map("n", "<C-Left>", "<cmd>vertical resize -2<cr>", { desc = "Decrease width" })
+map("n", "<C-Right>", "<cmd>vertical resize +2<cr>", { desc = "Increase width" })
 
 -- ── Terminal mode ─────────────────────────────────────────────────────────────
--- Navigate out of terminal buffers with the same keys as normal splits.
---
--- KEYBINDS:
---   <Esc><Esc>   — exit terminal mode (return to normal)
---   <C-h/j/k/l>  — same split navigation as normal mode (auto-exits terminal)
-map("t", "<Esc><Esc>", "<C-\\><C-n>",       { desc = "Exit terminal mode"                 })
-map("t", "<C-h>",      "<C-\\><C-n><C-w>h", { desc = "Terminal: focus split to the left"  })
-map("t", "<C-j>",      "<C-\\><C-n><C-w>j", { desc = "Terminal: focus split below"        })
-map("t", "<C-k>",      "<C-\\><C-n><C-w>k", { desc = "Terminal: focus split above"        })
-map("t", "<C-l>",      "<C-\\><C-n><C-w>l", { desc = "Terminal: focus split to the right" })
+map("t", "<Esc><Esc>", "<C-\\><C-n>", { desc = "Exit terminal mode" })
+map("t", "<C-h>", "<C-\\><C-n><C-w>h", { desc = "Terminal: left" })
+map("t", "<C-j>", "<C-\\><C-n><C-w>j", { desc = "Terminal: down" })
+map("t", "<C-k>", "<C-\\><C-n><C-w>k", { desc = "Terminal: up" })
+map("t", "<C-l>", "<C-\\><C-n><C-w>l", { desc = "Terminal: right" })
 
--- ── Misc ──────────────────────────────────────────────────────────────────────
--- KEYBINDS:
---   <leader>qq   — quit all windows (prompts if unsaved changes exist)
---   <leader>tt   — open a 15-line terminal split at the bottom of the screen
-map("n", "<leader>qq", "<cmd>qa<cr>", { desc = "Quit all windows" })
-
+-- ── Terminal toggle ───────────────────────────────────────────────────────────
 map("n", "<leader>tt", function()
   vim.cmd("botright 15split | terminal")
   vim.cmd("startinsert")
-end, { desc = "Open terminal in bottom split" })
+end, { desc = "Open terminal" })
+
+-- ── Quick macro recording (q is taken by quit, use Q) ─────────────────────────
+map("n", "Q", "q", { desc = "Record macro" })
+map("n", "gQ", "@q", { desc = "Play macro" })
+
+-- ── Clear search highlighting ─────────────────────────────────────────────────
+map("n", "<Esc>", "<cmd>nohlsearch<cr>", { desc = "Clear search highlight" })
+
+-- ── Better indenting (stay in visual mode) ────────────────────────────────────
+map("v", "<", "<gv", { desc = "Indent left" })
+map("v", ">", ">gv", { desc = "Indent right" })
+
+-- ── Move lines up/down ────────────────────────────────────────────────────────
+map("n", "<A-j>", "<cmd>m .+1<cr>==", { desc = "Move line down" })
+map("n", "<A-k>", "<cmd>m .-2<cr>==", { desc = "Move line up" })
+map("i", "<A-j>", "<esc><cmd>m .+1<cr>==gi", { desc = "Move line down" })
+map("i", "<A-k>", "<esc><cmd>m .-2<cr>==gi", { desc = "Move line up" })
+map("v", "<A-j>", ":m '>+1<cr>gv=gv", { desc = "Move selection down" })
+map("v", "<A-k>", ":m '<-2<cr>gv=gv", { desc = "Move selection up" })
+
+-- ── Quick fix navigation ──────────────────────────────────────────────────────
+map("n", "]q", "<cmd>cnext<cr>", { desc = "Next quickfix" })
+map("n", "[q", "<cmd>cprev<cr>", { desc = "Previous quickfix" })
+map("n", "]l", "<cmd>lnext<cr>", { desc = "Next loclist" })
+map("n", "[l", "<cmd>lprev<cr>", { desc = "Previous loclist" })
+
+-- ── Buffer navigation (alternative to barbar) ─────────────────────────────────
+map("n", "<leader>bn", "<cmd>bnext<cr>", { desc = "Next buffer" })
+map("n", "<leader>bp", "<cmd>bprevious<cr>", { desc = "Previous buffer" })
+map("n", "<leader>bN", "<cmd>enew<cr>", { desc = "New buffer" })
+
+-- ── Treesitter folding (global setting) ─────────────────────────────────────
+vim.opt.foldmethod = "expr"
+vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+vim.opt.foldlevel = 99 -- Start with all folds open
