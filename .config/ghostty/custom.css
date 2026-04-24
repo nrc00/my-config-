@@ -1,0 +1,101 @@
+/* custom.css - Rosé Pine Dawn for Ghostty */
+
+/* --- Define Rosé Pine Dawn Color Palette (as GTK variables) --- */
+@define-color rosepine-base #faf4ed;
+@define-color rosepine-surface #fffaf3;
+@define-color rosepine-overlay #f2e9de;
+@define-color rosepine-muted #9893a5;
+@define-color rosepine-subtle #797593;
+@define-color rosepine-text #575279;
+@define-color rosepine-love #b4637a;
+@define-color rosepine-gold #ea9d34;
+@define-color rosepine-rose #d7827e;
+@define-color rosepine-pine #286983;
+@define-color rosepine-foam #56949f;
+@define-color rosepine-iris #907aa9;
+@define-color rosepine-highlight-low alpha(@rosepine-iris, 0.1);
+@define-color rosepine-highlight-med alpha(@rosepine-iris, 0.25);
+@define-color rosepine-highlight-high alpha(@rosepine-iris, 0.5);
+
+/* --- Tab Bar (at the bottom of the window) --- */
+/* Main tab bar background - slightly darker base for better contrast */
+tabbar {
+    background-color: alpha(@rosepine-overlay, 0.9);
+    border-top: 1px solid @rosepine-muted;
+}
+
+/* Individual tab styling */
+tab {
+    background-color: alpha(@rosepine-foam, 0.8);
+    color: @rosepine-muted;
+    padding: 0px 2px;
+    transition: all 0.2s ease;
+    border: none;
+    margin: 0 1px;
+    border-radius: 1px;
+}
+
+/* Hover state for tabs */
+tab:hover {
+    background-color: @rosepine-overlay;
+    color: @rosepine-text;
+}
+
+/* Selected/active tab styling with pink hue */
+tab:selected {
+    background-color: @rosepine-love; /* Pink hue */
+    color: #ffffff; /* White text for contrast */
+}
+
+/* Inactive tab styling */
+tab:not(:selected) {
+    background-color: alpha(@rosepine-foam, 0.7);
+    color: @rosepine-subtle;
+}
+
+/* Hover state for inactive tabs */
+tab:hover:not(:selected) {
+    background-color: @rosepine-overlay;
+    color: @rosepine-text;
+}
+
+/* Tab labels (if you want to style them further) */
+tab label {
+    font-weight: normal;
+}
+
+tab:selected label {
+    font-weight: 500;
+}
+
+/* --- Titlebar and Window Headerbar --- */
+.titlebar, headerbar {
+    background-color: @rosepine-base;
+    border-bottom: 1px solid @rosepine-overlay;
+    padding: 0;
+    margin: 0;
+}
+
+/* Titlebar buttons (minimize, maximize, close) */
+.titlebar button, headerbar button {
+    background-color: transparent;
+    border: none;
+    color: @rosepine-text;
+}
+
+.titlebar button:hover, headerbar button:hover {
+    background-color: @rosepine-overlay;
+    color: @rosepine-rose;
+}
+
+/* --- Quick Terminal (Dropdown) --- */
+/* Background of the quick terminal */
+.quick-terminal {
+    background-color: @rosepine-base;
+    border-bottom: 1px solid @rosepine-overlay;
+}
+
+/* Quick terminal content area */
+.quick-terminal box {
+    background-color: @rosepine-base;
+}
