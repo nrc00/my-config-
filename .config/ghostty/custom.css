@@ -1,0 +1,114 @@
+/* ============================================================================
+   Ghostty – Ultra‑Thin Tab Bar
+   Theme: Rosé Pine Dawn (Bright)
+   ============================================================================ */
+
+/* ── Tab bar container ─────────────────────────────────────────────────────── */
+
+notebook header,
+notebook > header,
+tabbar,
+tabbar > stack {
+    min-height: 6px;
+    padding: 0;
+    margin: 0;
+    background-color: #faf4ed;   /* base – warm off‑white */
+    border: none;
+}
+
+tabbox {
+    padding: 0;
+    margin: 0;
+}
+
+/* ── All tabs (shared base) ────────────────────────────────────────────── */
+
+tab,
+notebook tab,
+tabbutton {
+    min-height: 6px;
+    padding: 0 10px;
+    margin: 0;
+    border-radius: 0;            /* square tabs */
+    transition: none;
+}
+
+/* Tab text */
+tab label,
+notebook tab label,
+tabbutton label {
+    font-size: 1em;
+    font-weight: normal;
+    line-height: 1;
+    padding: 0;
+    margin: 0;
+}
+
+tab:checked label,
+notebook tab:checked label,
+tabbutton:checked label {
+    font-weight: 500;
+}
+
+/* ── 1. Inactive tab ──────────────────────────────────────────────────────── */
+
+tab:not(:checked),
+notebook tab:not(:checked),
+tab:not(:selected),
+tabbutton:not(:checked) {
+    background-color: #e6ddd3;   /* subtle warm gray (overlay variant) */
+    color: #9893a5;              /* muted text */
+}
+
+/* ── 2. Hover (inactive or active) ────────────────────────────────────── */
+
+tab:hover,
+notebook tab:hover,
+tabbutton:hover {
+    background-color: #dfdd89;   /* highlight med – fresh yellowish pop */
+    color: #575279;              /* text – dark for contrast */
+}
+
+/* ── 3. Active tab ──────────────────────────────────────────────────────── */
+
+tab:checked,
+notebook tab:checked,
+tab:selected,
+tabbutton:checked,
+tabbutton:selected {
+    background-color: #ffffff;   /* pure white – stands out clearly */
+    color: #575279;              /* text (dawn) */
+}
+
+/* Active tab hover – slight pinkish feedback */
+tab:checked:hover,
+notebook tab:checked:hover,
+tab:selected:hover,
+tabbutton:checked:hover {
+    background-color: #f4ded8;   /* highlight low – slight pinkish */
+}
+
+/* ── Close button ─────────────────────────────────────────────────────────── */
+
+tab button.close-button,
+notebook tab button.close-button,
+tabbutton button.close-button {
+    min-width: 8px;
+    min-height: 8px;
+    padding: 0;
+    margin: 0 0 0 4px;
+    border-radius: 0;
+    background-color: transparent;
+    color: #797593;              /* subtle (dawn) */
+    border: none;
+    -gtk-icon-size: 6px;
+    transition: 0.1s ease;
+}
+
+tab button.close-button:hover,
+notebook tab button.close-button:hover,
+tabbutton button.close-button:hover {
+    background-color: #b4637a;   /* love (dawn) – rose accent */
+    color: #faf4ed;              /* base – warm off‑white */
+}
+

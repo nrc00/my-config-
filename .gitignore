@@ -1,0 +1,35 @@
+# Generated / private files
+.bash_history
+.zsh_history
+*.swp
+.cache/
+.local/
+.steam/
+.wine/
+.ssh/
+.gnupg/
+.pki/
+.go/
+.npm/
+.rustup/
+.bun/
+.pulse-cookie
+.python_history
+.viminfo
+
+# OS / Desktop clutter
+Desktop/
+Documents/
+Downloads/
+Pictures/
+Music/
+Videos/
+go/
+Projects/   # if you don't want to track projects inside dotfiles
+
+# Config folders you don't want (add more as needed)
+.config/Code\ - OSS/
+.config/discord/
+.config/mozilla/
+.config/vlc/
+.config/spotify/   # if exists

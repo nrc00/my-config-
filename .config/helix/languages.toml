@@ -1,0 +1,18 @@
+[language-server.tinymist]
+command = "tinymist"
+config = { preview.background.enabled = true, preview.background.args = ["--data-plane-host=127.0.0.1:23635", "--invert-colors=never", "--open"] }
+
+[[language]]
+name = "typst"
+language-servers = ["tinymist"]
+auto-format = true
+formatter = { command = "typstyle" }
+
+[[language]]
+name = "c"
+formatter = { command = "clang-format", args = ["--style=file"] }
+auto-format = true
+
+[[language]]
+name = "lua"
+formatter = { command = "stylua", args = [ "-" ] }

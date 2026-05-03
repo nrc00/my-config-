@@ -1,0 +1,195 @@
+# GHOSTTY CONFIG - Rose Pine Moon (Official Palette)
+# ===================================================
+
+# ----------------------------------------
+# THEME: Rosé Pine Moon (Official)
+# ----------------------------------------
+background = #232136
+foreground = #e0def4
+cursor-color = #e0def4
+cursor-text = #232136
+selection-background = #44415a
+selection-foreground = #e0def4
+
+minimum-contrast = 1.1
+
+# Official Rosé Pine Moon Palette (ANSI 0-15)
+palette = 0=#232136   
+palette = 1=#eb6f92   
+palette = 2=#3e8fb0   
+palette = 3=#f6c177   
+palette = 4=#9ccfd8   
+palette = 5=#c4a7e7   
+palette = 6=#ea9a97   
+palette = 7=#e0def4   
+palette = 8=#6e6a86   
+palette = 9=#eb6f92   
+palette = 10=#3e8fb0  
+palette = 11=#f6c177  
+palette = 12=#9ccfd8  
+palette = 13=#c4a7e7  
+palette = 14=#ea9a97  
+palette = 15=#e0def4  
+
+# ----------------------------------------
+# FONT
+# ----------------------------------------
+font-family = "GeistMono Nerd Font Mono"
+font-size = 18
+adjust-cell-height = -15%
+mouse-reporting = true
+freetype-load-flags = hinting,no-force-autohint,no-monochrome,autohint
+font-feature = -calt
+font-feature = -liga
+font-feature = -dlig
+
+# ----------------------------------------
+# WINDOW
+# ----------------------------------------
+background-opacity = 1
+background-blur = true
+window-padding-balance = true
+window-save-state = always
+unfocused-split-opacity = 1
+confirm-close-surface = false
+bell-audio-volume = 1
+window-width = 120
+window-height = 80
+window-padding-x = 2
+window-padding-y = 1
+window-padding-color = background
+
+# ----------------------------------------
+# CURSOR
+# ----------------------------------------
+cursor-opacity = 1
+cursor-style = block
+cursor-style-blink = true
+
+# ----------------------------------------
+# SHELL
+# ----------------------------------------
+shell-integration = zsh
+shell-integration-features = cursor,no-sudo,title,path,ssh-env,ssh-terminfo
+
+# ----------------------------------------
+# CUSTOM SHADERS
+# ----------------------------------------
+custom-shader = shaders/cursor_warp.glsl
+custom-shader = shaders/cursor_tail.glsl
+custom-shader = shaders/cursor_sweep.glsl
+custom-shader-animation = always
+
+# ----------------------------------------
+# GTK/LINUX
+# ----------------------------------------
+gtk-single-instance = true
+gtk-wide-tabs = false
+gtk-titlebar = true
+gtk-titlebar-style = native
+gtk-custom-css = /home/dola/.config/ghostty/custom.css
+gtk-tabs-location = bottom
+gtk-toolbar-style = raised
+window-decoration = server
+window-theme = ghostty
+window-colorspace = srgb
+window-inherit-working-directory = true
+window-inherit-font-size = true
+window-vsync = true
+window-subtitle = working-directory
+window-theme = ghostty
+
+# ----------------------------------------
+# SCROLLBACK & PERFORMANCE
+# ----------------------------------------
+scrollback-limit = 25000000
+
+# ----------------------------------------
+# MOUSE & SELECTION
+# ----------------------------------------
+mouse-hide-while-typing = true
+mouse-scroll-multiplier = precision:1,discrete:3
+mouse-shift-capture = true
+copy-on-select = true
+right-click-action = context-menu
+clipboard-read = allow
+clipboard-write = allow
+clipboard-trim-trailing-spaces = true
+clipboard-paste-protection = true
+clipboard-paste-bracketed-safe = true
+
+# ----------------------------------------
+# KEYBINDINGS 
+# ----------------------------------------
+keybind = ctrl+shift+c=copy_to_clipboard
+keybind = ctrl+shift+v=paste_from_clipboard
+keybind = ctrl+shift+a=select_all
+keybind = ctrl+plus=increase_font_size:1
+keybind = ctrl+minus=decrease_font_size:1
+keybind = ctrl+0=reset_font_size
+keybind = ctrl+shift+t=new_tab
+keybind = ctrl+shift+w=close_tab:this
+keybind = ctrl+tab=next_tab
+keybind = ctrl+shift+tab=previous_tab
+keybind = alt+1=goto_tab:1
+keybind = alt+2=goto_tab:2
+keybind = alt+3=goto_tab:3
+keybind = alt+4=goto_tab:4
+keybind = alt+5=goto_tab:5
+keybind = alt+6=goto_tab:6
+keybind = alt+7=goto_tab:7
+keybind = alt+8=goto_tab:8
+keybind = alt+9=goto_tab:9
+keybind = ctrl+shift+o=new_split:right
+keybind = ctrl+shift+e=new_split:down
+keybind = ctrl+h=goto_split:left
+keybind = ctrl+j=goto_split:down
+keybind = ctrl+k=goto_split:up
+keybind = ctrl+l=goto_split:right
+keybind = ctrl+shift+left=resize_split:left,10
+keybind = ctrl+shift+right=resize_split:right,10
+keybind = ctrl+shift+up=resize_split:up,10
+keybind = ctrl+shift+down=resize_split:down,10
+keybind = ctrl+shift+enter=toggle_split_zoom
+keybind = ctrl+shift+q=quit
+keybind = ctrl+shift+n=new_window
+keybind = ctrl+shift+i=inspector:toggle
+keybind = ctrl+shift+p=toggle_command_palette
+keybind = ctrl+comma=open_config
+keybind = ctrl+shift+comma=reload_config
+keybind = shift+page_up=scroll_page_up
+keybind = shift+page_down=scroll_page_down
+keybind = shift+home=scroll_to_top
+keybind = shift+end=scroll_to_bottom
+keybind = ctrl+shift+l=clear_screen
+keybind = ctrl+shift+f=toggle_tab_overview
+# ----------------------------------------
+# QUICK TERMINAL (Dropdown)
+# ----------------------------------------
+quick-terminal-position = top
+quick-terminal-autohide = false
+quick-terminal-animation-duration = 0.2
+quick-terminal-keyboard-interactivity = on-demand
+
+# ----------------------------------------
+# BELLS & NOTIFICATIONS
+# ----------------------------------------
+bell-features = no-system,audio,attention,title
+desktop-notifications = true
+app-notifications = clipboard-copy,config-reload
+
+# ----------------------------------------
+# ADVANCED
+# ----------------------------------------
+alpha-blending = linear-corrected
+grapheme-width-method = unicode
+link-url = true
+link-previews = true
+image-storage-limit = 320000000
+
+# ----------------------------------------
+# LINUX/GTK
+# ----------------------------------------
+gtk-opengl-debug = false
+linux-cgroup = single-instance
+linux-cgroup-hard-fail = false
